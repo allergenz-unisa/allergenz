@@ -1,0 +1,20 @@
+{
+  "name": "app-tirocinio",
+  "version": "1.0.0",
+  "description": "Material UI app ",
+  "scripts": {
+    "init:app": "node -r fs -e \"fs.rmSync('./app/node_modules', { recursive: true, force: true })\"",
+    "init:api": "node -r fs -e \"fs.rmSync('./api/node_modules', { recursive: true, force: true })\"",
+    "install:app": "cd ./app && npm install",
+    "install:api": "cd ./api && npm install",
+    "install:all": "concurrently \"npm:install:api\" \"npm:install:app\"",
+    "init:all": "concurrently \"npm:init:api\" \"npm:init:app\"",
+    "start:app": "cd ./app && npm start",
+    "start:api": "cd ./api && npm run dev",
+    "start:all": "concurrently \"npm:start:api\" \"npm:start:app\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
