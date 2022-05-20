@@ -11,19 +11,15 @@ import {
   ListItemIcon,
   ListItemText,
   Toolbar,
-  Typography
+  Typography,
 } from "@mui/material";
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+import MenuIcon from "@mui/icons-material/Menu";
 
-const MainLayout = ({
-  children
-}) => {
+const MainLayout = ({ children }) => {
   const drawerWidth = 240;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -36,25 +32,49 @@ const MainLayout = ({
       <Divider />
       <List>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to='/'>
+          <ListItemButton component={Link} to="/">
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={'Dashboard'} />
+            <ListItemText primary={"Dashboard"} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to='/allergeni'>
+          <ListItemButton component={Link} to="/allergeni">
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={'Allergeni'} />
+            <ListItemText primary={"Allergeni"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/login">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Login"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/registrazione">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Registrazione"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/account">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Account"} />
           </ListItemButton>
         </ListItem>
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -71,7 +91,7 @@ const MainLayout = ({
   const container = document.body;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <AppBar
         position="fixed"
         sx={{
@@ -85,7 +105,7 @@ const MainLayout = ({
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
@@ -108,8 +128,12 @@ const MainLayout = ({
             keepMounted: true,
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth,backgroundColor: 'secondary.main', },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+              backgroundColor: "secondary.main",
+            },
           }}
         >
           {drawer}
@@ -117,8 +141,12 @@ const MainLayout = ({
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'secondary.main', },
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+              backgroundColor: "secondary.main",
+            },
           }}
           open
         >
@@ -127,12 +155,17 @@ const MainLayout = ({
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, paddingTop: 10 }}
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          paddingTop: 10,
+        }}
       >
         {children}
       </Box>
     </Box>
   );
-}
+};
 
 export default MainLayout;
