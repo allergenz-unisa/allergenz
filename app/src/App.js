@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Registrazione from "./pages/Registrazione";
 import Account from "./pages/Account";
+import ModificaMenu from "./pages/ModificaMenu";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/registrazione" element={<Registrazione />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/modificaMenu" element={<ModificaMenu />}/>
         </Routes>
       </MainLayout>
     </BrowserRouter>

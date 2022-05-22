@@ -15,8 +15,10 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import Allergens from "@mui/icons-material/FileCopy";
+import Homepage from "@mui/icons-material/Home";
+import Login from "@mui/icons-material/Login";
+import ProfiloUtente from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const MainLayout = ({ children }) => {
@@ -34,7 +36,7 @@ const MainLayout = ({ children }) => {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/">
             <ListItemIcon>
-              <InboxIcon />
+              <Homepage />
             </ListItemIcon>
             <ListItemText primary={"Dashboard"} />
           </ListItemButton>
@@ -42,7 +44,7 @@ const MainLayout = ({ children }) => {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/allergeni">
             <ListItemIcon>
-              <InboxIcon />
+              <Allergens />
             </ListItemIcon>
             <ListItemText primary={"Allergeni"} />
           </ListItemButton>
@@ -50,7 +52,7 @@ const MainLayout = ({ children }) => {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/login">
             <ListItemIcon>
-              <InboxIcon />
+              <Login />
             </ListItemIcon>
             <ListItemText primary={"Login"} />
           </ListItemButton>
@@ -58,7 +60,7 @@ const MainLayout = ({ children }) => {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/registrazione">
             <ListItemIcon>
-              <InboxIcon />
+              <Login />
             </ListItemIcon>
             <ListItemText primary={"Registrazione"} />
           </ListItemButton>
@@ -66,9 +68,17 @@ const MainLayout = ({ children }) => {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/account">
             <ListItemIcon>
-              <InboxIcon />
+              <ProfiloUtente />
             </ListItemIcon>
             <ListItemText primary={"Account"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/modificaMenu">
+            <ListItemIcon>
+              <Login />
+            </ListItemIcon>
+            <ListItemText primary={"ModificaMenu"} />
           </ListItemButton>
         </ListItem>
       </List>
@@ -78,7 +88,7 @@ const MainLayout = ({ children }) => {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <ProfiloUtente /> : <ProfiloUtente/>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
