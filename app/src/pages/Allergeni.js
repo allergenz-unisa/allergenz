@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { 
   Avatar,
   Divider, 
-  IconButton, 
+  IconButton,
   List, 
   ListItem, 
   ListItemAvatar, 
@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import OpenCard from '@mui/icons-material/ChevronRight';
 import useTitleContext from "../components/PageTitleContext";
+import GoBackButton from "../components/GoBackButton";
 
 
 const Allergeni = () => {
@@ -21,7 +22,7 @@ const Allergeni = () => {
 
   return (<div>
     
-    <Paper>
+    <Paper sx={{ marginBottom: 1}}>
       <List>
         <ListItem 
         secondaryAction={
@@ -66,6 +67,8 @@ const Allergeni = () => {
         </ListItem>
       </List>
     </Paper>
+
+    <GoBackButton />
 
   </div>)
 };

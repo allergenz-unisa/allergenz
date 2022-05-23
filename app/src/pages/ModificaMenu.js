@@ -12,15 +12,19 @@ import {
 import React, { useEffect } from "react";
 import Portata from "@mui/icons-material/Restaurant";
 import Modifica from "@mui/icons-material/Edit";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
 
 const ModificaMenu = () => {
+    let navigate = useNavigate();
+
     const { changeTitle } = useTitleContext();
     useEffect(() => {
         changeTitle('Modifica il menù')
     }, [])
+
+
     return (
         <div>
             <Grid container maxWidth={'md'} justifyContent="center" alignItems="center">
@@ -36,7 +40,8 @@ const ModificaMenu = () => {
                     marginBottom: 3}}>
                     <List>
                         <ListItem 
-                        secondaryAction={<IconButton edge="end" component={Link} to="/account"> <Modifica />
+                        secondaryAction={<IconButton edge="end" component={Link} to="/account"> 
+                                <Modifica />
                              </IconButton>}>
 
                             <ListItemIcon>
@@ -85,7 +90,7 @@ const ModificaMenu = () => {
 
                         
                     </List>
-                    <Button fullWidth variant='text' color="secondary"> Aggiungi una nuova portata... </Button>
+                    <Button fullWidth variant='text' color="secondary" onClick={() => { navigate("/inserimento-portata") }}> Aggiungi una nuova portata... </Button>
                 </Paper>
                     <GoBackButton />
                 </Grid>

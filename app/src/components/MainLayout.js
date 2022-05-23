@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
+import CloseIcon from "@mui/icons-material/Close";
 import Allergens from "@mui/icons-material/FileCopy";
 import Homepage from "@mui/icons-material/Home";
 import Login from "@mui/icons-material/Login";
@@ -26,6 +27,8 @@ const MainLayout = ({ children }) => {
   const drawerWidth = 240;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { title } = useTitleContext();
+  const token = localStorage.getItem('token');
+  console.log(token);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -33,58 +36,70 @@ const MainLayout = ({ children }) => {
 
   const drawer = (
     <div>
-      <Toolbar />
-      <Divider />
       <List>
-      <ListItem disablePadding>
-          <ListItemButton component={Link} to="/">
-            
-            <ListItemText primary={"ALLERGENZ"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/">
-            <ListItemIcon>
-              <Homepage />
-            </ListItemIcon>
-            <ListItemText primary={"Homepage"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/allergeni">
-            <ListItemIcon>
-              <Allergens />
-            </ListItemIcon>
-            <ListItemText primary={"Allergeni"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/account">
-            <ListItemIcon>
-              <ProfiloUtente />
-            </ListItemIcon>
-            <ListItemText primary={"Account"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/modificaMenu">
-            <ListItemIcon>
-              <MenuIcon/>
-            </ListItemIcon>
-            <ListItemText primary={"ModificaMenu"} />
-          </ListItemButton>
-        </ListItem>
+        <ListItem disablePadding onClick={handleDrawerToggle}>
+            <ListItemButton component={Link} to="/">
+              
+              <ListItemText primary={"ALLERGENZ"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding onClick={handleDrawerToggle}>
+            <ListItemButton component={Link} to="/">
+              <ListItemIcon>
+                <Homepage />
+              </ListItemIcon>
+              <ListItemText primary={"Homepage"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding onClick={handleDrawerToggle}>
+            <ListItemButton component={Link} to="/allergeni">
+              <ListItemIcon>
+                <Allergens />
+              </ListItemIcon>
+              <ListItemText primary={"Allergeni"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding onClick={handleDrawerToggle}>
+            <ListItemButton component={Link} to="/account">
+              <ListItemIcon>
+                <ProfiloUtente />
+              </ListItemIcon>
+              <ListItemText primary={"Account"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding onClick={handleDrawerToggle}>
+            <ListItemButton component={Link} to="/modificaMenu">
+              <ListItemIcon>
+                <MenuIcon/>
+              </ListItemIcon>
+              <ListItemText primary={"ModificaMenu"} />
+            </ListItemButton>
+          </ListItem>
       </List>
       <Divider />
       <List>
-      <ListItem disablePadding>
-          <ListItemButton component={Link} to="/login">
-            <ListItemIcon>
-              <Login />
-            </ListItemIcon>
-            <ListItemText primary={"Login"} />
-          </ListItemButton>
-        </ListItem>
+        {!token ? (
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to="/login">
+              <ListItemIcon>
+                <Login />
+              </ListItemIcon>
+              <ListItemText primary={"Login"} />
+            </ListItemButton>
+          </ListItem>
+        ) : (
+          <ListItem disablePadding>
+          <ListItemButton onClick={() => {
+            localStorage.removeItem('token');
+            window.location.href = '/'
+          }}>
+              <ListItemIcon>
+                <Login />
+              </ListItemIcon>
+              <ListItemText primary={"Logout"} />
+            </ListItemButton>
+          </ListItem>
+        ) }
       </List>
     </div>
   );
@@ -137,6 +152,18 @@ const MainLayout = ({ children }) => {
             },
           }}
         >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <CloseIcon/>
+            </IconButton>
+            </Toolbar>
+          <Divider />
           {drawer}
         </Drawer>
         <Drawer
@@ -151,6 +178,8 @@ const MainLayout = ({ children }) => {
           }}
           open
         >
+          <Toolbar>HELLO2</Toolbar>
+          <Divider />
           {drawer}
         </Drawer>
       </Box>

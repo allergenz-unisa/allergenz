@@ -1,7 +1,9 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import {
+  Box,
+  Button,
+  TextField
+ } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function Login() {

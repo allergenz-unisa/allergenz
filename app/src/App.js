@@ -8,6 +8,7 @@ import Registrazione from "./pages/Registrazione";
 import Account from "./pages/Account";
 import ModificaMenu from "./pages/ModificaMenu";
 import { TitleContextProvider } from "./components/PageTitleContext";
+import FormInsPortata from "./pages/FormInsPortata";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/registrazione" element={<Registrazione />} />
             <Route path="/account" element={<Account />} />
             <Route path="/modificaMenu" element={<ModificaMenu />}/>
+            <Route path="/inserimento-portata" element={<FormInsPortata />}/>
           </Routes>
         </MainLayout>
       </TitleContextProvider>
