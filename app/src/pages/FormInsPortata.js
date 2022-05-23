@@ -11,15 +11,13 @@ const FormInsPortata = () => {
   return(
       <div>
           <Grid container maxWidth={'md'} justifyContent="center" alignItems="center">
-                <Grid item>
+                <Grid item xs={12} md={12} lg={6}>
                     <Typography variant="h4" component="h1">
                         Aggiungi un nuovo piatto
                     </Typography>
-                </Grid>
-
-                <Grid item>
-                    <Typography variant="h4" component="h1">
-                        Aggiungi un nuovo piatto compilando i campi del sguente form
+                
+                    <Typography>
+                        Aggiungi un nuovo piatto compilando i campi del seguente form
                     </Typography>
                 </Grid>
             </Grid>

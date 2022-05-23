@@ -29,12 +29,12 @@ const ModificaMenu = () => {
         <div>
             <Grid container maxWidth={'md'} justifyContent="center" alignItems="center">
                 <Grid item xs={12} md={12} lg={6}>
-                <Typography variant="h4" component="h1">
+                    <Typography variant="h4" component="h1">
                         Ristorante da Carmine
                     </Typography>
-                <Typography>
-                    Aggiungi una nuova portata o modifica i piatti già inseriti cliccando l'apposita icona...
-                </Typography>
+                    <Typography>
+                        Aggiungi una nuova portata o modifica i piatti già inseriti cliccando l'apposita icona...
+                    </Typography>
                 <Paper sx={{ 
                     marginTop: 2,
                     marginBottom: 3}}>
