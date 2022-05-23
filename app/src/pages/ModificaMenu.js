@@ -1,11 +1,26 @@
-import { Box, Button, Card, CardActions, CardContent, Drawer, Grid, Icon, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Typography } from "@mui/material";
-import React from "react";
+import { 
+    Button, 
+    Drawer, 
+    Grid, 
+    IconButton, 
+    List, 
+    ListItem, 
+    ListItemIcon, 
+    ListItemText, 
+    Paper, 
+    Typography } from "@mui/material";
+import React, { useEffect } from "react";
 import Portata from "@mui/icons-material/Restaurant";
 import Modifica from "@mui/icons-material/Edit";
 import { Link } from "react-router-dom";
 import GoBackButton from "../components/GoBackButton";
+import useTitleContext from "../components/PageTitleContext";
 
 const ModificaMenu = () => {
+    const { changeTitle } = useTitleContext();
+    useEffect(() => {
+        changeTitle('Modifica il menù')
+    }, [])
     return (
         <div>
             <Grid container maxWidth={'md'} justifyContent="center" alignItems="center">

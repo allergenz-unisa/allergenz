@@ -1,11 +1,16 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
+import useTitleContext from "../components/PageTitleContext";
 
-export default function Account() {
+const Account = () => {
+  const { changeTitle } = useTitleContext();
+    useEffect(() => {
+        changeTitle('Il tuo profilo')
+    }, [])
   return (
     <Card sx={{ minWidth: 275 }}>
       <Box
@@ -35,3 +40,6 @@ export default function Account() {
     </Card>
   );
 }
+
+
+export default Account;

@@ -36,12 +36,18 @@ const MainLayout = ({ children }) => {
       <Toolbar />
       <Divider />
       <List>
+      <ListItem disablePadding>
+          <ListItemButton component={Link} to="/">
+            
+            <ListItemText primary={"ALLERGENZ"} />
+          </ListItemButton>
+        </ListItem>
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/">
             <ListItemIcon>
               <Homepage />
             </ListItemIcon>
-            <ListItemText primary={"Dashboard"} />
+            <ListItemText primary={"Homepage"} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>

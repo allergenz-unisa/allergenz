@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Card,
@@ -16,8 +16,13 @@ import { red } from "@mui/material/colors";
 import ShareIcon from '@mui/icons-material/Share';
 import Search from '@mui/icons-material/Search';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import useTitleContext from "../components/PageTitleContext";
 
 const Dashboard = () => {
+  const { changeTitle } = useTitleContext();
+    useEffect(() => {
+        changeTitle('Homepage')
+    }, [])
   return (
     <div>
         <Grid container sx={{

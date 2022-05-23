@@ -1,18 +1,13 @@
 import React, { useEffect } from "react";
 import { 
   Avatar,
-  Box,  
-  CardActions, 
-  CardContent, 
   Divider, 
-  Grid, 
   IconButton, 
   List, 
   ListItem, 
   ListItemAvatar, 
   ListItemText, 
-  Paper, 
-  Typography 
+  Paper
 } from "@mui/material";
 import OpenCard from '@mui/icons-material/ChevronRight';
 import useTitleContext from "../components/PageTitleContext";
