@@ -20,10 +20,13 @@ import Homepage from "@mui/icons-material/Home";
 import Login from "@mui/icons-material/Login";
 import ProfiloUtente from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
+import useTitleContext from "./PageTitleContext";
 
 const MainLayout = ({ children }) => {
   const drawerWidth = 240;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { title } = useTitleContext();
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -102,7 +105,7 @@ const MainLayout = ({ children }) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h5" noWrap component="div">
-            Allergenz
+            {title}
           </Typography>
         </Toolbar>
       </AppBar>

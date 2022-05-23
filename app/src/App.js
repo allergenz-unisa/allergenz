@@ -7,20 +7,23 @@ import Login from "./pages/Login";
 import Registrazione from "./pages/Registrazione";
 import Account from "./pages/Account";
 import ModificaMenu from "./pages/ModificaMenu";
+import { TitleContextProvider } from "./components/PageTitleContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/allergeni" element={<Allergeni />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registrazione" element={<Registrazione />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/modificaMenu" element={<ModificaMenu />}/>
-        </Routes>
-      </MainLayout>
+      <TitleContextProvider>
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/allergeni" element={<Allergeni />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/registrazione" element={<Registrazione />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/modificaMenu" element={<ModificaMenu />}/>
+          </Routes>
+        </MainLayout>
+      </TitleContextProvider>
     </BrowserRouter>
   );
 }
