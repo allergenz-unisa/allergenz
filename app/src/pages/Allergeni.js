@@ -19,6 +19,7 @@ const Allergeni = () => {
         <Box sx={{ minWidth: 275 }}>
           <CardContent >
             <Grid container direction="row" spacing={2}>
+              
               <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
               <Typography variant="h5" component="div">
                 Lattosio

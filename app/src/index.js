@@ -17,6 +17,9 @@ const theme = createTheme({
     background: {
       default: '#AD1818',
     }
+  },
+  shape: {
+      borderRadius: 20,
   }
 
 

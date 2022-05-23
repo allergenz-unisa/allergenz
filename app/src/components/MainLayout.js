@@ -50,22 +50,6 @@ const MainLayout = ({ children }) => {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/login">
-            <ListItemIcon>
-              <Login />
-            </ListItemIcon>
-            <ListItemText primary={"Login"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/registrazione">
-            <ListItemIcon>
-              <Login />
-            </ListItemIcon>
-            <ListItemText primary={"Registrazione"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
           <ListItemButton component={Link} to="/account">
             <ListItemIcon>
               <ProfiloUtente />
@@ -76,7 +60,7 @@ const MainLayout = ({ children }) => {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/modificaMenu">
             <ListItemIcon>
-              <Login />
+              <MenuIcon/>
             </ListItemIcon>
             <ListItemText primary={"ModificaMenu"} />
           </ListItemButton>
@@ -84,16 +68,14 @@ const MainLayout = ({ children }) => {
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <ProfiloUtente /> : <ProfiloUtente/>}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+      <ListItem disablePadding>
+          <ListItemButton component={Link} to="/login">
+            <ListItemIcon>
+              <Login />
+            </ListItemIcon>
+            <ListItemText primary={"Login"} />
+          </ListItemButton>
+        </ListItem>
       </List>
     </div>
   );
@@ -119,7 +101,7 @@ const MainLayout = ({ children }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h5" noWrap component="div">
             Allergenz
           </Typography>
         </Toolbar>

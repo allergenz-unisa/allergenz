@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export default function Registrazione() {
   return (
@@ -26,7 +27,7 @@ export default function Registrazione() {
       </div>
 
       <div>
-        <Button color="secondary" href="#link">
+        <Button color="secondary" component={Link} to="/login">
           Sei già registrato? Effettua il login cliccando qui
         </Button>
       </div>
