@@ -29,17 +29,12 @@ const Dashboard = () => {
   return (
     <div>
       <Grid
-        container
-        sx={{
-          marginBottom: 5,
-        }}
-      >
-        <Grid
-          item
+          container
           justifyContent="center"
           alignItems="center"
           alignSelf="center"
-        >
+      >
+        <Grid item>
           <Typography variant="h4" component="h1">
             ALLERGENZ
           </Typography>
@@ -47,6 +42,7 @@ const Dashboard = () => {
 
         <Grid item xs={12}>
           <OutlinedInput
+            sx={{marginTop: 2, marginBottom: 5}}
             fullWidth
             placeholder="Per effettuare una ricerca inizia a scrivere..."
             id="outlined-adornment-weight"
@@ -169,7 +165,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Cucina
+                Cucina indiana
               </Button>
             </CardActions>
           </Card>
@@ -192,6 +188,50 @@ const Dashboard = () => {
                 }}
               >
                 Fast food
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} md={6} lg={3}>
+          <Card>
+            <CardMedia
+              component="img"
+              height="194"
+              image="../../img/carne.jpeg"
+              alt="Carne"
+            />
+            <CardActions disableSpacing>
+              <Button
+                color="secondary"
+                variant="text"
+                onClick={() => {
+                  navigate("/ristoranti-per-categoria");
+                }}
+              >
+                Cucina di terra
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} md={6} lg={3}>
+          <Card>
+            <CardMedia
+              component="img"
+              height="194"
+              image="../../img/pita.jpg"
+              alt="Pita"
+            />
+            <CardActions disableSpacing>
+              <Button
+                color="secondary"
+                variant="text"
+                onClick={() => {
+                  navigate("/ristoranti-per-categoria");
+                }}
+              >
+                Piadine e pite
               </Button>
             </CardActions>
           </Card>

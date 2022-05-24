@@ -12,21 +12,23 @@ import {
 import OpenCard from '@mui/icons-material/ChevronRight';
 import useTitleContext from "../components/PageTitleContext";
 import GoBackButton from "../components/GoBackButton";
+import { useNavigate } from "react-router-dom";
 
 
 const Allergeni = () => {
+  let navigate = useNavigate();
+
   const { changeTitle } = useTitleContext();
   useEffect(() => {
     changeTitle('Allergeni')
   }, [])
 
   return (<div>
-    
     <Paper sx={{ marginBottom: 1}}>
       <List>
         <ListItem 
         secondaryAction={
-          <IconButton edge="end">
+          <IconButton edge="end" onClick={() => {navigate("/account")}}>
               <OpenCard />
           </IconButton>
         }
@@ -48,7 +50,7 @@ const Allergeni = () => {
 
         <ListItem 
         secondaryAction={
-          <IconButton edge="end">
+          <IconButton edge="end" onClick={() => {navigate("/account")}}>
               <OpenCard />
           </IconButton>
         }
