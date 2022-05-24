@@ -9,6 +9,8 @@ import Account from "./pages/Account";
 import ModificaMenu from "./pages/ModificaMenu";
 import { TitleContextProvider } from "./components/PageTitleContext";
 import FormInsPortata from "./pages/FormInsPortata";
+import InfoRistorante from "./pages/InfoRistorante";
+import RistoCategoria from "./pages/RistoCategoria";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/account" element={<Account />} />
             <Route path="/modificaMenu" element={<ModificaMenu />}/>
             <Route path="/inserimento-portata" element={<FormInsPortata />}/>
+            <Route path="/dettagli-ristorante" element={<InfoRistorante />}/>
+            <Route path="/ristoranti-per-categoria" element={<RistoCategoria />}/>
           </Routes>
         </MainLayout>
       </TitleContextProvider>

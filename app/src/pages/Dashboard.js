@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import {
+  Box,
   Button,
   Card,
   CardActions,
@@ -12,13 +13,15 @@ import {
   OutlinedInput,
   Typography
 } from "@mui/material";
-import { red } from "@mui/material/colors";
 import ShareIcon from '@mui/icons-material/Share';
 import Search from '@mui/icons-material/Search';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import useTitleContext from "../components/PageTitleContext";
+import { Link, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  let navigate = useNavigate();
+
   const { changeTitle } = useTitleContext();
     useEffect(() => {
         changeTitle('Homepage')
@@ -28,6 +31,13 @@ const Dashboard = () => {
         <Grid container sx={{
           marginBottom: 5
         }}>
+
+          <Grid item justifyContent="center" alignItems="center" alignSelf="center">
+            <Typography variant="h4" component="h1">
+              ALLERGENZ
+            </Typography>
+          </Grid>
+
           <Grid item xs={12}>
           <OutlinedInput 
             fullWidth
@@ -45,180 +55,120 @@ const Dashboard = () => {
     <Grid container spacing={2}>
       <Grid item xs={12} md={6} lg={3}>
         <Card>
-          <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
-          />
           <CardMedia
             component="img"
             height="194"
             image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
             alt="Paella dish"
           />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook
-              together with your guests. Add 1 cup of frozen peas along with the mussels,
-              if you like.
-            </Typography>
-          </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
+            <Button
+              color="secondary"
+              variant='text' 
+              onClick={() => { navigate("/ristoranti-per-categoria") }}
+            > 
+              Visualizza 
+            </Button>
           </CardActions>
         </Card>
       </Grid>
 
       <Grid item xs={12} md={6} lg={3}>
         <Card>
-          <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
-          />
           <CardMedia
             component="img"
             height="194"
             image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
             alt="Paella dish"
           />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook
-              together with your guests. Add 1 cup of frozen peas along with the mussels,
-              if you like.
-            </Typography>
-          </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
+            <Button
+              color="secondary"
+              variant='text' 
+              onClick={() => { navigate("/ristoranti-per-categoria") }}
+            > 
+              Visualizza 
+            </Button>
           </CardActions>
         </Card>
       </Grid>
 
       <Grid item xs={12} md={6} lg={3}>
         <Card>
-          <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
-          />
           <CardMedia
             component="img"
             height="194"
             image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
             alt="Paella dish"
           />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook
-              together with your guests. Add 1 cup of frozen peas along with the mussels,
-              if you like.
-            </Typography>
-          </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
+            <Button
+              color="secondary"
+              variant='text' 
+              onClick={() => { navigate("/ristoranti-per-categoria") }}
+            > 
+              Visualizza 
+            </Button>
           </CardActions>
         </Card>
       </Grid>
 
       <Grid item xs={12} md={6} lg={3}>
         <Card>
-          <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
-          />
           <CardMedia
             component="img"
             height="194"
             image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
             alt="Paella dish"
           />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook
-              together with your guests. Add 1 cup of frozen peas along with the mussels,
-              if you like.
-            </Typography>
-          </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
+            <Button
+              color="secondary"
+              variant='text' 
+              onClick={() => { navigate("/ristoranti-per-categoria") }}
+            > 
+              Visualizza 
+            </Button>
           </CardActions>
         </Card>
       </Grid>
 
       <Grid item xs={12} md={6} lg={3}>
         <Card>
-          <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
-          />
           <CardMedia
             component="img"
             height="194"
             image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
             alt="Paella dish"
           />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook
-              together with your guests. Add 1 cup of frozen peas along with the mussels,
-              if you like.
-            </Typography>
-          </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
+            <Button
+              color="secondary"
+              variant='text' 
+              onClick={() => { navigate("/ristoranti-per-categoria") }}
+            > 
+              Visualizza 
+            </Button>
           </CardActions>
         </Card>
       </Grid>
 
       <Grid item xs={12} md={6} lg={3}>
         <Card>
-          <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
-          />
           <CardMedia
             component="img"
             height="194"
             image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
             alt="Paella dish"
           />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook
-              together with your guests. Add 1 cup of frozen peas along with the mussels,
-              if you like.
-            </Typography>
-          </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
+            <Button
+              color="secondary"
+              variant='text' 
+              onClick={() => { navigate("/ristoranti-per-categoria") }}
+            > 
+              Visualizza 
+            </Button>
           </CardActions>
         </Card>
       </Grid>
@@ -228,7 +178,7 @@ const Dashboard = () => {
     <Grid container fluid sx={{
       marginTop: 5
     }}>
-    <Grid item xs={12} md={12} lg={4}>
+    <Grid item xs={12} md={12} lg={12}>
       <Button fullWidth variant="contained" color="secondary">Segnala un locale</Button>
     </Grid>
  </Grid>
