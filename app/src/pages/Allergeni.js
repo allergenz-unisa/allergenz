@@ -34,7 +34,7 @@ const Allergeni = () => {
         }
         alignItems="flex-start">
           <ListItemAvatar>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+            <Avatar alt="Remy Sharp" src="../../icon/lactose-free.png" />
           </ListItemAvatar>
           <ListItemText
           primary="Lattosio"
@@ -56,10 +56,54 @@ const Allergeni = () => {
         }
         alignItems="flex-start">
           <ListItemAvatar>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+            <Avatar alt="Remy Sharp" src="../../icon/gluten-free.png" />
           </ListItemAvatar>
           <ListItemText
           primary="Glutine"
+          secondary={
+            <React.Fragment>
+              {"Il lattosio è uno zucchero formato da glucosio e galattosio..."}
+            </React.Fragment>
+          }
+        />
+        </ListItem>
+
+        <Divider variant="inset" component="li" />
+
+        <ListItem 
+        secondaryAction={
+          <IconButton edge="end" onClick={() => {navigate("/account")}}>
+              <OpenCard />
+          </IconButton>
+        }
+        alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar alt="Remy Sharp" src="../../icon/no-seafood.png" />
+          </ListItemAvatar>
+          <ListItemText
+          primary="Crostacei"
+          secondary={
+            <React.Fragment>
+              {"Il lattosio è uno zucchero formato da glucosio e galattosio..."}
+            </React.Fragment>
+          }
+        />
+        </ListItem>
+
+        <Divider variant="inset" component="li" />
+
+        <ListItem 
+        secondaryAction={
+          <IconButton edge="end" onClick={() => {navigate("/account")}}>
+              <OpenCard />
+          </IconButton>
+        }
+        alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar alt="Remy Sharp" src="../../icon/peanut-free.png" />
+          </ListItemAvatar>
+          <ListItemText
+          primary="Frutta a guscio"
           secondary={
             <React.Fragment>
               {"Il lattosio è uno zucchero formato da glucosio e galattosio..."}
