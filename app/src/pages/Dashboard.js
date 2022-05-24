@@ -70,8 +70,8 @@ const Dashboard = () => {
             <CardMedia
               component="img"
               height="194"
-              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-              alt="Paella dish"
+              image="../../img/salmon.jpg"
+              alt="Salmone"
             />
             <CardActions disableSpacing>
               <Button
@@ -81,7 +81,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Visualizza
+                Cucina di mare
               </Button>
             </CardActions>
           </Card>
@@ -92,8 +92,8 @@ const Dashboard = () => {
             <CardMedia
               component="img"
               height="194"
-              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-              alt="Paella dish"
+              image="../../img/pizza.jpg"
+              alt="Pizza"
             />
             <CardActions disableSpacing>
               <Button
@@ -103,7 +103,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Visualizza
+                Pizza
               </Button>
             </CardActions>
           </Card>
@@ -114,8 +114,8 @@ const Dashboard = () => {
             <CardMedia
               component="img"
               height="194"
-              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-              alt="Paella dish"
+              image="../../img/hamburger.jpg"
+              alt="Hamburger"
             />
             <CardActions disableSpacing>
               <Button
@@ -125,7 +125,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Visualizza
+                Hamburger
               </Button>
             </CardActions>
           </Card>
@@ -136,8 +136,8 @@ const Dashboard = () => {
             <CardMedia
               component="img"
               height="194"
-              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-              alt="Paella dish"
+              image="../../img/sushi.jpg"
+              alt="Sushi"
             />
             <CardActions disableSpacing>
               <Button
@@ -147,7 +147,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Visualizza
+                Sushi
               </Button>
             </CardActions>
           </Card>
@@ -158,8 +158,8 @@ const Dashboard = () => {
             <CardMedia
               component="img"
               height="194"
-              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-              alt="Paella dish"
+              image="../../img/indian.jpg"
+              alt="Indian dish"
             />
             <CardActions disableSpacing>
               <Button
@@ -169,7 +169,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Visualizza
+                Cucina
               </Button>
             </CardActions>
           </Card>
@@ -180,8 +180,8 @@ const Dashboard = () => {
             <CardMedia
               component="img"
               height="194"
-              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-              alt="Paella dish"
+              image="../../img/fastFood.jpeg"
+              alt="Fast food"
             />
             <CardActions disableSpacing>
               <Button
@@ -191,7 +191,7 @@ const Dashboard = () => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Visualizza
+                Fast food
               </Button>
             </CardActions>
           </Card>
