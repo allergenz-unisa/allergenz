@@ -32,7 +32,12 @@ export default function Registrazione() {
         </Button>
       </div>
 
-      <Button color="secondary" variant="contained">
+      <Button
+        sx={{ color: "white" }}
+        variant={"contained"}
+        color={"secondary"}
+        fullWidth
+      >
         Registrati
       </Button>
     </Box>

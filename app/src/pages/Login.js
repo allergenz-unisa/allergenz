@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  TextField
- } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -27,7 +23,12 @@ export default function Login() {
         </Button>
       </div>
 
-      <Button color="secondary" variant="contained">
+      <Button
+        sx={{ color: "white" }}
+        variant={"contained"}
+        color={"secondary"}
+        fullWidth
+      >
         Login
       </Button>
     </Box>

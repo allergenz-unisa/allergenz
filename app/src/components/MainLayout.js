@@ -27,54 +27,73 @@ const MainLayout = ({ children }) => {
   const drawerWidth = 240;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { title } = useTitleContext();
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   console.log(token);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const text = {
+    color: "white",
+    fontWeight: "bold",
+  };
+
   const drawer = (
     <div>
       <List>
         <ListItem disablePadding onClick={handleDrawerToggle}>
-            <ListItemButton component={Link} to="/">
-              
-              <ListItemText primary={"ALLERGENZ"} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding onClick={handleDrawerToggle}>
-            <ListItemButton component={Link} to="/">
-              <ListItemIcon>
-                <Homepage />
-              </ListItemIcon>
-              <ListItemText primary={"Homepage"} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding onClick={handleDrawerToggle}>
-            <ListItemButton component={Link} to="/allergeni">
-              <ListItemIcon>
-                <Allergens />
-              </ListItemIcon>
-              <ListItemText primary={"Allergeni"} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding onClick={handleDrawerToggle}>
-            <ListItemButton component={Link} to="/account">
-              <ListItemIcon>
-                <ProfiloUtente />
-              </ListItemIcon>
-              <ListItemText primary={"Account"} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding onClick={handleDrawerToggle}>
-            <ListItemButton component={Link} to="/modificaMenu">
-              <ListItemIcon>
-                <MenuIcon/>
-              </ListItemIcon>
-              <ListItemText primary={"ModificaMenu"} />
-            </ListItemButton>
-          </ListItem>
+          <ListItemButton component={Link} to="/">
+            <ListItemText
+              primaryTypographyProps={{ style: text }}
+              primary={"ALLERGENZ"}
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding onClick={handleDrawerToggle}>
+          <ListItemButton component={Link} to="/">
+            <ListItemIcon>
+              <Homepage style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText
+              primaryTypographyProps={{ style: text }}
+              primary={"Homepage"}
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding onClick={handleDrawerToggle}>
+          <ListItemButton component={Link} to="/allergeni">
+            <ListItemIcon>
+              <Allergens style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText
+              primaryTypographyProps={{ style: text }}
+              primary={"Allergeni"}
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding onClick={handleDrawerToggle}>
+          <ListItemButton component={Link} to="/account">
+            <ListItemIcon>
+              <ProfiloUtente style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText
+              primaryTypographyProps={{ style: text }}
+              primary={"Account"}
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding onClick={handleDrawerToggle}>
+          <ListItemButton component={Link} to="/modificaMenu">
+            <ListItemIcon>
+              <MenuIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText
+              primaryTypographyProps={{ style: text }}
+              primary={"ModificaMenu"}
+            />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
       <List>
@@ -82,24 +101,32 @@ const MainLayout = ({ children }) => {
           <ListItem disablePadding>
             <ListItemButton component={Link} to="/login">
               <ListItemIcon>
-                <Login />
+                <Login style={{ color: "white" }} />
               </ListItemIcon>
-              <ListItemText primary={"Login"} />
+              <ListItemText
+                primaryTypographyProps={{ style: text }}
+                primary={"Login"}
+              />
             </ListItemButton>
           </ListItem>
         ) : (
           <ListItem disablePadding>
-          <ListItemButton onClick={() => {
-            localStorage.removeItem('token');
-            window.location.href = '/'
-          }}>
+            <ListItemButton
+              onClick={() => {
+                localStorage.removeItem("token");
+                window.location.href = "/";
+              }}
+            >
               <ListItemIcon>
-                <Login />
+                <Login style={{ color: "white" }} />
               </ListItemIcon>
-              <ListItemText primary={"Logout"} />
+              <ListItemText
+                primaryTypographyProps={{ style: text }}
+                primary={"Logout"}
+              />
             </ListItemButton>
           </ListItem>
-        ) }
+        )}
       </List>
     </div>
   );
@@ -125,7 +152,7 @@ const MainLayout = ({ children }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" noWrap component="div">
+          <Typography variant="h6" noWrap component="div">
             {title}
           </Typography>
         </Toolbar>
@@ -160,9 +187,9 @@ const MainLayout = ({ children }) => {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: "none" } }}
             >
-              <CloseIcon/>
+              <CloseIcon style={{ color: "white" }} />
             </IconButton>
-            </Toolbar>
+          </Toolbar>
           <Divider />
           {drawer}
         </Drawer>
