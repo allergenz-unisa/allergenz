@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Card,
+  CardActionArea,
   CardActions,
   CardContent,
   CardHeader,
@@ -28,233 +29,277 @@ const Dashboard = () => {
   }, []);
   return (
     <div>
-      <Grid
+      <Box maxWidth="lg" justifyContent="center" margin="auto">
+        <Grid
           container
           justifyContent="center"
           alignItems="center"
           alignSelf="center"
-      >
-        <Grid item>
-          <Typography variant="h4" component="h1">
-            ALLERGENZ
-          </Typography>
-        </Grid>
+        >
+          <Grid item>
+            <Typography variant="h4" component="h1">
+              ALLERGENZ
+            </Typography>
+          </Grid>
 
-        <Grid item xs={12}>
-          <OutlinedInput
-            sx={{marginTop: 2, marginBottom: 5}}
-            fullWidth
-            placeholder="Per effettuare una ricerca inizia a scrivere..."
-            id="outlined-adornment-weight"
-            endAdornment={
-              <InputAdornment position="end">
-                {" "}
-                <Search />{" "}
-              </InputAdornment>
-            }
-            aria-describedby="outlined-weight-helper-text"
-            inputProps={{
-              "aria-label": "weight",
-            }}
-          />
-        </Grid>
-      </Grid>
-
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/salmon.jpg"
-              alt="Salmone"
+          <Grid item xs={12}>
+            <OutlinedInput
+              sx={{ marginTop: 2, marginBottom: 5 }}
+              fullWidth
+              placeholder="Per effettuare una ricerca inizia a scrivere..."
+              id="outlined-adornment-weight"
+              endAdornment={
+                <InputAdornment position="end">
+                  {" "}
+                  <Search />{" "}
+                </InputAdornment>
+              }
+              aria-describedby="outlined-weight-helper-text"
+              inputProps={{
+                "aria-label": "weight",
+              }}
             />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={2}>
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Cucina di mare
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/salmon.jpg"
+                  alt="Salmone"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Cucina di mare
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/pizza.jpg"
-              alt="Pizza"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Pizza
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/pizza.jpg"
+                  alt="Pizza"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Pizza
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/hamburger.jpg"
-              alt="Hamburger"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Hamburger
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/hamburger.jpg"
+                  alt="Hamburger"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Hamburger
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/sushi.jpg"
-              alt="Sushi"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Sushi
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/sushi.jpg"
+                  alt="Sushi"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Sushi
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/indian.jpg"
-              alt="Indian dish"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Cucina indiana
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/indian.jpg"
+                  alt="Indian dish"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Cucina indiana
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/fastFood.jpeg"
-              alt="Fast food"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Fast food
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/fastFood.jpeg"
+                  alt="Fast food"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Fast food
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/carne.jpeg"
-              alt="Carne"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Cucina di terra
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/carne.jpeg"
+                  alt="Carne"
+                />
+                <CardActions disableSpacing>
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate("/ristoranti-per-categoria");
+                    }}
+                  >
+                    Cucina di terra
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="194"
-              image="../../img/pita.jpg"
-              alt="Pita"
-            />
-            <CardActions disableSpacing>
-              <Button
-                color="secondary"
-                variant="text"
+          <Grid item xs={6} md={4} lg={3}>
+            <Card>
+              <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria");
                 }}
               >
-                Piadine e pite
-              </Button>
-            </CardActions>
-          </Card>
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image="../../img/pita.jpg"
+                  alt="Pita"
+                />
+                <CardActions disableSpacing>
+                  <Button color="secondary" variant="text">
+                    Piadine e pite
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid
-        container
-        fluid
-        sx={{
-          marginTop: 5,
-        }}
-      >
-        <Grid item xs={12} md={12} lg={12}>
-          <Button
-            sx={{ color: "white" }}
-            variant={"contained"}
-            color={"secondary"}
-            fullWidth
-          >
-            Segnala un locale
-          </Button>
+        <Grid
+          container
+          fluid
+          sx={{
+            marginTop: 5,
+          }}
+        >
+          <Grid item xs={12} md={12} lg={12}>
+            <Button
+              sx={{ color: "white" }}
+              variant={"contained"}
+              color={"secondary"}
+              fullWidth
+            >
+              Segnala un locale
+            </Button>
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </div>
   );
 };

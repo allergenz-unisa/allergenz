@@ -5,16 +5,26 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <Box
+      justifyContent="center"
+      alignItems="center"
+      alignSelf="center"
+      margin="auto"
       component="form"
       sx={{
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
+        maxWidth: 400,
+        "& .MuiTextField-root": { m: 1 },
       }}
       noValidate
       autoComplete="off"
     >
       <div>
-        <TextField id="email" label="Email" />
-        <TextField id="password-input" label="Password" type="password" />
+        <TextField fullWidth id="email" label="Email" />
+        <TextField
+          fullWidth
+          id="password-input"
+          label="Password"
+          type="password"
+        />
       </div>
 
       <div>
