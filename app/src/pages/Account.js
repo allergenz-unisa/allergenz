@@ -1,5 +1,16 @@
 import React, { useEffect } from "react";
-import { Avatar, Box, Button, Icon, TextField, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Icon,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  TextField,
+  Typography,
+} from "@mui/material";
 import useTitleContext from "../components/PageTitleContext";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
@@ -27,46 +38,52 @@ const Account = () => {
       autoComplete="off"
     >
       <Card>
-        <Box
-          justifyContent="center"
-          alignItems="center"
-          alignSelf="center"
-          margin="auto"
-          sx={{
-            maxWidth: 300,
-          }}
-        >
+        <List>
+          <ListItem>
             <Avatar
               alt="Profile Image"
               src="../../img/person.jpg"
-              sx={{ 
-                width: 120, 
-                height: 120, 
-                border: 2, 
-                borderColor: "#b34b2a" }}
+              sx={{
+                width: 120,
+                height: 120,
+                border: 2,
+                borderColor: "#b34b2a",
+              }}
             />
-            <Icon> 
-                <DatiAnagrafici />
-            </Icon>
-            <Typography sx = {{marginTop: 2, fontWeight: "bold" }}> Dati anagrafici </Typography>
+          </ListItem>
+
+          <ListItem>
+            <ListItemIcon>
+              <DatiAnagrafici />
+            </ListItemIcon>
+            <ListItemText primary="Dati Anagrafici" />
+          </ListItem>
+          <ListItem>
             <TextField fullWidth id="nome" label="nome" />
+          </ListItem>
+          <ListItem>
             <TextField fullWidth id="cognome" label="cognome" />
+          </ListItem>
+          <ListItem>
             <TextField fullWidth id="email" label="email" />
+          </ListItem>
+          <ListItem>
             <TextField fullWidth id="password" label="password" />
-         
+          </ListItem>
 
-            <Icon> 
-                <Intolleranze />
-            </Icon>
-            <Typography sx = {{marginTop: 2, fontWeight: "bold" }}> Intolleranze </Typography>
+          <ListItem>
+            <ListItemIcon>
+              <Intolleranze />
+            </ListItemIcon>
+            <ListItemText primary="Intolleranze" />
+          </ListItem>
+          <ListItem>
             <TextField fullWidth id="intolleranza1" label="intolleranza1" />
+          </ListItem>
+          <ListItem>
             <TextField fullWidth id="intolleranza2" label="intolleranza2" />
-          
-
-          <IconButton aria-label="edit">
-            <EditIcon />
-          </IconButton>
-        </Box>
+          </ListItem>
+        </List>
       </Card>
     </Box>
   );

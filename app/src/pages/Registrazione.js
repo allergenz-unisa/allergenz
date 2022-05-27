@@ -1,25 +1,34 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import React from "react";
+import { Box, Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function Registrazione() {
   return (
     <Box
+      justifyContent="center"
+      alignItems="center"
+      alignSelf="center"
+      margin="auto"
       component="form"
       sx={{
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
+        maxWidth: 400,
+        "& .MuiTextField-root": { m: 1 },
       }}
       noValidate
       autoComplete="off"
     >
       <div>
-        <TextField id="nome" label="Nome" />
-        <TextField id="cognome" label="Cognome" />
-        <TextField id="email" label="Email" />
-        <TextField id="password-input" label="Password" type="password" />
+        <TextField fullWidth id="nome" label="Nome" />
+        <TextField fullWidth id="cognome" label="Cognome" />
+        <TextField fullWidth id="email" label="Email" />
         <TextField
+          fullWidth
+          id="password-input"
+          label="Password"
+          type="password"
+        />
+        <TextField
+          fullWidth
           id="password-confirm"
           label="Conferma password"
           type="password"
