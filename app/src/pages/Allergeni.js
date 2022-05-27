@@ -33,7 +33,7 @@ const Allergeni = () => {
                 <IconButton
                   edge="end"
                   onClick={() => {
-                    navigate("/account");
+                    navigate("/lattosio");
                   }}
                 >
                   <OpenCard />
@@ -136,6 +136,66 @@ const Allergeni = () => {
               </ListItemAvatar>
               <ListItemText
                 primary="Frutta a guscio"
+                secondary={
+                  <React.Fragment>
+                    {
+                      "Il lattosio è uno zucchero formato da glucosio e galattosio..."
+                    }
+                  </React.Fragment>
+                }
+              />
+            </ListItem>
+
+            <Divider variant="inset" component="li" />
+
+            <ListItem
+              secondaryAction={
+                <IconButton
+                  edge="end"
+                  onClick={() => {
+                    navigate("/account");
+                  }}
+                >
+                  <OpenCard />
+                </IconButton>
+              }
+              alignItems="flex-start"
+            >
+              <ListItemAvatar>
+                <Avatar alt="Remy Sharp" src="../../icon/peanut-free.png" />
+              </ListItemAvatar>
+              <ListItemText
+                primary="Nichel"
+                secondary={
+                  <React.Fragment>
+                    {
+                      "Il lattosio è uno zucchero formato da glucosio e galattosio..."
+                    }
+                  </React.Fragment>
+                }
+              />
+            </ListItem>
+
+            <Divider variant="inset" component="li" />
+
+            <ListItem
+              secondaryAction={
+                <IconButton
+                  edge="end"
+                  onClick={() => {
+                    navigate("/account");
+                  }}
+                >
+                  <OpenCard />
+                </IconButton>
+              }
+              alignItems="flex-start"
+            >
+              <ListItemAvatar>
+                <Avatar alt="Remy Sharp" src="../../icon/peanut-free.png" />
+              </ListItemAvatar>
+              <ListItemText
+                primary="Proteina LTP"
                 secondary={
                   <React.Fragment>
                     {

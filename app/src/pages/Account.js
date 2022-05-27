@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import { Box, Button, TextField } from "@mui/material";
+import { Avatar, Box, Button, Icon, TextField, Typography } from "@mui/material";
 import useTitleContext from "../components/PageTitleContext";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
+import DatiAnagrafici from "@mui/icons-material/AccountBox";
+import Intolleranze from "@mui/icons-material/DinnerDining";
 
 import Card from "@mui/material/Card";
 const Account = () => {
@@ -34,17 +36,32 @@ const Account = () => {
             maxWidth: 300,
           }}
         >
-          <div>
+            <Avatar
+              alt="Profile Image"
+              src="../../img/person.jpg"
+              sx={{ 
+                width: 120, 
+                height: 120, 
+                border: 2, 
+                borderColor: "#b34b2a" }}
+            />
+            <Icon> 
+                <DatiAnagrafici />
+            </Icon>
+            <Typography sx = {{marginTop: 2, fontWeight: "bold" }}> Dati anagrafici </Typography>
             <TextField fullWidth id="nome" label="nome" />
             <TextField fullWidth id="cognome" label="cognome" />
             <TextField fullWidth id="email" label="email" />
             <TextField fullWidth id="password" label="password" />
-          </div>
+         
 
-          <div>
+            <Icon> 
+                <Intolleranze />
+            </Icon>
+            <Typography sx = {{marginTop: 2, fontWeight: "bold" }}> Intolleranze </Typography>
             <TextField fullWidth id="intolleranza1" label="intolleranza1" />
             <TextField fullWidth id="intolleranza2" label="intolleranza2" />
-          </div>
+          
 
           <IconButton aria-label="edit">
             <EditIcon />

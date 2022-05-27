@@ -11,6 +11,7 @@ import { TitleContextProvider } from "./components/PageTitleContext";
 import FormInsPortata from "./pages/FormInsPortata";
 import InfoRistorante from "./pages/InfoRistorante";
 import RistoCategoria from "./pages/RistoCategoria";
+import Lattosio from "./pages/Lattosio";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/inserimento-portata" element={<FormInsPortata />}/>
             <Route path="/dettagli-ristorante" element={<InfoRistorante />}/>
             <Route path="/ristoranti-per-categoria" element={<RistoCategoria />}/>
+            <Route path="/lattosio" element={<Lattosio />}/>
           </Routes>
         </MainLayout>
       </TitleContextProvider>
