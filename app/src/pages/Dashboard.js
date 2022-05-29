@@ -19,6 +19,7 @@ import Search from "@mui/icons-material/Search";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import useTitleContext from "../components/PageTitleContext";
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../images/logo/4x/allergens_logo@4x.png";
 
 const Dashboard = () => {
   let navigate = useNavigate();
@@ -36,11 +37,16 @@ const Dashboard = () => {
           alignItems="center"
           alignSelf="center"
         >
-          <Grid item>
-            <Typography variant="h4" component="h1">
-              ALLERGENZ
-            </Typography>
-          </Grid>
+          <Box
+            component="img"
+            sx={{
+              maxWidth: 300,
+            }}
+            alt="Logo"
+            src={logo}
+          />
+
+          <Grid item></Grid>
 
           <Grid item xs={12}>
             <OutlinedInput

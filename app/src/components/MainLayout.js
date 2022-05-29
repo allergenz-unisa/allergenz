@@ -22,6 +22,7 @@ import Login from "@mui/icons-material/Login";
 import ProfiloUtente from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import useTitleContext from "./PageTitleContext";
+import logo from "../images/logo/2x/allergens_logo_w@2x.png";
 
 const MainLayout = ({ children }) => {
   const drawerWidth = 240;
@@ -44,9 +45,13 @@ const MainLayout = ({ children }) => {
       <List>
         <ListItem disablePadding onClick={handleDrawerToggle}>
           <ListItemButton component={Link} to="/">
-            <ListItemText
-              primaryTypographyProps={{ style: text }}
-              primary={"ALLERGENZ"}
+            <Box
+              component="img"
+              sx={{
+                maxWidth: 150,
+              }}
+              alt="Logo"
+              src={logo}
             />
           </ListItemButton>
         </ListItem>
