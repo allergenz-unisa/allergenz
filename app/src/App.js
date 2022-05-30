@@ -12,6 +12,7 @@ import FormInsPortata from "./pages/FormInsPortata";
 import InfoRistorante from "./pages/InfoRistorante";
 import RistoCategoria from "./pages/RistoCategoria";
 import Lattosio from "./pages/Lattosio";
+import FormSegnalazione from "./pages/FormSegnalazione";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/dettagli-ristorante" element={<InfoRistorante />}/>
             <Route path="/ristoranti-per-categoria" element={<RistoCategoria />}/>
             <Route path="/lattosio" element={<Lattosio />}/>
+            <Route path="/form-segnalazione-locale" element={<FormSegnalazione />}/>
           </Routes>
         </MainLayout>
       </TitleContextProvider>

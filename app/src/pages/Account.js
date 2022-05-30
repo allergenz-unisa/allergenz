@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Icon,
+  IconButton,
   List,
   ListItem,
   ListItemIcon,
@@ -12,12 +13,12 @@ import {
   Typography,
 } from "@mui/material";
 import useTitleContext from "../components/PageTitleContext";
-import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 import DatiAnagrafici from "@mui/icons-material/AccountBox";
 import Intolleranze from "@mui/icons-material/DinnerDining";
 
 import Card from "@mui/material/Card";
+import { Link } from "react-router-dom";
 const Account = () => {
   const { changeTitle } = useTitleContext();
   useEffect(() => {
@@ -56,7 +57,7 @@ const Account = () => {
             <ListItemIcon>
               <DatiAnagrafici />
             </ListItemIcon>
-            <ListItemText primary="Dati Anagrafici" />
+            <ListItemText primary="Dati Anagrafici"/>
           </ListItem>
           <ListItem>
             <TextField fullWidth id="nome" label="nome" />
@@ -82,6 +83,13 @@ const Account = () => {
           </ListItem>
           <ListItem>
             <TextField fullWidth id="intolleranza2" label="intolleranza2" />
+          </ListItem>
+
+          <ListItem sx={{mb: 2, mt: 2}} secondaryAction={
+            <IconButton edge="end" component={Link} to="/allergeni" color= "secondary">
+              <EditIcon />
+            </IconButton>
+          }>
           </ListItem>
         </List>
       </Card>

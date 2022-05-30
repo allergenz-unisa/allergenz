@@ -294,6 +294,9 @@ const Dashboard = () => {
               variant={"contained"}
               color={"secondary"}
               fullWidth
+              onClick={() => {
+                navigate("/form-segnalazione-locale");
+              }}
             >
               Segnala un locale
             </Button>
