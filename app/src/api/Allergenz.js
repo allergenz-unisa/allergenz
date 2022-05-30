@@ -22,7 +22,67 @@ const getRestarantById = async (id) => {
     }
 }
 
+const getRestarantByName = async (localName) => {
+    try {
+        const response = await restaurants.get(`/restaurants/${localName}`);
+        return response.data;
+    } catch(e) {
+        throw new Error (e.message);
+    }
+}
+
+const getRestarantByCity = async (citta) => {
+    try {
+        const response = await restaurants.get(`/restaurants/${citta}`);
+        return response.data;
+    } catch(e) {
+        throw new Error (e.message);
+    }
+}
+
+const addNewRestaurant = async (newOne) => {
+    try {
+        await restaurants.post(`/restaurants`, newOne);
+    } catch (e) {
+        throw new Error(e.message);
+    }
+}
+
+const updateRestaurant = async (restaurant) => {
+    try {
+        await restaurants.put(`/restaurants/${restaurant.id}`, {
+        ...restaurant
+        });
+    } catch (e) {
+        throw new Error (e.message);
+    }
+}
+
+const getDishById = async (id) => {
+    try {
+        const response = await restaurants.get(`/restaurants/Menu/${id}`);
+        return response.data;
+    } catch(e) {
+        throw new Error (e.message);
+    }
+}
+
+const getDishByName = async (name) => {
+    try {
+        const response = await restaurants.get(`/restaurants/Menu/${name}`);
+        return response.data;
+    } catch(e) {
+        throw new Error (e.message);
+    }
+}
+
 export {
     getAllRestaurants,
-    getRestarantById
+    getRestarantById,
+    getRestarantByName,
+    getRestarantByCity,
+    addNewRestaurant,
+    updateRestaurant,
+    getDishById,
+    getDishByName
 }

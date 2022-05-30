@@ -9,16 +9,7 @@
                 "cap": "84091"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "sushi"
-                },
-                {
-                    "id": "2",
-                    "categoria": "fast food"
-                }
-            ],
+            "Cucina": "sushi",
 
             "AllergenFree": [
                 {
@@ -68,16 +59,7 @@
                 "cap": "84121"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "sushi"
-                },
-                {
-                    "id": "2",
-                    "categoria": "fast food"
-                }
-            ],
+            "Cucina": "sushi",
 
             "AllergenFree": [
                 {
@@ -127,16 +109,7 @@
                 "cap": "84047"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "sushi"
-                },
-                {
-                    "id": "2",
-                    "categoria": "fast food"
-                }
-            ],
+            "Cucina": "sushi",
 
             "AllergenFree": [
                 {
@@ -187,16 +160,7 @@
                 "cap": "84121"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "hamburger"
-                },
-                {
-                    "id": "2",
-                    "categoria": "fast food"
-                }
-            ],
+            "Cucina": "hamburger",
 
             "AllergenFree": [
                 {
@@ -248,16 +212,7 @@
                 "cap": "84121"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "hamburger"
-                },
-                {
-                    "id": "2",
-                    "categoria": "fast food"
-                }
-            ],
+            "Cucina": "hamburger",
 
             "AllergenFree": [
                 {
@@ -309,16 +264,7 @@
                 "cap": "84122"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "hamburger"
-                },
-                {
-                    "id": "2",
-                    "categoria": "fast food"
-                }
-            ],
+            "Cucina": "hamburger",
 
             "AllergenFree": [
                 {
@@ -365,12 +311,7 @@
                 "cap": "56125"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "cucina indiana"
-                }
-            ],
+            "Cucina": "indiana",
 
             "AllergenFree": [
                 {
@@ -425,12 +366,7 @@
                 "cap": "84121"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "cucina indiana"
-                }
-            ],
+            "Cucina": "indiana",
 
             "AllergenFree": [
                 {
@@ -481,12 +417,7 @@
                 "cap": "80138"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "pizza"
-                }
-            ],
+            "Cucina": "pizza",
 
             "AllergenFree": [
                 {
@@ -541,12 +472,7 @@
                 "cap": "80138"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "pizza"
-                }
-            ],
+            "Cucina": "pizza",
 
             "AllergenFree": [
                 {
@@ -597,12 +523,7 @@
                 "cap": "80138"
             },
 
-            "Cucina": [
-                {
-                    "id": "1",
-                    "categoria": "pizza"
-                }
-            ],
+            "Cucina": "pizza",
 
             "AllergenFree": [
                 {
