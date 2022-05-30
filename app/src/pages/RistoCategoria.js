@@ -40,7 +40,7 @@ const RistoCategoria = () => {
                 />
             </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"
@@ -70,7 +70,7 @@ const RistoCategoria = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"
@@ -100,7 +100,7 @@ const RistoCategoria = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"
@@ -130,7 +130,7 @@ const RistoCategoria = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"
@@ -160,7 +160,7 @@ const RistoCategoria = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"
@@ -190,7 +190,7 @@ const RistoCategoria = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"
@@ -220,7 +220,7 @@ const RistoCategoria = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card onClick={() => {navigate("/dettagli-ristorante")}}>
                         <CardHeader
                             title="Shrimp and Chorizo Paella"

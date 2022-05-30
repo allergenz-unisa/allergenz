@@ -12,7 +12,7 @@ const GoBackButton = (props) => {
             variant="outlined" 
             color="secondary"> 
                 Indietro 
-    </Button>
+        </Button>
     )
     
 }

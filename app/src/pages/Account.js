@@ -2,28 +2,27 @@ import React, { useEffect } from "react";
 import {
   Avatar,
   Box,
-  Button,
-  Icon,
   IconButton,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   TextField,
-  Typography,
 } from "@mui/material";
 import useTitleContext from "../components/PageTitleContext";
 import EditIcon from "@mui/icons-material/Edit";
 import DatiAnagrafici from "@mui/icons-material/AccountBox";
 import Intolleranze from "@mui/icons-material/DinnerDining";
-
 import Card from "@mui/material/Card";
 import { Link } from "react-router-dom";
+
+
 const Account = () => {
   const { changeTitle } = useTitleContext();
   useEffect(() => {
     changeTitle("Il tuo profilo");
   }, []);
+  
   return (
     <Box
       justifyContent="center"
