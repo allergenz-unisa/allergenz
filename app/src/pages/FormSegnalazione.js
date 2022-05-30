@@ -72,91 +72,91 @@ const FormSegnalazione = () => {
 
   return(
       <div sx={{bgcolor: '#FAF4F4'}}>
-          <Grid continer>
+        <Grid container>
+          <Grid item xs={12} md={2} lg={3} />
+          <Grid item xs={12} md={8} lg={6}>
             <Paper>
-                <Grid item xs={12} md={6} lg={6}>
-                    <Typography sx={{mr: 2, ml: 2, mb: 2}} variant="h4" component="h1"> Segnala un locale</Typography>
-                    <Typography sx={{mr: 2, ml: 2, mb: 2}}> Grazie per aver scelto di contribuire alla crescita della nostra community! Grazie a te, sempre meno persone con intolleranze alimentari avranno difficoltà a trovare e scegliere un ristorante in cui poter mangiare. Ti invitiamo a inserire i dati a tua disposizione nel form di seguito... </Typography>
-                </Grid>
-
-                <Grid item xs={12} md={6} lg={2}>
-                    <List>
+                <Typography sx={{mr: 2, ml: 2, mb: 2}} variant="h4" component="h1"> Segnala un locale</Typography>
+                <Typography sx={{mr: 2, ml: 2, mb: 2}}> Grazie per aver scelto di contribuire alla crescita della nostra community! Grazie a te, sempre meno persone con intolleranze alimentari avranno difficoltà a trovare e scegliere un ristorante in cui poter mangiare. Ti invitiamo a inserire i dati a tua disposizione nel form di seguito... </Typography>
+                <List>
+                    <ListItem>
+                        <Typography variant="h6" component="h2" sx={{fontWeight: "bold"}}> Dati del locale </Typography>
+                    </ListItem>
+                    <ListItem>
+                        <TextField fullWidth id="NomeLocale" label="Nome del locale"/>
+                    </ListItem>
+                    <ListItem>
+                        <TextField fullWidth id="Via" label="Via..."/>
+                    </ListItem>
+                    <ListItem>
+                        <TextField fullWidth id="Citta" label="Città"/>
+                    </ListItem>
+                    <ListItem>
+                        <TextField fullWidth id="CAP" label="CAP"/>
+                    </ListItem>
+                    <ListItem>
+                        <TextField 
+                            fullWidth
+                            select 
+                            helperText="Selezionare un tipo di cucina" 
+                            id="Cucina" 
+                            label="Cucina"
+                        >
+                            {cucine.map((option) => (
+                            <MenuItem key={option.value} value={option.value}>
+                            {option.label}
+                            </MenuItem>
+                            ))}
+                        </TextField>
+                    </ListItem>
                         <ListItem>
-                            <Typography variant="h6" component="h2" sx={{fontWeight: "bold"}}> Dati del locale </Typography>
-                        </ListItem>
-                        <ListItem>
-                            <TextField fullWidth id="NomeLocale" label="Nome del locale"/>
-                        </ListItem>
-                        <ListItem>
-                            <TextField fullWidth id="Via" label="Via..."/>
-                        </ListItem>
-                        <ListItem>
-                            <TextField fullWidth id="Citta" label="Città"/>
-                        </ListItem>
-                        <ListItem>
-                            <TextField fullWidth id="CAP" label="CAP"/>
-                        </ListItem>
-                        <ListItem>
-                            <TextField 
-                                fullWidth
+                            <TextField
+                                fullWidth 
                                 select 
-                                helperText="Selezionare un tipo di cucina" 
-                                id="Cucina" 
-                                label="Cucina"
+                                helperText="Selezionare l'allergene che è possibile evitare in questo locale" 
+                                id="Allergene" 
+                                label="Allergene"
                             >
-                                {cucine.map((option) => (
+                                {allergeni.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                 {option.label}
                                 </MenuItem>
                                 ))}
                             </TextField>
                         </ListItem>
-                            <ListItem>
-                                <TextField
-                                    fullWidth 
-                                    select 
-                                    helperText="Selezionare l'allergene che è possibile evitare in questo locale" 
-                                    id="Allergene" 
-                                    label="Allergene"
-                                >
-                                    {allergeni.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                    {option.label}
-                                    </MenuItem>
-                                    ))}
-                                </TextField>
-                            </ListItem>
 
-                            <ListItem>
-                                <Grid container direction="row" spacing={2}>
-                                <Grid item>
-                                        <Button
-                                        variant="contained" 
-                                        color="secondary"
-                                        style={{ color: "white" }}
-                                        onClick={() => {navigate("/conferma")}}
-                                        >
-                                            Conferma
-                                        </Button>
-                                    </Grid>
-
-                                    <Grid item>
-                                        <Button
-                                        variant="outlined" 
-                                        color="secondary"
-                                        onClick={() => {navigate(-1)}}
-                                        > 
-                                            Annulla
-                                        </Button>
-                                    </Grid>
+                        <ListItem>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} md={6}>
+                                    <Button
+                                    fullWidth
+                                    variant="contained" 
+                                    color="secondary"
+                                    style={{ color: "white" }}
+                                    onClick={() => {navigate("/conferma")}}
+                                    >
+                                        Conferma
+                                    </Button>
                                 </Grid>
 
-                            </ListItem>
-                    </List>
-                </Grid> 
+                                <Grid item xs={12} md={6}>
+                                    <Button
+                                    fullWidth
+                                    variant="outlined" 
+                                    color="secondary"
+                                    onClick={() => {navigate(-1)}}
+                                    > 
+                                        Annulla
+                                    </Button>
+                                </Grid>
+                            </Grid>
+
+                        </ListItem>
+                </List>
             </Paper>
           </Grid>
-          
+          <Grid item xs={12} md={2} lg={3} />
+        </Grid>
           
       </div>
   );
