@@ -22,7 +22,7 @@ const Account = () => {
   useEffect(() => {
     changeTitle("Il tuo profilo");
   }, []);
-  
+
   return (
     <Box
       justifyContent="center"
@@ -33,6 +33,7 @@ const Account = () => {
       sx={{
         maxWidth: 400,
         "& .MuiTextField-root": { m: 1 },
+        backgroundColor: "#FAF4F4"
       }}
       noValidate
       autoComplete="off"
@@ -59,16 +60,16 @@ const Account = () => {
             <ListItemText primary="Dati Anagrafici"/>
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="nome" label="nome" />
+            <TextField fullWidth id="fullName" label="Nome e cognome" />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="cognome" label="cognome" />
+            <TextField fullWidth id="username" label="Username" />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="email" label="email" />
+            <TextField fullWidth id="email" label="Email" />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="password" label="password" />
+            <TextField fullWidth id="password" label="Password" />
           </ListItem>
 
           <ListItem>

@@ -335,7 +335,9 @@
                     "name": "Maguro",
                     "descrizione": "Nigiri con una fettina di tonno",
                     "allergenFree": [
-                        
+                        {
+                            "img": "gluten-free.png"
+                        }
                     ] 
                 },
                 {
@@ -568,5 +570,22 @@
                 }
             ]
         }
+    ],
+
+    "users": [
+        {
+            "id": 1,
+            "fullName": "Alessia Amato",
+            "username": "AleAle",
+            "email": "a.amato85@studenti.unisa.it",
+            "password": "Allergenz",
+            "intolleranze": [
+                {
+                    "id": 1,
+                    "int": "lattosio"
+                }
+            ]
+        }
     ]
+
 }

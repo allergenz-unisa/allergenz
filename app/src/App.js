@@ -14,6 +14,7 @@ import RistoCategoria from "./pages/RistoCategoria";
 import Lattosio from "./pages/Lattosio";
 import FormSegnalazione from "./pages/FormSegnalazione";
 import Conferma from "./pages/Conferma";
+import "./index.css";
 
 function App() {
   return (

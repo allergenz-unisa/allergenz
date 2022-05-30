@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const restaurants = axios.create({
+const api = axios.create({
     baseURL: 'http://localhost:3001'
 });
 
 const getAllRestaurants = async () => {
     try {
-        const response = await restaurants.get(`/restaurants`);
+        const response = await api.get(`/restaurants`);
         return response.data;
     } catch(e) {
         throw new Error (e.message);
@@ -15,7 +15,7 @@ const getAllRestaurants = async () => {
 
 const getRestarantById = async (id) => {
     try {
-        const response = await restaurants.get(`/restaurants/${id}`);
+        const response = await api.get(`/restaurants/${id}`);
         return response.data;
     } catch(e) {
         throw new Error (e.message);
@@ -24,7 +24,7 @@ const getRestarantById = async (id) => {
 
 const getRestarantByName = async (localName) => {
     try {
-        const response = await restaurants.get(`/restaurants/${localName}`);
+        const response = await api.get(`/restaurants/${localName}`);
         return response.data;
     } catch(e) {
         throw new Error (e.message);
@@ -33,7 +33,7 @@ const getRestarantByName = async (localName) => {
 
 const getRestarantByCity = async (citta) => {
     try {
-        const response = await restaurants.get(`/restaurants/${citta}`);
+        const response = await api.get(`/restaurants/${citta}`);
         return response.data;
     } catch(e) {
         throw new Error (e.message);
@@ -42,7 +42,7 @@ const getRestarantByCity = async (citta) => {
 
 const addNewRestaurant = async (newOne) => {
     try {
-        await restaurants.post(`/restaurants`, newOne);
+        await api.post(`/restaurants`, newOne);
     } catch (e) {
         throw new Error(e.message);
     }
@@ -50,7 +50,7 @@ const addNewRestaurant = async (newOne) => {
 
 const updateRestaurant = async (restaurant) => {
     try {
-        await restaurants.put(`/restaurants/${restaurant.id}`, {
+        await api.put(`/restaurants/${restaurant.id}`, {
         ...restaurant
         });
     } catch (e) {
@@ -60,7 +60,7 @@ const updateRestaurant = async (restaurant) => {
 
 const getDishById = async (id) => {
     try {
-        const response = await restaurants.get(`/restaurants/Menu/${id}`);
+        const response = await api.get(`/restaurants/Menu/${id}`);
         return response.data;
     } catch(e) {
         throw new Error (e.message);
@@ -69,10 +69,21 @@ const getDishById = async (id) => {
 
 const getDishByName = async (name) => {
     try {
-        const response = await restaurants.get(`/restaurants/Menu/${name}`);
+        const response = await api.get(`/restaurants/Menu/${name}`);
         return response.data;
     } catch(e) {
         throw new Error (e.message);
+    }
+}
+
+const addNewUser = async (user) => {
+    try {
+        Object.assign(user, {
+            token: Date.now()
+        })
+        await api.post(`/users`, user);
+    } catch (e) {
+        throw new Error(e.message);
     }
 }
 
@@ -84,5 +95,6 @@ export {
     addNewRestaurant,
     updateRestaurant,
     getDishById,
-    getDishByName
+    getDishByName,
+    addNewUser
 }

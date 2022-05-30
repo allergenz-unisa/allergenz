@@ -71,7 +71,7 @@ const FormSegnalazione = () => {
     }, []);
 
   return(
-      <div>
+      <div sx={{bgcolor: '#FAF4F4'}}>
           <Grid continer>
             <Paper>
                 <Grid item xs={12} md={6} lg={6}>
@@ -128,7 +128,7 @@ const FormSegnalazione = () => {
                             </ListItem>
 
                             <ListItem>
-                                <Grid container spacing={2}>
+                                <Grid container direction="row" spacing={2}>
                                 <Grid item>
                                         <Button
                                         variant="contained" 
