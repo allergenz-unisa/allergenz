@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Avatar,
   Box,
@@ -15,11 +15,22 @@ import DatiAnagrafici from "@mui/icons-material/AccountBox";
 import Intolleranze from "@mui/icons-material/DinnerDining";
 import Card from "@mui/material/Card";
 import { Link } from "react-router-dom";
-
+import { getUserByToken } from "../api/Allergenz";
 
 const Account = () => {
+  const [user, setUser] = useState("");
   const { changeTitle } = useTitleContext();
+
+  const token = localStorage.getItem("token");
+  console.log(token);
+
+  async function getUtente() {
+    const user = await getUserByToken();
+    setUser(user);
+  }
+
   useEffect(() => {
+    getUtente();
     changeTitle("Il tuo profilo");
   }, []);
 
@@ -33,7 +44,7 @@ const Account = () => {
       sx={{
         maxWidth: 400,
         "& .MuiTextField-root": { m: 1 },
-        backgroundColor: "#FAF4F4"
+        backgroundColor: "#FAF4F4",
       }}
       noValidate
       autoComplete="off"
@@ -57,19 +68,19 @@ const Account = () => {
             <ListItemIcon>
               <DatiAnagrafici />
             </ListItemIcon>
-            <ListItemText primary="Dati Anagrafici"/>
+            <ListItemText primary="Dati Anagrafici" />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="fullName" label="Nome e cognome" />
+            <TextField fullWidth id="fullName" label={user.fullName} />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="username" label="Username" />
+            <TextField fullWidth id="username" label={user.username} />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="email" label="Email" />
+            <TextField fullWidth id="email" label={user.email} />
           </ListItem>
           <ListItem>
-            <TextField fullWidth id="password" label="Password" />
+            <TextField fullWidth id="password" label={user.password} />
           </ListItem>
 
           <ListItem>
@@ -85,12 +96,19 @@ const Account = () => {
             <TextField fullWidth id="intolleranza2" label="intolleranza2" />
           </ListItem>
 
-          <ListItem sx={{mb: 2, mt: 2}} secondaryAction={
-            <IconButton edge="end" component={Link} to="/allergeni" color= "secondary">
-              <EditIcon />
-            </IconButton>
-          }>
-          </ListItem>
+          <ListItem
+            sx={{ mb: 2, mt: 2 }}
+            secondaryAction={
+              <IconButton
+                edge="end"
+                component={Link}
+                to="/allergeni"
+                color="secondary"
+              >
+                <EditIcon />
+              </IconButton>
+            }
+          ></ListItem>
         </List>
       </Card>
     </Box>
