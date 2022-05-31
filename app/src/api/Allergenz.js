@@ -31,6 +31,15 @@ const getRestarantByName = async (localName) => {
     }
 }
 
+const getRestarantByCategory = async (category) => {
+    try {
+        const response = await api.get(`/restaurants/${category}`);
+        return response.data;
+    } catch(e) {
+        throw new Error (e.message);
+    }
+}
+
 const getRestarantByCity = async (citta) => {
     try {
         const response = await api.get(`/restaurants/${citta}`);
@@ -82,8 +91,33 @@ const addNewUser = async (user) => {
             token: Date.now()
         })
         await api.post(`/users`, user);
+        localStorage.setItem("token", user.token);
     } catch (e) {
         throw new Error(e.message);
+    }
+}
+
+const getUserByLogin = async (login) => {
+    try {
+        const response = await api.get(`/users/?email=${login.email}&password=${login.password}`);
+        if(response.data.length===1)
+        {
+            console.log(response.data);
+            localStorage.setItem("token", response.data[0].token);
+            return;
+        }   
+        throw new Error ("utente non registrato");
+    } catch(e) {
+        throw new Error (e.message);
+    }
+}
+
+const getUserByToken = async () => {
+    try {
+        const response = await api.get(`/users/?token=${localStorage.getItem("token")}`);
+        return response.data[0];
+    } catch(e) {
+        throw new Error (e.message);
     }
 }
 
@@ -91,10 +125,13 @@ export {
     getAllRestaurants,
     getRestarantById,
     getRestarantByName,
+    getRestarantByCategory,
     getRestarantByCity,
     addNewRestaurant,
     updateRestaurant,
     getDishById,
     getDishByName,
-    addNewUser
+    addNewUser,
+    getUserByLogin,
+    getUserByToken
 }

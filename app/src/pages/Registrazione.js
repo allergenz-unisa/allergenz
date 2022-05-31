@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Alert, Box, Button, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { addNewUser } from "../api/Allergenz";
+import { useNavigate } from "react-router-dom";
 
 export default function Registrazione() {
 
@@ -11,6 +12,7 @@ export default function Registrazione() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  let navigate = useNavigate();
 
 
   /**
@@ -21,6 +23,7 @@ export default function Registrazione() {
     setErrors([]);
     let errs = []
     const user = {
+      id: Date.now(),
       fullName: fullName,
       username: username,
       password: password,
@@ -40,8 +43,11 @@ export default function Registrazione() {
     if(!user.password)
       errs.push("Password obbligatoria");
 
-    if(!user.confirmPassword)
-      errs.push("Conferma della password obbligatoria")
+    if(!confirmPassword)
+      errs.push("Conferma della password obbligatoria");
+
+    if(user.password !== confirmPassword)
+    errs.push("Le password inserite non coincidono")
 
     if (errs.length) {
       setErrors(errs);
@@ -49,6 +55,7 @@ export default function Registrazione() {
     }
 
     await addNewUser(user);
+    navigate("/");
   }
 
   return (

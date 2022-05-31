@@ -9,18 +9,23 @@ import {
     InputAdornment, 
     OutlinedInput, 
     Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useTitleContext from "../components/PageTitleContext";
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Search from '@mui/icons-material/Search';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { getRestarantByCategory } from "../api/Allergenz";
 
 const RistoCategoria = () => {
+   
+
     let navigate = useNavigate();
+    let [searchParams, setSearchParams] = useSearchParams();
+
     const { changeTitle } = useTitleContext();
     useEffect(() => {
-        changeTitle('Ristoranti di .... (sushi)')
+        changeTitle(searchParams.get("categoria"))
     }, [])
 
     return (

@@ -107,6 +107,19 @@ const FormInsPortata = () => {
 
               <ListItem>
                 <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                    <Button
+                      fullWidth
+                      variant="outlined"
+                      color="secondary"
+                      onClick={() => {
+                        navigate(-1);
+                      }}
+                    >
+                      Annulla
+                    </Button>
+                  </Grid>
+
                   <Grid item xs={12} md={6}>
                     <Button
                       fullWidth
@@ -118,19 +131,6 @@ const FormInsPortata = () => {
                       }}
                     >
                       Conferma
-                    </Button>
-                  </Grid>
-
-                  <Grid item xs={12} md={6}>
-                    <Button
-                      fullWidth
-                      variant="outlined"
-                      color="secondary"
-                      onClick={() => {
-                        navigate(-1);
-                      }}
-                    >
-                      Annulla
                     </Button>
                   </Grid>
                 </Grid>

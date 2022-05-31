@@ -1,15 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
   Card,
   CardActionArea,
   CardActions,
-  CardContent,
-  CardHeader,
   CardMedia,
   Grid,
-  IconButton,
   InputAdornment,
   OutlinedInput,
   Typography,
@@ -23,6 +20,8 @@ import logo from "../images/logo/4x/allergens_logo@4x.png";
 
 const Dashboard = () => {
   let navigate = useNavigate();
+
+  const [search, setSearch] = useState("");
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
@@ -54,6 +53,7 @@ const Dashboard = () => {
               fullWidth
               placeholder="Per effettuare una ricerca inizia a scrivere..."
               id="outlined-adornment-weight"
+              onChange={e => setSearch(e.target.value)}
               endAdornment={
                 <InputAdornment position="end">
                   {" "}
@@ -69,11 +69,11 @@ const Dashboard = () => {
         </Grid>
 
         <Grid container spacing={2}>
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=cucina di mare");
                 }}
               >
                 <CardMedia
@@ -87,7 +87,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=cucina di mare");
                     }}
                   >
                     Cucina di mare
@@ -97,7 +97,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
@@ -125,7 +125,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
@@ -153,7 +153,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
@@ -181,7 +181,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
@@ -209,7 +209,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
@@ -237,7 +237,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
@@ -265,7 +265,7 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardActionArea
                 onClick={() => {
