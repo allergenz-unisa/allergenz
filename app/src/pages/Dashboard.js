@@ -73,7 +73,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria?categoria=cucina di mare");
+                  navigate("/ristoranti-per-categoria?categoria=Cucina di mare");
                 }}
               >
                 <CardMedia
@@ -87,7 +87,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria?categoria=cucina di mare");
+                      navigate("/ristoranti-per-categoria?categoria=Cucina di mare");
                     }}
                   >
                     Cucina di mare
@@ -101,7 +101,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Pizza");
                 }}
               >
                 <CardMedia
@@ -115,7 +115,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=Pizza");
                     }}
                   >
                     Pizza
@@ -129,7 +129,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Hamburger");
                 }}
               >
                 <CardMedia
@@ -143,7 +143,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=Hamburger");
                     }}
                   >
                     Hamburger
@@ -157,7 +157,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Sushi");
                 }}
               >
                 <CardMedia
@@ -171,7 +171,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=Sushi");
                     }}
                   >
                     Sushi
@@ -185,7 +185,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Indiano");
                 }}
               >
                 <CardMedia
@@ -199,7 +199,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=Indiano");
                     }}
                   >
                     Cucina indiana
@@ -213,7 +213,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Fast food");
                 }}
               >
                 <CardMedia
@@ -227,7 +227,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=Fast food");
                     }}
                   >
                     Fast food
@@ -241,7 +241,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Cucina di terra");
                 }}
               >
                 <CardMedia
@@ -255,7 +255,7 @@ const Dashboard = () => {
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria");
+                      navigate("/ristoranti-per-categoria?categoria=Cucina di terra");
                     }}
                   >
                     Cucina di terra
@@ -269,7 +269,7 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria");
+                  navigate("/ristoranti-per-categoria?categoria=Pite e piadine");
                 }}
               >
                 <CardMedia
@@ -279,7 +279,13 @@ const Dashboard = () => {
                   alt="Pita"
                 />
                 <CardActions disableSpacing>
-                  <Button color="secondary" variant="text">
+                  <Button 
+                  color="secondary" 
+                  variant="text"
+                  onClick={() => {
+                    navigate("/ristoranti-per-categoria?categoria=Pite e piadine");
+                  }}
+                  >
                     Piadine e pite
                   </Button>
                 </CardActions>
