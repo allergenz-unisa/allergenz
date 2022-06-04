@@ -42,8 +42,7 @@ const Account = () => {
       margin="auto"
       component="form"
       sx={{
-        maxWidth: 400,
-        "& .MuiTextField-root": { m: 1 },
+        maxWidth: 350,
         backgroundColor: "#FAF4F4",
       }}
       noValidate
@@ -60,6 +59,7 @@ const Account = () => {
                 height: 120,
                 border: 2,
                 borderColor: "#b34b2a",
+                margin: "auto",
               }}
             />
           </ListItem>

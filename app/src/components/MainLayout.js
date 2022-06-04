@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
+import RestaurantIcon from "@mui/icons-material/Restaurant";
 import CloseIcon from "@mui/icons-material/Close";
 import Allergens from "@mui/icons-material/FileCopy";
 import Homepage from "@mui/icons-material/Home";
@@ -25,7 +26,7 @@ import useTitleContext from "./PageTitleContext";
 import logo from "../images/logo/2x/allergens_logo_w@2x.png";
 
 const MainLayout = ({ children }) => {
-  const drawerWidth = 240;
+  const drawerWidth = 270;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { title } = useTitleContext();
   const token = localStorage.getItem("token");
@@ -43,18 +44,26 @@ const MainLayout = ({ children }) => {
   const drawer = (
     <div>
       <List>
+        <ListItem />
+        <ListItem />
+
         <ListItem disablePadding onClick={handleDrawerToggle}>
           <ListItemButton component={Link} to="/">
             <Box
               component="img"
               sx={{
                 maxWidth: 150,
+                margin: "auto",
               }}
               alt="Logo"
               src={logo}
             />
           </ListItemButton>
         </ListItem>
+
+        <ListItem />
+        <ListItem />
+
         <ListItem disablePadding onClick={handleDrawerToggle}>
           <ListItemButton component={Link} to="/">
             <ListItemIcon>
@@ -62,18 +71,7 @@ const MainLayout = ({ children }) => {
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{ style: text }}
-              primary={"Homepage"}
-            />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding onClick={handleDrawerToggle}>
-          <ListItemButton component={Link} to="/allergeni">
-            <ListItemIcon>
-              <Allergens style={{ color: "white" }} />
-            </ListItemIcon>
-            <ListItemText
-              primaryTypographyProps={{ style: text }}
-              primary={"Allergeni"}
+              primary={"Home"}
             />
           </ListItemButton>
         </ListItem>
@@ -84,18 +82,30 @@ const MainLayout = ({ children }) => {
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{ style: text }}
-              primary={"Account"}
+              primary={"Il tuo profilo"}
+            />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding onClick={handleDrawerToggle}>
+          <ListItemButton component={Link} to="/form-segnalazione-locale">
+            <ListItemIcon>
+              <RestaurantIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText
+              primaryTypographyProps={{ style: text }}
+              primary={"Segnala un locale"}
             />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding onClick={handleDrawerToggle}>
-          <ListItemButton component={Link} to="/modificaMenu">
+          <ListItemButton component={Link} to="/allergeni">
             <ListItemIcon>
-              <MenuIcon style={{ color: "white" }} />
+              <Allergens style={{ color: "white" }} />
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{ style: text }}
-              primary={"ModificaMenu"}
+              primary={"Schede degli Allergeni"}
             />
           </ListItemButton>
         </ListItem>
@@ -184,18 +194,23 @@ const MainLayout = ({ children }) => {
             },
           }}
         >
+          <ListItem />
+          <ListItem />
+
           <Toolbar>
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{
+                ml: 25,
+                display: { sm: "none" },
+              }}
             >
               <CloseIcon style={{ color: "white" }} />
             </IconButton>
           </Toolbar>
-          <Divider />
           {drawer}
         </Drawer>
         <Drawer
@@ -211,7 +226,6 @@ const MainLayout = ({ children }) => {
           open
         >
           <Toolbar>HELLO2</Toolbar>
-          <Divider />
           {drawer}
         </Drawer>
       </Box>
