@@ -33,7 +33,7 @@ const getRestarantByName = async (localName) => {
 
 const getRestarantByCategory = async (category) => {
   try {
-    const response = await api.get(`/restaurants/${category}`);
+    const response = await api.get(`/restaurants?Cucina=${category}`);
     return response.data;
   } catch (e) {
     throw new Error(e.message);

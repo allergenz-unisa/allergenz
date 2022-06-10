@@ -8,7 +8,7 @@
         "citta": "Battipaglia",
         "cap": "84091"
       },
-      "Cucina": "sushi",
+      "Cucina": "Sushi",
       "AllergenFree": [
         {
           "id": "1",
@@ -48,7 +48,7 @@
         "citta": "Salerno",
         "cap": "84121"
       },
-      "Cucina": "sushi",
+      "Cucina": "Sushi",
       "AllergenFree": [
         {
           "id": "1",
@@ -88,7 +88,7 @@
         "citta": "Capaccio",
         "cap": "84047"
       },
-      "Cucina": "sushi",
+      "Cucina": "Sushi",
       "AllergenFree": [
         {
           "id": "1",
@@ -128,7 +128,7 @@
         "citta": "Salerno",
         "cap": "84121"
       },
-      "Cucina": "hamburger",
+      "Cucina": "Hamburger",
       "AllergenFree": [
         {
           "id": "1",
@@ -168,7 +168,7 @@
         "citta": "Salerno",
         "cap": "84121"
       },
-      "Cucina": "hamburger",
+      "Cucina": "Hamburger",
       "AllergenFree": [
         {
           "id": "1",
@@ -208,7 +208,7 @@
         "citta": "Salerno",
         "cap": "84122"
       },
-      "Cucina": "hamburger",
+      "Cucina": "Hamburger",
       "AllergenFree": [
         {
           "id": "1",
@@ -244,7 +244,7 @@
         "citta": "Pisa",
         "cap": "56125"
       },
-      "Cucina": "indiana",
+      "Cucina": "Indiano",
       "AllergenFree": [
         {
           "id": "1",
@@ -292,7 +292,7 @@
         "citta": "Salerno",
         "cap": "84121"
       },
-      "Cucina": "indiana",
+      "Cucina": "Indiano",
       "AllergenFree": [
         {
           "id": "1",
@@ -376,7 +376,7 @@
         "citta": "Napoli",
         "cap": "80138"
       },
-      "Cucina": "pizza",
+      "Cucina": "Pizza",
       "AllergenFree": [
         {
           "id": "1",
@@ -416,7 +416,7 @@
         "citta": "Napoli",
         "cap": "80138"
       },
-      "Cucina": "pizza",
+      "Cucina": "Pizza",
       "AllergenFree": [
         {
           "id": "1",

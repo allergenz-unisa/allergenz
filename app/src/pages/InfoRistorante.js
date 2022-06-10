@@ -65,6 +65,9 @@ const DettagliRistorante = () => {
                       }}
                       alt="Remy Sharp"
                       src="../../icon/lactose-free.png"
+                      onClick={() => {
+                        navigate("/lattosio");
+                      }}
                     />
                   </ListItemAvatar>
                 }
@@ -88,6 +91,9 @@ const DettagliRistorante = () => {
                       }}
                       alt="Remy Sharp"
                       src="../../icon/peanut-free.png"
+                      onClick={() => {
+                        navigate("/lattosio");
+                      }}
                     />
                   </ListItemAvatar>
                 }
@@ -111,6 +117,9 @@ const DettagliRistorante = () => {
                       }}
                       alt="Remy Sharp"
                       src="../../icon/lactose-free.png"
+                      onClick={() => {
+                        navigate("/lattosio");
+                      }}
                     />
                   </ListItemAvatar>
                 }
@@ -134,6 +143,9 @@ const DettagliRistorante = () => {
                       }}
                       alt="Remy Sharp"
                       src="../../icon/gluten-free.png"
+                      onClick={() => {
+                        navigate("/lattosio");
+                      }}
                     />
                   </ListItemAvatar>
                 }

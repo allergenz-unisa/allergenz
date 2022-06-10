@@ -53,7 +53,7 @@ const Dashboard = () => {
               fullWidth
               placeholder="Per effettuare una ricerca inizia a scrivere..."
               id="outlined-adornment-weight"
-              onChange={e => setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               endAdornment={
                 <InputAdornment position="end">
                   {" "}
@@ -73,7 +73,9 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria?categoria=Cucina di mare");
+                  navigate(
+                    "/ristoranti-per-categoria?categoria=Cucina di mare"
+                  );
                 }}
               >
                 <CardMedia
@@ -84,10 +86,15 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria?categoria=Cucina di mare");
+                      navigate(
+                        "/ristoranti-per-categoria?categoria=Cucina di mare"
+                      );
                     }}
                   >
                     Cucina di mare
@@ -112,6 +119,9 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
@@ -140,6 +150,9 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
@@ -168,6 +181,9 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
@@ -196,6 +212,9 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
@@ -224,6 +243,9 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
@@ -241,7 +263,9 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria?categoria=Cucina di terra");
+                  navigate(
+                    "/ristoranti-per-categoria?categoria=Cucina di terra"
+                  );
                 }}
               >
                 <CardMedia
@@ -252,10 +276,15 @@ const Dashboard = () => {
                 />
                 <CardActions disableSpacing>
                   <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
                     color="secondary"
                     variant="text"
                     onClick={() => {
-                      navigate("/ristoranti-per-categoria?categoria=Cucina di terra");
+                      navigate(
+                        "/ristoranti-per-categoria?categoria=Cucina di terra"
+                      );
                     }}
                   >
                     Cucina di terra
@@ -269,7 +298,9 @@ const Dashboard = () => {
             <Card>
               <CardActionArea
                 onClick={() => {
-                  navigate("/ristoranti-per-categoria?categoria=Pite e piadine");
+                  navigate(
+                    "/ristoranti-per-categoria?categoria=Pite e piadine"
+                  );
                 }}
               >
                 <CardMedia
@@ -279,12 +310,17 @@ const Dashboard = () => {
                   alt="Pita"
                 />
                 <CardActions disableSpacing>
-                  <Button 
-                  color="secondary" 
-                  variant="text"
-                  onClick={() => {
-                    navigate("/ristoranti-per-categoria?categoria=Pite e piadine");
-                  }}
+                  <Button
+                    sx={{
+                      fontWeight: "bold",
+                    }}
+                    color="secondary"
+                    variant="text"
+                    onClick={() => {
+                      navigate(
+                        "/ristoranti-per-categoria?categoria=Pite e piadine"
+                      );
+                    }}
                   >
                     Piadine e pite
                   </Button>
@@ -302,7 +338,7 @@ const Dashboard = () => {
         >
           <Grid item xs={12} md={12} lg={12}>
             <Button
-              sx={{ color: "white" }}
+              sx={{ color: "white", fontWeight: "bold" }}
               variant={"contained"}
               color={"secondary"}
               fullWidth

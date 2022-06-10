@@ -22,13 +22,22 @@ const Conferma = () => {
             }}
           >
             <CardContent>
-              <CheckCircleIcon color="secondary" sx={{ fontSize: 180 }} />
+              <CheckCircleIcon
+                color="secondary"
+                sx={{ fontSize: 180, margin: "auto" }}
+              />
               <Typography variant="h5" component="div">
                 L’inserimento è andato a buon fine!
               </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained" size="small" color="secondary">
+              <Button
+                fullWidth
+                variant="contained"
+                color="secondary"
+                sx={{ color: "white", fontWeight: "bold" }}
+                onClick={() => {}}
+              >
                 Ok
               </Button>
             </CardActions>
