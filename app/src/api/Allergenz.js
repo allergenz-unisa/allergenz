@@ -24,7 +24,7 @@ const getRestarantById = async (id) => {
 
 const getRestarantByName = async (localName) => {
   try {
-    const response = await api.get(`/restaurants/${localName}`);
+    const response = await api.get(`/restaurants?localName=${localName}`);
     return response.data;
   } catch (e) {
     throw new Error(e.message);

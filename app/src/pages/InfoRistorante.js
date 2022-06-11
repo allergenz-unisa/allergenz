@@ -11,19 +11,39 @@ import {
   Box,
   ListItemAvatar,
 } from "@mui/material";
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import { getRestarantByName } from "../api/Allergenz";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const DettagliRistorante = () => {
+  const [ristorante, setRistorante] = useState();
   let navigate = useNavigate();
+  let [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    getRistorante();
+  }, []);
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
     changeTitle("Dettagli Ristorante");
   }, []);
+
+  function getRistorante() {
+    getRestarantByName(searchParams.get("localName"))
+      .then(function (_ristorante) {
+        console.log(_ristorante);
+        setRistorante(_ristorante);
+        console.log(ristorante);
+        console.log("getRistorante ok");
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
 
   return (
     <div>
@@ -52,7 +72,7 @@ const DettagliRistorante = () => {
                 <ListItemIcon>
                   <Avatar alt="Image" src="../../img/wine-glass.jpg" />
                 </ListItemIcon>
-                <ListItemText primary="Ristorante da Carmine" />
+                <ListItemText primary={ristorante.localName} />
               </ListItem>
               <ListItem
                 secondaryAction={
