@@ -14,25 +14,22 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import useTitleContext from "../components/PageTitleContext";
 import SearchBar from "../components/SearchBar";
 
-import { getRestarantByCategory } from "../api/Allergenz";
+import { searchRestarant } from "../api/Allergenz";
 
-const RistoCategoria = () => {
+const RisultatiRicerca = () => {
   const [ristoranti, setRistoranti] = useState([]);
 
   let navigate = useNavigate();
   let [searchParams, setSearchParams] = useSearchParams();
 
   const { changeTitle } = useTitleContext();
-  useEffect(() => {
-    changeTitle(searchParams.get("categoria"));
-  }, []);
 
   useEffect(() => {
-    getRistoranti();
+    searchRistoranti();
   }, []);
 
-  function getRistoranti() {
-    getRestarantByCategory(searchParams.get("categoria"))
+  function searchRistoranti() {
+    searchRestarant(searchParams.get("param"))
       .then(function (_ristoranti) {
         setRistoranti(_ristoranti);
         console.log(ristoranti);
@@ -87,4 +84,4 @@ const RistoCategoria = () => {
   );
 };
 
-export default RistoCategoria;
+export default RisultatiRicerca;

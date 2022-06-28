@@ -14,6 +14,7 @@ import RistoCategoria from "./pages/RistoCategoria";
 import Lattosio from "./pages/Lattosio";
 import FormSegnalazione from "./pages/FormSegnalazione";
 import Conferma from "./pages/Conferma";
+import RisultatiRicerca from "./pages/RisultatiRicerca";
 import "./index.css";
 
 function App() {
@@ -27,13 +28,20 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registrazione" element={<Registrazione />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/modificaMenu" element={<ModificaMenu />}/>
-            <Route path="/inserimento-portata" element={<FormInsPortata />}/>
-            <Route path="/dettagli-ristorante" element={<InfoRistorante />}/>
-            <Route path="/ristoranti-per-categoria" element={<RistoCategoria />}/>
-            <Route path="/lattosio" element={<Lattosio />}/>
-            <Route path="/form-segnalazione-locale" element={<FormSegnalazione />}/>
-            <Route path="/conferma" element={<Conferma />}/>
+            <Route path="/modificaMenu" element={<ModificaMenu />} />
+            <Route path="/inserimento-portata" element={<FormInsPortata />} />
+            <Route path="/dettagli-ristorante" element={<InfoRistorante />} />
+            <Route path="/risultati-ricerca" element={<RisultatiRicerca />} />
+            <Route
+              path="/ristoranti-per-categoria"
+              element={<RistoCategoria />}
+            />
+            <Route path="/lattosio" element={<Lattosio />} />
+            <Route
+              path="/form-segnalazione-locale"
+              element={<FormSegnalazione />}
+            />
+            <Route path="/conferma" element={<Conferma />} />
           </Routes>
         </MainLayout>
       </TitleContextProvider>

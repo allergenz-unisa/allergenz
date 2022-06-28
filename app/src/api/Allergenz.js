@@ -13,6 +13,15 @@ const getAllRestaurants = async () => {
   }
 };
 
+const searchRestarant = async (param) => {
+  try {
+    const response = await api.get(`/restaurants?q=${param}`);
+    return response.data;
+  } catch (e) {
+    throw new Error(e.message);
+  }
+};
+
 const getRestarantById = async (id) => {
   try {
     const response = await api.get(`/restaurants/${id}`);
@@ -125,6 +134,7 @@ const getUserByToken = async () => {
 };
 
 export {
+  searchRestarant,
   getAllRestaurants,
   getRestarantById,
   getRestarantByName,

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -7,21 +8,13 @@ import {
   CardActions,
   CardMedia,
   Grid,
-  InputAdornment,
-  OutlinedInput,
-  Typography,
 } from "@mui/material";
-import ShareIcon from "@mui/icons-material/Share";
-import Search from "@mui/icons-material/Search";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import useTitleContext from "../components/PageTitleContext";
-import { Link, useNavigate } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
 import logo from "../images/logo/4x/allergens_logo@4x.png";
 
 const Dashboard = () => {
   let navigate = useNavigate();
-
-  const [search, setSearch] = useState("");
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
@@ -48,23 +41,7 @@ const Dashboard = () => {
           <Grid item></Grid>
 
           <Grid item xs={12}>
-            <OutlinedInput
-              sx={{ marginTop: 2, marginBottom: 5 }}
-              fullWidth
-              placeholder="Per effettuare una ricerca inizia a scrivere..."
-              id="outlined-adornment-weight"
-              onChange={(e) => setSearch(e.target.value)}
-              endAdornment={
-                <InputAdornment position="end">
-                  {" "}
-                  <Search />{" "}
-                </InputAdornment>
-              }
-              aria-describedby="outlined-weight-helper-text"
-              inputProps={{
-                "aria-label": "weight",
-              }}
-            />
+            <SearchBar></SearchBar>
           </Grid>
         </Grid>
 
