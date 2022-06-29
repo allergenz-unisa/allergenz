@@ -54,10 +54,9 @@ const RistoCategoria = () => {
             <Grid item xs={12} sm={6} md={4} lg={4}>
               <Card
                 onClick={() => {
-                  navigate(
-                    "/dettagli-ristorante?localName=" + ristorante.localName,
-                    { localName: ristorante.localName }
-                  );
+                  navigate("/dettagli-ristorante?id=" + ristorante.id, {
+                    id: ristorante.id,
+                  });
                 }}
               >
                 <CardHeader

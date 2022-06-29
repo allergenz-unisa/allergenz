@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Avatar,
@@ -11,39 +12,38 @@ import {
   Box,
   ListItemAvatar,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
-import { getRestarantByName } from "../api/Allergenz";
+import { getRestarantById, getRestarantByName } from "../api/Allergenz";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const DettagliRistorante = () => {
-  const [ristorante, setRistorante] = useState();
+  const [ristorante, setRistorante] = useState({});
   let navigate = useNavigate();
   let [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    getRistorante();
-  }, []);
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
     changeTitle("Dettagli Ristorante");
   }, []);
 
-  function getRistorante() {
-    getRestarantByName(searchParams.get("localName"))
+  useEffect(() => {
+    getRestarantById(searchParams.get("id"))
       .then(function (_ristorante) {
         console.log(_ristorante);
-        setRistorante(_ristorante);
+        setRistorante((ristorante) => ({
+          ...ristorante,
+          ..._ristorante,
+        }));
         console.log(ristorante);
-        console.log("getRistorante ok");
+        console.log("ok");
       })
       .catch(function (error) {
+        console.log("ERRORE");
         console.error(error);
       });
-  }
+  }, []);
 
   return (
     <div>
