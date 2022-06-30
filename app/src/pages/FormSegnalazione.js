@@ -160,6 +160,18 @@ const FormSegnalazione = () => {
                   <Grid item xs={12} md={6}>
                     <Button
                       fullWidth
+                      variant="outlined"
+                      color="secondary"
+                      onClick={() => {
+                        navigate(-1);
+                      }}
+                    >
+                      Annulla
+                    </Button>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      fullWidth
                       variant="contained"
                       color="secondary"
                       sx={{ color: "white", fontWeight: "bold" }}
@@ -168,19 +180,6 @@ const FormSegnalazione = () => {
                       }}
                     >
                       Conferma
-                    </Button>
-                  </Grid>
-
-                  <Grid item xs={12} md={6}>
-                    <Button
-                      fullWidth
-                      variant="outlined"
-                      color="secondary"
-                      onClick={() => {
-                        navigate(-1);
-                      }}
-                    >
-                      Annulla
                     </Button>
                   </Grid>
                 </Grid>
