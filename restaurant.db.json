@@ -17,6 +17,10 @@
         {
           "id": "2",
           "categoria": "frutta a guscio"
+        },
+        {
+          "id": "3",
+          "categoria": "glutine"
         }
       ],
       "Menu": [
@@ -24,21 +28,22 @@
           "id": "1",
           "name": "Maguro",
           "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "allergenFree": ["lattosio", "frutta a guscio", "glutine"]
         },
         {
           "id": "2",
           "name": "Avocado",
           "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "allergenFree": ["lattosio", "frutta a guscio", "glutine"]
         },
         {
           "id": "3",
           "name": "Spicy tuna",
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "allergenFree": ["lattosio", "frutta a guscio"]
         }
-      ]
+      ],
+      "like": "4"
     },
     {
       "id": "2",
@@ -52,33 +57,43 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "proteina LTP"
+          "categoria": "lattosio"
         },
         {
           "id": "2",
           "categoria": "frutta a guscio"
+        },
+        {
+          "id": "3",
+          "categoria": "proteina LTP"
+        },
+        {
+          "id": "4",
+          "categoria": "crostacei"
         }
+
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Jo-Maguro",
+          "descrizione": "Riso avvolto da tonno e ricoperto da tobiko e tartare di tonno e ricoperto con salsa mayo",
+          "allergenFree": ["lattosio", "frutta a guscio", "proteina LTP", "crostacei"]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Sake Hot Roll",
+          "descrizione": "Salmone, philadelphia, avocado, ricoperto da philadelphia",
+          "allergenFree": ["frutta a guscio", "crostacei"]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Futomaki Classic",
+          "descrizione": "Salmone, surimi, gambero in tempura, tobiko e avocado",
+          "allergenFree": ["lattosio", "frutta a guscio"]
         }
-      ]
+      ],
+      "like": "6"
     },
     {
       "id": "3",
@@ -97,32 +112,45 @@
         {
           "id": "2",
           "categoria": "glutine"
+        },
+        {
+          "id": "3",
+          "categoria": "crostacei"
+        },
+        {
+          "id": "4",
+          "categoria": "lattosio"
+        },
+        {
+          "id": "5",
+          "categoria": "frutta a guscio"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Riso Croccante Tonno",
+          "descrizione": "Riso fritto con tartare di tonno, erba cipollina, salsa spicy e teriyaki",
+          "allergenFree": ["lattosio", "crostacei", "proteina LTP"]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Involtini primavera",
+          "descrizione": "Fagottini fritti di pasta con un ripieno di verdure e gamberi",
+          "allergenFree": ["lattosio", "frutta a guscio"]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
+          "name": "Scampi roll",
+          "descrizione": "Salmone, avocado, topping tartare di scampi all'olio",
           "allergenFree": []
         }
-      ]
+      ],
+      "like": "10"
     },
     {
       "id": "4",
-      "localName": "Ingordo-Hamburger",
+      "localName": "Ingordo-Burger",
       "address": {
         "via": "Via Roma",
         "citta": "Salerno",
@@ -137,28 +165,27 @@
         {
           "id": "2",
           "categoria": "crostacei"
+        },
+        {
+          "id": "3",
+          "categoria": "frutta a guscio"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Cismoke Burger",
+          "descrizione": "Bun tradizionale, hamburger, smoked ceddar, insalata iceberg e pomodori",
+          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
-        },
-        {
-          "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Ciclope Burger",
+          "descrizione": "Bun tradizionale, hamburger, white ceddar, uova all'occhio di bue, bacon croccante, insalata iceberg e pomodori ",
+          "allergenFree": ["crostacei", "frutta a guscio"]
         }
-      ]
+      ],
+      "like": "15"
     },
     {
       "id": "5",
@@ -177,28 +204,33 @@
         {
           "id": "2",
           "categoria": "crostacei"
+        }, 
+        {
+          "id": "3",
+          "categoria": "frutta a guscio"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Panino Frank",
+          "descrizione": "Cotoletta di pollo impanata con riso soffiato, mozzarella, insalata e pomodoro",
+          "allergenFree": ["crostacei", "proteina LTP"]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Hamburger Krabby patty",
+          "descrizione": "Hambuger di scottona, bacon, pomodoro, insalata, cheddar, cipolle caramellate e bacon",
+          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Hamburger Mansueto",
+          "descrizione": "Hambuger di scottona, cheddar, bacon e patatine fritte",
+          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
         }
-      ]
+      ],
+      "like": "8"
     },
     {
       "id": "6",
@@ -213,28 +245,31 @@
         {
           "id": "1",
           "categoria": "crostacei"
+        },
+        {
+          "id": "2",
+          "categoria": "frutta a guscio"
+        },
+        {
+          "id": "3",
+          "categoria": "proteina LTP"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Bacon King",
+          "descrizione": "Hamburger di manzo alla griglia, maionese, ketchup, cheddar e bacon",
+          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
         },
         {
           "id": "2",
           "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
-        },
-        {
-          "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "descrizione": "Pane al mais, pollo croccante, pomodoro, lattuga e doppia maionese",
+          "allergenFree": ["crostacei", "frutta a guscio"]
         }
-      ]
+      ],
+      "like": "9"
     },
     {
       "id": "7",
@@ -282,7 +317,8 @@
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
           "allergenFree": []
         }
-      ]
+      ],
+      "like": "5"
     },
     {
       "id": "8",
@@ -322,7 +358,8 @@
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
           "allergenFree": []
         }
-      ]
+      ],
+      "like": "7"
     },
     {
       "id": "9",
@@ -366,7 +403,8 @@
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
           "allergenFree": []
         }
-      ]
+      ],
+      "like": "30"
     },
     {
       "id": "10",
@@ -406,7 +444,8 @@
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
           "allergenFree": []
         }
-      ]
+      ],
+      "like": "20"
     },
     {
       "id": "11",
@@ -450,7 +489,8 @@
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
           "allergenFree": []
         }
-      ]
+      ],
+      "like": "25"
     }
   ],
   "users": [
