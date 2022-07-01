@@ -47,7 +47,7 @@ const RisultatiRicerca = () => {
         <div>
           <Box maxWidth="lg" justifyContent="center" margin="auto">
             <Typography variant="h5" component="div">
-              Nessun ristorante trovato
+              Nessun ristorante trovato, cerca ancora!
             </Typography>
           </Box>
         </div>
