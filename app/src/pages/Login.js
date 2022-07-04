@@ -69,6 +69,7 @@ export default function Login() {
         />
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
+            color="secondary"
             onChange={(e) => setEmail(e.target.value)}
             margin="normal"
             required
@@ -80,6 +81,7 @@ export default function Login() {
             autoFocus
           />
           <TextField
+            color="secondary"
             onChange={(e) => setPassword(e.target.value)}
             margin="normal"
             required

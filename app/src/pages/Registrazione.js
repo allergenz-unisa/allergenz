@@ -76,6 +76,7 @@ export default function Registrazione() {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
+                color="secondary"
                 onChange={(e) => setFullName(e.target.value)}
                 autoComplete="given-name"
                 name="firstName"
@@ -88,6 +89,7 @@ export default function Registrazione() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                color="secondary"
                 onChange={(e) => setUsername(e.target.value)}
                 required
                 fullWidth
@@ -99,6 +101,7 @@ export default function Registrazione() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                color="secondary"
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 fullWidth
@@ -110,6 +113,7 @@ export default function Registrazione() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                color="secondary"
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 fullWidth
@@ -122,6 +126,7 @@ export default function Registrazione() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                color="secondary"
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 fullWidth

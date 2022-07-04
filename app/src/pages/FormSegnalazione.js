@@ -16,58 +16,58 @@ import useTitleContext from "../components/PageTitleContext";
 const cucine = [
   {
     value: "1",
-    label: "sushi",
+    label: "Sushi",
   },
   {
     value: "2",
-    label: "pizza",
+    label: "Pizza",
   },
   {
     value: "3",
-    label: "hamburger",
+    label: "Hamburger",
   },
   {
     value: "4",
-    label: "fast food",
+    label: "Fast food",
   },
   {
     value: "5",
-    label: "cucina di terra",
+    label: "Cucina di terra",
   },
   {
     value: "6",
-    label: "cucina di mare",
+    label: "Cucina di mare",
   },
   {
     value: "7",
-    label: "piadine e pite",
+    label: "Piadine e pite",
   },
 ];
 
 const allergeni = [
   {
     value: "1",
-    label: "lattosio",
+    label: "Lattosio",
   },
   {
     value: "2",
-    label: "glutine",
+    label: "Glutine",
   },
   {
     value: "3",
-    label: "crostacei",
+    label: "Crostacei",
   },
   {
     value: "4",
-    label: "frutta a guscio",
+    label: "Frutta a guscio",
   },
   {
     value: "5",
-    label: "nichel",
+    label: "Nichel",
   },
   {
     value: "6",
-    label: "proteina LTP",
+    label: "Proteina LTP",
   },
 ];
 
@@ -113,19 +113,35 @@ const FormSegnalazione = () => {
                 </Typography>
               </ListItem>
               <ListItem>
-                <TextField fullWidth id="NomeLocale" label="Nome del locale" />
-              </ListItem>
-              <ListItem>
-                <TextField fullWidth id="Via" label="Via..." />
-              </ListItem>
-              <ListItem>
-                <TextField fullWidth id="Citta" label="Città" />
-              </ListItem>
-              <ListItem>
-                <TextField fullWidth id="CAP" label="CAP" />
+                <TextField
+                  color="secondary"
+                  fullWidth
+                  id="NomeLocale"
+                  label="Nome del locale"
+                />
               </ListItem>
               <ListItem>
                 <TextField
+                  color="secondary"
+                  fullWidth
+                  id="Via"
+                  label="Via..."
+                />
+              </ListItem>
+              <ListItem>
+                <TextField
+                  color="secondary"
+                  fullWidth
+                  id="Citta"
+                  label="Città"
+                />
+              </ListItem>
+              <ListItem>
+                <TextField color="secondary" fullWidth id="CAP" label="CAP" />
+              </ListItem>
+              <ListItem>
+                <TextField
+                  color="secondary"
                   fullWidth
                   select
                   helperText="Selezionare un tipo di cucina"
@@ -141,6 +157,7 @@ const FormSegnalazione = () => {
               </ListItem>
               <ListItem>
                 <TextField
+                  color="secondary"
                   fullWidth
                   select
                   helperText="Selezionare l'allergene che è possibile evitare in questo locale"
