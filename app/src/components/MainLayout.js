@@ -225,7 +225,7 @@ const MainLayout = ({ children }) => {
           }}
           open
         >
-          <Toolbar>HELLO2</Toolbar>
+          <Toolbar></Toolbar>
           {drawer}
         </Drawer>
       </Box>
