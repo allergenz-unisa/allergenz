@@ -133,7 +133,27 @@ const getUserByToken = async () => {
   }
 };
 
+const getAllAllergnes = async () => {
+  try {
+    const response = await api.get(`/allergeni`);
+    return response.data;
+  } catch (e) {
+    throw new Error(e.message);
+  }
+};
+
+const getAllergenById = async (id) => {
+  try {
+    const response = await api.get(`/allergeni?id=${id}`);
+    return response.data;
+  } catch (e) {
+    throw new Error(e.message);
+  }
+};
+
 export {
+  getAllergenById,
+  getAllAllergnes,
   searchRestarant,
   getAllRestaurants,
   getRestarantById,

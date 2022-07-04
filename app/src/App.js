@@ -11,7 +11,7 @@ import { TitleContextProvider } from "./components/PageTitleContext";
 import FormInsPortata from "./pages/FormInsPortata";
 import InfoRistorante from "./pages/InfoRistorante";
 import RistoCategoria from "./pages/RistoCategoria";
-import Lattosio from "./pages/Lattosio";
+import InfoAllergene from "./pages/InfoAllergene";
 import FormSegnalazione from "./pages/FormSegnalazione";
 import Conferma from "./pages/Conferma";
 import RisultatiRicerca from "./pages/RisultatiRicerca";
@@ -36,7 +36,7 @@ function App() {
               path="/ristoranti-per-categoria"
               element={<RistoCategoria />}
             />
-            <Route path="/lattosio" element={<Lattosio />} />
+            <Route path="/dettagli-allergene" element={<InfoAllergene />} />
             <Route
               path="/form-segnalazione-locale"
               element={<FormSegnalazione />}
