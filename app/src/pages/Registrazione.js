@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { Alert, Box, Button, TextField, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { Alert } from "@mui/material";
 import { addNewUser } from "../api/Allergenz";
 import { useNavigate } from "react-router-dom";
+import logo from "../images/logo/4x/allergens_logo@4x.png";
 
 export default function Registrazione() {
-
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -14,40 +20,30 @@ export default function Registrazione() {
   const [errors, setErrors] = useState([]);
   let navigate = useNavigate();
 
-
-  /**
-   * Questa funzione colleziona tutte le variabili di stato del form
-   * e se non ci sono errori invoca il metodo addNewUser dell'API
-   */
   const registerUser = async () => {
     setErrors([]);
-    let errs = []
+    let errs = [];
     const user = {
       id: Date.now(),
       fullName: fullName,
       username: username,
       password: password,
       email: email,
-      intolleranze: []
-    }
+      intolleranze: [],
+    };
 
-    if (!user.fullName)
-      errs.push("Nome obbligatorio");
+    if (!user.fullName) errs.push("Nome obbligatorio");
 
-    if (!user.username)
-      errs.push("Username obbligatorio");
+    if (!user.username) errs.push("Username obbligatorio");
 
-    if(!user.email)
-      errs.push("Email obbligatoria");
+    if (!user.email) errs.push("Email obbligatoria");
 
-    if(!user.password)
-      errs.push("Password obbligatoria");
+    if (!user.password) errs.push("Password obbligatoria");
 
-    if(!confirmPassword)
-      errs.push("Conferma della password obbligatoria");
+    if (!confirmPassword) errs.push("Conferma della password obbligatoria");
 
-    if(user.password !== confirmPassword)
-    errs.push("Le password inserite non coincidono")
+    if (user.password !== confirmPassword)
+      errs.push("Le password inserite non coincidono");
 
     if (errs.length) {
       setErrors(errs);
@@ -56,68 +52,116 @@ export default function Registrazione() {
 
     await addNewUser(user);
     navigate("/");
-  }
+  };
 
   return (
-    <Box
-      justifyContent="center"
-      alignItems="center"
-      alignSelf="center"
-      margin="auto"
-      component="form"
-      sx={{
-        maxWidth: 400,
-        "& .MuiTextField-root": { m: 1 },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
-        <TextField fullWidth id="nome" label="Nome e Cognome" onChange={e => setFullName(e.target.value)}/>
-        <TextField fullWidth id="username" label="Username" onChange={e => setUsername(e.target.value)}/>
-        <TextField fullWidth id="email" label="Email" onChange={e => setEmail(e.target.value)}/>
-        <TextField
-          fullWidth
-          id="password-input"
-          label="Password"
-          type="password"
-          onChange={e => setPassword(e.target.value)}
-        />
-        <TextField
-          fullWidth
-          id="password-confirm"
-          label="Conferma password"
-          type="password"
-          onChange={e => setConfirmPassword(e.target.value)}
-        />
-      </div>
-
-      {errors.length > 0 ? (
-        <Alert severity="error">
-          <Typography>
-            Attenzione correggere i seguenti errori:
-            <ul>
-            {errors.map(err =>  <li>{err}</li> )}
-            </ul>
-          </Typography>
-        </Alert>
-      ) : null}
-
-      <div>
-        <Button color="secondary" component={Link} to="/login">
-          Sei già registrato? Effettua il login cliccando qui
-        </Button>
-      </div>
-
-      <Button
-        sx={{ color: "white" }}
-        variant={"contained"}
-        color={"secondary"}
-        fullWidth
-        onClick={() => registerUser()}
+    <Container component="main" maxWidth="xs">
+      <Box
+        sx={{
+          marginTop: 8,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
-        Registrati
-      </Button>
-    </Box>
+        <Box
+          component="img"
+          sx={{
+            maxWidth: 300,
+          }}
+          alt="Logo"
+          src={logo}
+        />
+        <Box component="form" noValidate sx={{ mt: 3 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                onChange={(e) => setFullName(e.target.value)}
+                autoComplete="given-name"
+                name="firstName"
+                required
+                fullWidth
+                id="firstName"
+                label="Nome"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                onChange={(e) => setUsername(e.target.value)}
+                required
+                fullWidth
+                id="lastName"
+                label="Username"
+                name="lastName"
+                autoComplete="family-name"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                fullWidth
+                id="email"
+                label="Indirizzo email"
+                name="email"
+                autoComplete="email"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="new-password"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+                fullWidth
+                name="conferma-password"
+                label="Conferma Password"
+                type="password"
+                id="conferma-password"
+              />
+            </Grid>
+          </Grid>
+          {errors.length > 0 ? (
+            <Alert severity="error">
+              <Typography>
+                Attenzione correggere i seguenti errori:
+                <ul>
+                  {errors.map((err) => (
+                    <li>{err}</li>
+                  ))}
+                </ul>
+              </Typography>
+            </Alert>
+          ) : null}
+          <Button
+            onClick={() => registerUser()}
+            color={"secondary"}
+            fullWidth
+            variant="contained"
+            sx={{ color: "white", mt: 3, mb: 2 }}
+          >
+            Registrati
+          </Button>
+          <Grid container justifyContent="center">
+            <Grid item>
+              <Link color="secondary" href="/login" variant="body2">
+                Sei già registrato? Effettua il login cliccando qui
+              </Link>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    </Container>
   );
 }

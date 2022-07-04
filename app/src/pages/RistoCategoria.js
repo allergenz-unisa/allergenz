@@ -8,6 +8,7 @@ import {
   CardMedia,
   Grid,
   IconButton,
+  Typography,
 } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -73,9 +74,14 @@ const RistoCategoria = () => {
                   <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                   </IconButton>
-                  <IconButton aria-label="share">
-                    <ShareIcon />
-                  </IconButton>
+                  <Typography
+                    sx={{
+                      fontWeight: "bold",
+                      color: "#757575",
+                    }}
+                  >
+                    {ristorante.like}
+                  </Typography>
                 </CardActions>
               </Card>
             </Grid>

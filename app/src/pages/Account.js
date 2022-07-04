@@ -45,51 +45,50 @@ const Account = () => {
 
   return (
     <div>
-      {localStorage.getItem("token") === null ?
-      (
-        <div> 
+      {localStorage.getItem("token") === null ? (
+        <div>
           <Box maxWidth="md" justifyContent="center" margin="auto">
-                <Card sx={{marginBottom: 1}}>
-                    <List>
-                        <ListItem>
-                            <ListItemText primary="Registrati o effettua il login e riprova!" />
-                        </ListItem>
-                    </List>
-                    
-                    <Typography m={2}>
-                        Per accedere all'area personale è necessario autenticarsi. <br/>
-                        Se non sei ancora registrato sulla piattaforma Allergenz, iscriviti ora per non perderti i vantaggi riservati alla nostra community: potrai essere d'aiuto ad altre persone, mettere like per suggerire i locali che preferisci, accedere all'area personale...e tanto altro ancora! <br/>
-
-                    </Typography>
-                    
-                </Card>
-
-                
+            <Card sx={{ marginBottom: 1 }}>
+              <List>
                 <ListItem>
-                <Grid container spacing={2}>
-                  <Grid item xs={12} md={6}>
-                    <GoBackButton mt={2}/>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Button
-                      fullWidth
-                      variant="contained"
-                      color="secondary"
-                      sx={{ color: "white", fontWeight: "bold" }}
-                      onClick={() => {
-                        navigate("/login");
-                      }}
-                    >
-                      Effettua il login
-                    </Button>
-                  </Grid>
-                </Grid>
-              </ListItem>
-            </Box>
+                  <ListItemText primary="Registrati o effettua il login e riprova!" />
+                </ListItem>
+              </List>
 
+              <Typography m={2}>
+                Per accedere all'area personale è necessario autenticarsi.{" "}
+                <br />
+                Se non sei ancora registrato sulla piattaforma Allergenz,
+                iscriviti ora per non perderti i vantaggi riservati alla nostra
+                community: potrai essere d'aiuto ad altre persone, mettere like
+                per suggerire i locali che preferisci, accedere all'area
+                personale...e tanto altro ancora! <br />
+              </Typography>
+            </Card>
+
+            <ListItem>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <GoBackButton mt={2} />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Button
+                    fullWidth
+                    variant="contained"
+                    color="secondary"
+                    sx={{ color: "white", fontWeight: "bold" }}
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
+                    Effettua il login
+                  </Button>
+                </Grid>
+              </Grid>
+            </ListItem>
+          </Box>
         </div>
-      ):
-      (
+      ) : (
         <Box
           justifyContent="center"
           alignItems="center"
@@ -150,28 +149,11 @@ const Account = () => {
               <ListItem>
                 <TextField fullWidth id="intolleranza2" label="intolleranza2" />
               </ListItem>
-
-              <ListItem
-                sx={{ mb: 2, mt: 2 }}
-                secondaryAction={
-                  <IconButton
-                    edge="end"
-                    component={Link}
-                    to="/allergeni"
-                    color="secondary"
-                  >
-                    <EditIcon />
-                  </IconButton>
-                }
-              ></ListItem>
             </List>
           </Card>
         </Box>
       )}
     </div>
-    
-    
-    
   );
 };
 
