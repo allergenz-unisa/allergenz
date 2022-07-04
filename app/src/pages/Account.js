@@ -108,7 +108,7 @@ const Account = () => {
               <ListItem>
                 <Avatar
                   alt="Profile Image"
-                  src="../../img/person.jpg"
+                  src="../../img/Ellipse.png"
                   sx={{
                     width: 120,
                     height: 120,
