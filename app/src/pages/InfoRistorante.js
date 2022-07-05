@@ -20,6 +20,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 
 const DettagliRistorante = () => {
   const [ristorante, setRistorante] = useState({});
+  const [menu, setMenu] = useState([{}]);
   let navigate = useNavigate();
   let [searchParams, setSearchParams] = useSearchParams();
 
@@ -30,13 +31,12 @@ const DettagliRistorante = () => {
 
   useEffect(() => {
     getRestarantById(searchParams.get("id"))
-      .then(function (_ristorante) {
-        console.log(_ristorante);
-        setRistorante((ristorante) => ({
-          ...ristorante,
-          ..._ristorante,
-        }));
+      .then(function (ristorante) {
+        setRistorante(ristorante);
         console.log(ristorante);
+        console.log(ristorante.Menu);
+        setMenu(ristorante.Menu);
+        console.log(menu);
         console.log("ok");
       })
       .catch(function (error) {
@@ -74,107 +74,35 @@ const DettagliRistorante = () => {
                 </ListItemIcon>
                 <ListItemText primary={ristorante.localName} />
               </ListItem>
-              <ListItem
-                secondaryAction={
-                  <ListItemAvatar>
-                    <Avatar
-                      sx={{
-                        width: 30,
-                        height: 30,
-                        ml: 50,
-                      }}
-                      alt="Remy Sharp"
-                      src="../../icon/lactose-free.png"
-                      onClick={() => {
-                        navigate("/lattosio");
-                      }}
-                    />
-                  </ListItemAvatar>
-                }
-              >
-                <ListItemIcon>
-                  <RestaurantMenuIcon />
-                </ListItemIcon>
-                <ListItemText primary="Nome piatto" />
-              </ListItem>
 
-              <Drawer />
-
-              <ListItem
-                secondaryAction={
-                  <ListItemAvatar>
-                    <Avatar
-                      sx={{
-                        width: 30,
-                        height: 30,
-                        ml: 50,
-                      }}
-                      alt="Remy Sharp"
-                      src="../../icon/peanut-free.png"
-                      onClick={() => {
-                        navigate("/lattosio");
-                      }}
-                    />
-                  </ListItemAvatar>
-                }
-              >
-                <ListItemIcon>
-                  <RestaurantMenuIcon />
-                </ListItemIcon>
-                <ListItemText primary="Nome piatto" />
-              </ListItem>
-
-              <Drawer />
-
-              <ListItem
-                secondaryAction={
-                  <ListItemAvatar>
-                    <Avatar
-                      sx={{
-                        width: 30,
-                        height: 30,
-                        ml: 50,
-                      }}
-                      alt="Remy Sharp"
-                      src="../../icon/lactose-free.png"
-                      onClick={() => {
-                        navigate("/lattosio");
-                      }}
-                    />
-                  </ListItemAvatar>
-                }
-              >
-                <ListItemIcon>
-                  <RestaurantMenuIcon />
-                </ListItemIcon>
-                <ListItemText primary="Nome piatto" />
-              </ListItem>
-
-              <Drawer />
-
-              <ListItem
-                secondaryAction={
-                  <ListItemAvatar>
-                    <Avatar
-                      sx={{
-                        width: 30,
-                        height: 30,
-                        ml: 50,
-                      }}
-                      alt="Remy Sharp"
-                      src="../../icon/gluten-free.png"
-                      onClick={() => {
-                        navigate("/lattosio");
-                      }}
-                    />
-                  </ListItemAvatar>
-                }
-              >
-                <ListItemIcon>
-                  <RestaurantMenuIcon />
-                </ListItemIcon>
-                <ListItemText primary="Nome piatto" />
-              </ListItem>
+              {menu.map((piatto, id) => (
+                <ListItem
+                  secondaryAction={
+                    <ListItemAvatar>
+                      <Avatar
+                        sx={{
+                          width: 30,
+                          height: 30,
+                          ml: 50,
+                        }}
+                        alt="Remy Sharp"
+                        src="../../icon/lactose-free.png"
+                        onClick={() => {
+                          navigate("/lattosio");
+                        }}
+                      />
+                    </ListItemAvatar>
+                  }
+                >
+                  <ListItemIcon>
+                    <RestaurantMenuIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={piatto.name}
+                    secondary={piatto.descrizione}
+                  />
+                </ListItem>
+              ))}
 
               <Drawer />
             </List>
