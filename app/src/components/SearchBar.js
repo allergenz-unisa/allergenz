@@ -45,8 +45,8 @@ const SearchBar = (props) => {
       <IconButton
         sx={{ p: "10px" }}
         aria-label="search"
-        onClick={() => { searchRistoranti()
-          //window.location.href = "/risultati-ricerca?param=" + value;
+        onClick={() => { 
+          searchRistoranti();
         }}
       >
         <SearchIcon />

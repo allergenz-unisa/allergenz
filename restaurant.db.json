@@ -544,62 +544,10 @@
         }
       ],
       "like": "25"
-    },
-    {
-      "nomeLocale": "vineria",
-      "via": "fffbff",
-      "citta": "bfdbdf",
-      "cap": "56457",
-      "cucina": "Cucina di mare",
-      "allergene": "Crostacei",
-      "id": "m8OfR4e"
-    },
-    {
-      "nomeLocale": "vineria",
-      "via": "ghh",
-      "citta": "fvdfvjdnvn",
-      "cap": "56387",
-      "cucina": "Fast food",
-      "allergene": "Lattosio",
-      "id": "TlveOtv"
-    },
-    {
-      "nomeLocale": "vineria",
-      "via": "ksfjvjfvkj",
-      "citta": "tbrtbwr",
-      "cap": "46636",
-      "cucina": "Pizza",
-      "allergene": "Glutine",
-      "id": "PPAvtlH"
-    },
-    {
-      "nomeLocale": "vineria",
-      "via": "ghh",
-      "citta": "vrjkfv ",
-      "cap": "56387",
-      "cucina": "Hamburger",
-      "allergene": "Crostacei",
-      "id": "buATmln"
-    },
-    {
-      "nomeLocale": "vineria",
-      "via": "gbrb",
-      "citta": "fkvdvjf",
-      "cap": "56387",
-      "cucina": "Sushi",
-      "allergene": "Glutine",
-      "id": "taLVCm9"
-    },
-    {
-      "nomeLocale": "vineria",
-      "via": "gbrb",
-      "citta": "fkvdvjf",
-      "cap": "56387",
-      "cucina": "Sushi",
-      "allergene": "Glutine",
-      "id": "X0-SOSN"
     }
   ],
+
+
   "users": [
     {
       "id": 1,
@@ -633,6 +581,8 @@
       "token": 1654003355357
     }
   ],
+
+  
   "allergeni": [
     {
       "id": "1",

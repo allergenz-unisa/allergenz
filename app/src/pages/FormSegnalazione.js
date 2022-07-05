@@ -2,10 +2,12 @@ import {
   Alert,
   Box,
   Button,
+  Card,
   Container,
   Grid,
   List,
   ListItem,
+  ListItemText,
   MenuItem,
   Paper,
   TextField,
@@ -15,6 +17,7 @@ import { textAlign } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addNewRestaurant } from "../api/Allergenz";
+import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
 
 const cucine = [
@@ -132,6 +135,48 @@ const FormSegnalazione = () => {
 
   return (
     <div sx={{ bgcolor: "#FAF4F4" }}>
+      {localStorage.getItem("token") === null ? (
+        <div>
+          <Box maxWidth="md" justifyContent="center" margin="auto">
+            <Card sx={{ marginBottom: 1 }}>
+              <List>
+                <ListItem>
+                  <ListItemText primary="Registrati o effettua il login e riprova!" />
+                </ListItem>
+              </List>
+
+              <Typography m={2}>
+                Se non sei ancora registrato sulla piattaforma Allergenz,
+                iscriviti ora per non perderti i vantaggi riservati alla nostra
+                community: potrai essere d'aiuto ad altre persone, mettere like
+                per suggerire i locali che preferisci, accedere all'area
+                personale...e tanto altro ancora! <br />
+              </Typography>
+            </Card>
+
+            <ListItem>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <GoBackButton mt={2} />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Button
+                    fullWidth
+                    variant="contained"
+                    color="secondary"
+                    sx={{ color: "white", fontWeight: "bold" }}
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
+                    Effettua il login
+                  </Button>
+                </Grid>
+              </Grid>
+            </ListItem>
+          </Box>
+        </div>
+      ) : (
       <Grid container>
         <Grid item xs={12} md={2} lg={3} />
         <Grid item xs={12} md={8} lg={6}>
@@ -289,6 +334,7 @@ const FormSegnalazione = () => {
         </Grid>
         <Grid item xs={12} md={2} lg={3} />
       </Grid>
+      )}
     </div>
   );
 };

@@ -36,7 +36,7 @@ const Conferma = () => {
                 variant="contained"
                 color="secondary"
                 sx={{ color: "white", fontWeight: "bold" }}
-                onClick={() => {}}
+                onClick={() => window.location.href = "/"}
               >
                 Ok
               </Button>
