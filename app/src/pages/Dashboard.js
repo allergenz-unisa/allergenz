@@ -46,8 +46,8 @@ const Dashboard = () => {
         </Grid>
 
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate(
@@ -81,8 +81,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria?categoria=Pizza");
@@ -112,8 +112,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria?categoria=Hamburger");
@@ -143,8 +143,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria?categoria=Sushi");
@@ -174,8 +174,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria?categoria=Indiano");
@@ -205,8 +205,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate("/ristoranti-per-categoria?categoria=Fast food");
@@ -236,8 +236,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate(
@@ -271,8 +271,8 @@ const Dashboard = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={4} lg={3}>
+            <Card sx={{ height: 200 }}>
               <CardActionArea
                 onClick={() => {
                   navigate(
