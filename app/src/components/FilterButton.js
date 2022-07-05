@@ -5,10 +5,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import ToggleOffIcon from "@mui/icons-material/ToggleOff";
-import ToggleOnIcon from "@mui/icons-material/ToggleOn";
+import Switch from '@mui/material/Switch';
 
 const StyledMenu = styled((props) => (
+
   <Menu
     elevation={0}
     anchorOrigin={{
@@ -51,6 +51,11 @@ const StyledMenu = styled((props) => (
 }));
 
 export default function CustomizedMenus() {
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -85,60 +90,60 @@ export default function CustomizedMenus() {
       >
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Le mie intolleranze
-          <ToggleOffIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Lattosio
-          <ToggleOffIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Glutine
-          <ToggleOffIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Crostacei
-          <ToggleOnIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Frutta a guscio
-          <ToggleOnIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Nichel
-          <ToggleOffIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleClose}
+          onClick={handleChange}
           disableRipple
         >
           Proteina LTP
-          <ToggleOffIcon sx={{ ml: 1 }} />
+          <Switch color="secondary"/>
         </MenuItem>
       </StyledMenu>
     </div>

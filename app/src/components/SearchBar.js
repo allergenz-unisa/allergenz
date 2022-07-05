@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import { searchRestarant } from "../api/Allergenz";
 
 const SearchBar = (props) => {
-  let navigate = useNavigate();
 
-  var value;
+  const [value, setValue] = useState("");
 
-  function setValue(val) {
-    value = val;
-    console.log(value);
+  function searchRistoranti() {
+    console.log(value)
+    searchRestarant(value)
+      .then(function (ristoranti) {
+        props.onSearchResult(ristoranti, value)
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   }
 
   return (
@@ -27,9 +33,7 @@ const SearchBar = (props) => {
         marginBottom: 3,
       }}
     >
-      <IconButton sx={{ p: "10px" }} aria-label="menu">
-        <MenuIcon />
-      </IconButton>
+      
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         placeholder="Cerca un locale"
@@ -39,11 +43,10 @@ const SearchBar = (props) => {
         }}
       />
       <IconButton
-        type="submit"
         sx={{ p: "10px" }}
         aria-label="search"
-        onClick={() => {
-          navigate("/risultati-ricerca?param=" + value);
+        onClick={() => { searchRistoranti()
+          //window.location.href = "/risultati-ricerca?param=" + value;
         }}
       >
         <SearchIcon />

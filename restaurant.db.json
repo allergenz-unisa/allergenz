@@ -28,19 +28,30 @@
           "id": "1",
           "name": "Maguro",
           "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": ["lattosio", "frutta a guscio", "glutine"]
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio",
+            "glutine"
+          ]
         },
         {
           "id": "2",
           "name": "Avocado",
           "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": ["lattosio", "frutta a guscio", "glutine"]
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio",
+            "glutine"
+          ]
         },
         {
           "id": "3",
           "name": "Spicy tuna",
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": ["lattosio", "frutta a guscio"]
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio"
+          ]
         }
       ],
       "like": "4"
@@ -88,13 +99,19 @@
           "id": "2",
           "name": "Sake Hot Roll",
           "descrizione": "Salmone, philadelphia, avocado, ricoperto da philadelphia",
-          "allergenFree": ["frutta a guscio", "crostacei"]
+          "allergenFree": [
+            "frutta a guscio",
+            "crostacei"
+          ]
         },
         {
           "id": "3",
           "name": "Futomaki Classic",
           "descrizione": "Salmone, surimi, gambero in tempura, tobiko e avocado",
-          "allergenFree": ["lattosio", "frutta a guscio"]
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio"
+          ]
         }
       ],
       "like": "6"
@@ -135,13 +152,20 @@
           "id": "1",
           "name": "Riso Croccante Tonno",
           "descrizione": "Riso fritto con tartare di tonno, erba cipollina, salsa spicy e teriyaki",
-          "allergenFree": ["lattosio", "crostacei", "proteina LTP"]
+          "allergenFree": [
+            "lattosio",
+            "crostacei",
+            "proteina LTP"
+          ]
         },
         {
           "id": "2",
           "name": "Involtini primavera",
           "descrizione": "Fagottini fritti di pasta con un ripieno di verdure e gamberi",
-          "allergenFree": ["lattosio", "frutta a guscio"]
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio"
+          ]
         },
         {
           "id": "3",
@@ -180,13 +204,20 @@
           "id": "1",
           "name": "Cismoke Burger",
           "descrizione": "Bun tradizionale, hamburger, smoked ceddar, insalata iceberg e pomodori",
-          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
+          "allergenFree": [
+            "crostacei",
+            "frutta a guscio",
+            "proteina LTP"
+          ]
         },
         {
           "id": "2",
           "name": "Ciclope Burger",
           "descrizione": "Bun tradizionale, hamburger, white ceddar, uova all'occhio di bue, bacon croccante, insalata iceberg e pomodori ",
-          "allergenFree": ["crostacei", "frutta a guscio"]
+          "allergenFree": [
+            "crostacei",
+            "frutta a guscio"
+          ]
         }
       ],
       "like": "15"
@@ -219,19 +250,30 @@
           "id": "1",
           "name": "Panino Frank",
           "descrizione": "Cotoletta di pollo impanata con riso soffiato, mozzarella, insalata e pomodoro",
-          "allergenFree": ["crostacei", "proteina LTP"]
+          "allergenFree": [
+            "crostacei",
+            "proteina LTP"
+          ]
         },
         {
           "id": "2",
           "name": "Hamburger Krabby patty",
           "descrizione": "Hambuger di scottona, bacon, pomodoro, insalata, cheddar, cipolle caramellate e bacon",
-          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
+          "allergenFree": [
+            "crostacei",
+            "frutta a guscio",
+            "proteina LTP"
+          ]
         },
         {
           "id": "3",
           "name": "Hamburger Mansueto",
           "descrizione": "Hambuger di scottona, cheddar, bacon e patatine fritte",
-          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
+          "allergenFree": [
+            "crostacei",
+            "frutta a guscio",
+            "proteina LTP"
+          ]
         }
       ],
       "like": "8"
@@ -264,13 +306,20 @@
           "id": "1",
           "name": "Bacon King",
           "descrizione": "Hamburger di manzo alla griglia, maionese, ketchup, cheddar e bacon",
-          "allergenFree": ["crostacei", "frutta a guscio", "proteina LTP"]
+          "allergenFree": [
+            "crostacei",
+            "frutta a guscio",
+            "proteina LTP"
+          ]
         },
         {
           "id": "2",
           "name": "Avocado",
           "descrizione": "Pane al mais, pollo croccante, pomodoro, lattuga e doppia maionese",
-          "allergenFree": ["crostacei", "frutta a guscio"]
+          "allergenFree": [
+            "crostacei",
+            "frutta a guscio"
+          ]
         }
       ],
       "like": "9"
@@ -495,6 +544,60 @@
         }
       ],
       "like": "25"
+    },
+    {
+      "nomeLocale": "vineria",
+      "via": "fffbff",
+      "citta": "bfdbdf",
+      "cap": "56457",
+      "cucina": "Cucina di mare",
+      "allergene": "Crostacei",
+      "id": "m8OfR4e"
+    },
+    {
+      "nomeLocale": "vineria",
+      "via": "ghh",
+      "citta": "fvdfvjdnvn",
+      "cap": "56387",
+      "cucina": "Fast food",
+      "allergene": "Lattosio",
+      "id": "TlveOtv"
+    },
+    {
+      "nomeLocale": "vineria",
+      "via": "ksfjvjfvkj",
+      "citta": "tbrtbwr",
+      "cap": "46636",
+      "cucina": "Pizza",
+      "allergene": "Glutine",
+      "id": "PPAvtlH"
+    },
+    {
+      "nomeLocale": "vineria",
+      "via": "ghh",
+      "citta": "vrjkfv ",
+      "cap": "56387",
+      "cucina": "Hamburger",
+      "allergene": "Crostacei",
+      "id": "buATmln"
+    },
+    {
+      "nomeLocale": "vineria",
+      "via": "gbrb",
+      "citta": "fkvdvjf",
+      "cap": "56387",
+      "cucina": "Sushi",
+      "allergene": "Glutine",
+      "id": "taLVCm9"
+    },
+    {
+      "nomeLocale": "vineria",
+      "via": "gbrb",
+      "citta": "fkvdvjf",
+      "cap": "56387",
+      "cucina": "Sushi",
+      "allergene": "Glutine",
+      "id": "X0-SOSN"
     }
   ],
   "users": [

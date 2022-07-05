@@ -86,7 +86,7 @@ const DettagliRistorante = () => {
                           ml: 50,
                         }}
                         alt="Remy Sharp"
-                        src="../../icon/lactose-free.png"
+                        src="../../icon/lattosio.png"
                         onClick={() => {
                           navigate("/lattosio");
                         }}

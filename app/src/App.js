@@ -14,7 +14,6 @@ import RistoCategoria from "./pages/RistoCategoria";
 import InfoAllergene from "./pages/InfoAllergene";
 import FormSegnalazione from "./pages/FormSegnalazione";
 import Conferma from "./pages/Conferma";
-import RisultatiRicerca from "./pages/RisultatiRicerca";
 import "./index.css";
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
             <Route path="/modificaMenu" element={<ModificaMenu />} />
             <Route path="/inserimento-portata" element={<FormInsPortata />} />
             <Route path="/dettagli-ristorante" element={<InfoRistorante />} />
-            <Route path="/risultati-ricerca" element={<RisultatiRicerca />} />
             <Route
               path="/ristoranti-per-categoria"
               element={<RistoCategoria />}
