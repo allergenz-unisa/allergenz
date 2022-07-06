@@ -47,7 +47,7 @@ const FormInsPortata = () => {
   const [ristorante, setRistorante] = useState({});
   const [nomePiatto, setNomePiatto] = useState("");
   const [descrizione, setDescrizione] = useState("");
-  const [allergene, setAllergene] = useState("");
+  const [allergenFree, setAllergenFree] = useState([]);
   const [errors, setErrors] = useState([]);
 
   const { changeTitle } = useTitleContext();
@@ -76,9 +76,10 @@ const FormInsPortata = () => {
     setErrors([]);
     let errs = [];
     const piatto = {
+      id: (Math.floor(Math.random() * 1000000) + 10).toString(),
       name: nomePiatto,
       descrizione: descrizione,
-      allergenFree: allergene,
+      allergenFree: allergenFree,
     };
 
     if (!piatto.name)
@@ -163,7 +164,7 @@ const FormInsPortata = () => {
                     <MenuItem
                       key={option.value}
                       value={option.value}
-                      onClick={() => setAllergene(option.value)}
+                      onClick={() => setAllergenFree([option.value])}
                     >
                       {option.label}
                     </MenuItem>
