@@ -11,6 +11,7 @@ import {
   Paper,
   Box,
   ListItemAvatar,
+  Container,
 } from "@mui/material";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
@@ -18,11 +19,23 @@ import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import { getRestarantById, getRestarantByName } from "../api/Allergenz";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
+import ListSubheader from "@mui/material/ListSubheader";
+import ListItemButton from "@mui/material/ListItemButton";
+import Collapse from "@mui/material/Collapse";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import SendIcon from "@mui/icons-material/Send";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import StarBorder from "@mui/icons-material/StarBorder";
+
 const DettagliRistorante = () => {
   const [ristorante, setRistorante] = useState({});
   const [menu, setMenu] = useState([{}]);
   let navigate = useNavigate();
   let [searchParams, setSearchParams] = useSearchParams();
+
+  const [open, setOpen] = React.useState(true);
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
@@ -79,35 +92,40 @@ const DettagliRistorante = () => {
               </ListItem>
 
               {menu.map((piatto, id) => (
-                <ListItem
-                  secondaryAction={
-                    <ListItemAvatar>
-                      {piatto.allergenFree && piatto.allergenFree.map(a => 
-                          <Avatar
-                          sx={{
-                            width: 30,
-                            height: 30,
-                            ml: 50,
-                          }}
-                          alt="Remy Sharp"
-                          src={`/icon/${a}.png`}
-                          onClick={() => {
-                            navigate("/lattosio");
-                          }}
-                        />
-                      )}
-                      
-                    </ListItemAvatar>
-                  }
-                >
-                  <ListItemIcon>
-                    <RestaurantMenuIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={piatto.name}
-                    secondary={piatto.descrizione}
-                  />
-                </ListItem>
+                <Box>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <RestaurantMenuIcon />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={piatto.name}
+                      secondary={piatto.descrizione}
+                    />
+                    {piatto.allergenFree &&
+                      piatto.allergenFree.map((allergene, id) => (
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Avatar
+                              sx={{
+                                width: 20,
+                                height: 20,
+                              }}
+                              alt="Remy Sharp"
+                              src={`/icon/${allergene}.png`}
+                              onClick={() => {
+                                navigate(
+                                  "/dettagli-allergene?name=" + allergene,
+                                  {
+                                    allergene: allergene,
+                                  }
+                                );
+                              }}
+                            />
+                          </ListItemIcon>
+                        </ListItemButton>
+                      ))}
+                  </ListItemButton>
+                </Box>
               ))}
 
               <Drawer />

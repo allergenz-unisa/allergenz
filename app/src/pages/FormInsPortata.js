@@ -10,50 +10,49 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useTitleContext from "../components/PageTitleContext";
 import { getRestarantById, updateRestaurant } from "../api/Allergenz";
 
 const allergeni = [
   {
-    value: "lattosio",
-    label: "lattosio",
+    value: "Lattosio",
+    label: "Lattosio",
   },
   {
-    value: "glutine",
-    label: "glutine",
+    value: "Glutine",
+    label: "Glutine",
   },
   {
-    value: "crostacei",
-    label: "crostacei",
+    value: "Crostacei",
+    label: "Crostacei",
   },
   {
-    value: "frutta a guscio",
-    label: "frutta a guscio",
+    value: "Frutta a guscio",
+    label: "Frutta a guscio",
   },
   {
-    value: "nichel",
-    label: "nichel",
+    value: "Nichel",
+    label: "Nichel",
   },
   {
-    value: "proteina LTP",
-    label: "proteina LTP",
+    value: "Proteina LTP",
+    label: "Proteina LTP",
   },
 ];
 
-const FormInsPortata = () => {  
+const FormInsPortata = () => {
   let navigate = useNavigate();
-  let { id } = useParams();  
+  let { id } = useParams();
   const [ristorante, setRistorante] = useState({});
   const [nomePiatto, setNomePiatto] = useState("");
   const [descrizione, setDescrizione] = useState("");
   const [allergene, setAllergene] = useState("");
   const [errors, setErrors] = useState([]);
- 
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
-    changeTitle("Inserisci una portata per \" " + ristorante.localName + " \" ");
+    changeTitle('Inserisci una portata per " ' + ristorante.localName + ' " ');
   }, []);
 
   useEffect(() => {
@@ -69,7 +68,6 @@ const FormInsPortata = () => {
       });
   }, []);
 
-
   /**
    * Questa funzione colleziona tutte le variabili di stato del form
    * e se non ci sono errori invoca il metodo updateRestaurant dell'API
@@ -78,32 +76,32 @@ const FormInsPortata = () => {
     setErrors([]);
     let errs = [];
     const piatto = {
-       
       name: nomePiatto,
       descrizione: descrizione,
       allergenFree: allergene,
     };
 
-    if (!piatto.name) errs.push("È obbligatorio inserire il nome della portata");
+    if (!piatto.name)
+      errs.push("È obbligatorio inserire il nome della portata");
 
-    if (!piatto.descrizione) errs.push("È obbligatorio inserire la descrizione della portata");
+    if (!piatto.descrizione)
+      errs.push("È obbligatorio inserire la descrizione della portata");
 
-    if (!piatto.allergenFree) errs.push("È obbligatorio inserire l'allergene a cui il locale pone attenzione con questa portata");
+    if (!piatto.allergenFree)
+      errs.push(
+        "È obbligatorio inserire l'allergene a cui il locale pone attenzione con questa portata"
+      );
 
     if (errs.length) {
       setErrors(errs);
       return;
     }
 
-    console.log(piatto)
+    console.log(piatto);
     ristorante.Menu.push(piatto);
     await updateRestaurant(ristorante);
     window.location.href = "/conferma";
   };
-
-
-  
-
 
   return (
     <div sx={{ bgcolor: "#FAF4F4" }}>
@@ -136,12 +134,12 @@ const FormInsPortata = () => {
                 </Typography>
               </ListItem>
               <ListItem>
-                <TextField 
-                  fullWidth 
+                <TextField
+                  fullWidth
                   name="NomePiatto"
-                  id="NomePiatto" 
+                  id="NomePiatto"
                   label="Nome del piatto"
-                  onChange={(e) => setNomePiatto(e.target.value)} 
+                  onChange={(e) => setNomePiatto(e.target.value)}
                 />
               </ListItem>
               <ListItem>
@@ -162,32 +160,33 @@ const FormInsPortata = () => {
                   label="Scegli l'allergene non presente"
                 >
                   {allergeni.map((option) => (
-                    <MenuItem key={option.value} value={option.value} onClick={()=> setAllergene(option.value)}>
+                    <MenuItem
+                      key={option.value}
+                      value={option.value}
+                      onClick={() => setAllergene(option.value)}
+                    >
                       {option.label}
                     </MenuItem>
                   ))}
                 </TextField>
               </ListItem>
 
-
               <ListItem>
-                
                 <Grid container spacing={2}>
+                  {errors.length > 0 ? (
+                    <Alert severity="error">
+                      <Typography>
+                        Attenzione correggere i seguenti errori:
+                        <ul>
+                          {errors.map((err) => (
+                            <li>{err}</li>
+                          ))}
+                        </ul>
+                      </Typography>
+                    </Alert>
+                  ) : null}
 
-                {errors.length > 0 ? (
-                      <Alert severity="error">
-                        <Typography>
-                          Attenzione correggere i seguenti errori:
-                          <ul>
-                            {errors.map((err) => (
-                              <li>{err}</li>
-                            ))}
-                          </ul>
-                        </Typography>
-                      </Alert>
-                    ) : null}
-
-                <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6}>
                     <Button
                       fullWidth
                       variant="outlined"
@@ -199,8 +198,6 @@ const FormInsPortata = () => {
                       Annulla
                     </Button>
                   </Grid>
-
-                  
 
                   <Grid item xs={12} md={6}>
                     <Button

@@ -142,9 +142,9 @@ const getAllAllergnes = async () => {
   }
 };
 
-const getAllergenById = async (id) => {
+const getAllergenByName = async (name) => {
   try {
-    const response = await api.get(`/allergeni?id=${id}`);
+    const response = await api.get(`/allergeni?name=${name}`);
     return response.data;
   } catch (e) {
     throw new Error(e.message);
@@ -152,7 +152,7 @@ const getAllergenById = async (id) => {
 };
 
 export {
-  getAllergenById,
+  getAllergenByName,
   getAllAllergnes,
   searchRestarant,
   getAllRestaurants,

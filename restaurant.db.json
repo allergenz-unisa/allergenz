@@ -12,15 +12,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         },
         {
           "id": "3",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         }
       ],
       "Menu": [
@@ -28,30 +28,19 @@
           "id": "1",
           "name": "Maguro",
           "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio", "Glutine"]
         },
         {
           "id": "2",
           "name": "Avocado",
           "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio", "Glutine"]
         },
         {
           "id": "3",
           "name": "Spicy tuna",
           "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         }
       ],
       "like": "4"
@@ -68,19 +57,19 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         },
         {
           "id": "3",
-          "categoria": "proteina LTP"
+          "categoria": "Proteina LTP"
         },
         {
           "id": "4",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         }
       ],
       "Menu": [
@@ -89,29 +78,23 @@
           "name": "Jo-Maguro",
           "descrizione": "Riso avvolto da tonno e ricoperto da tobiko e tartare di tonno e ricoperto con salsa mayo",
           "allergenFree": [
-            "lattosio",
-            "frutta a guscio",
-            "proteina LTP",
-            "crostacei"
+            "Lattosio",
+            "Frutta a guscio",
+            "Proteina LTP",
+            "cCrostacei"
           ]
         },
         {
           "id": "2",
           "name": "Sake Hot Roll",
           "descrizione": "Salmone, philadelphia, avocado, ricoperto da philadelphia",
-          "allergenFree": [
-            "frutta a guscio",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Crostacei"]
         },
         {
           "id": "3",
           "name": "Futomaki Classic",
           "descrizione": "Salmone, surimi, gambero in tempura, tobiko e avocado",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         }
       ],
       "like": "6"
@@ -128,23 +111,23 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "proteina LTP"
+          "categoria": "Proteina LTP"
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         },
         {
           "id": "3",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "4",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "5",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -152,20 +135,13 @@
           "id": "1",
           "name": "Riso Croccante Tonno",
           "descrizione": "Riso fritto con tartare di tonno, erba cipollina, salsa spicy e teriyaki",
-          "allergenFree": [
-            "lattosio",
-            "crostacei",
-            "proteina LTP"
-          ]
+          "allergenFree": ["Lattosio", "Crostacei", "Proteina LTP"]
         },
         {
           "id": "2",
           "name": "Involtini primavera",
           "descrizione": "Fagottini fritti di pasta con un ripieno di verdure e gamberi",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         },
         {
           "id": "3",
@@ -188,15 +164,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "proteina LTP"
+          "categoria": "Proteina LTP"
         },
         {
           "id": "2",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "3",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -204,20 +180,13 @@
           "id": "1",
           "name": "Cismoke Burger",
           "descrizione": "Bun tradizionale, hamburger, smoked ceddar, insalata iceberg e pomodori",
-          "allergenFree": [
-            "crostacei",
-            "frutta a guscio",
-            "proteina LTP"
-          ]
+          "allergenFree": ["Crostacei", "Frutta a guscio", "Proteina LTP"]
         },
         {
           "id": "2",
           "name": "Ciclope Burger",
           "descrizione": "Bun tradizionale, hamburger, white ceddar, uova all'occhio di bue, bacon croccante, insalata iceberg e pomodori ",
-          "allergenFree": [
-            "crostacei",
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Crostacei", "Frutta a guscio"]
         }
       ],
       "like": "15"
@@ -234,15 +203,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "proteina LTP"
+          "categoria": "Proteina LTP"
         },
         {
           "id": "2",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "3",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -250,30 +219,19 @@
           "id": "1",
           "name": "Panino Frank",
           "descrizione": "Cotoletta di pollo impanata con riso soffiato, mozzarella, insalata e pomodoro",
-          "allergenFree": [
-            "crostacei",
-            "proteina LTP"
-          ]
+          "allergenFree": ["Crostacei", "Proteina LTP"]
         },
         {
           "id": "2",
           "name": "Hamburger Krabby patty",
           "descrizione": "Hambuger di scottona, bacon, pomodoro, insalata, cheddar, cipolle caramellate e bacon",
-          "allergenFree": [
-            "crostacei",
-            "frutta a guscio",
-            "proteina LTP"
-          ]
+          "allergenFree": ["Crostacei", "Frutta a guscio", "Proteina LTP"]
         },
         {
           "id": "3",
           "name": "Hamburger Mansueto",
           "descrizione": "Hambuger di scottona, cheddar, bacon e patatine fritte",
-          "allergenFree": [
-            "crostacei",
-            "frutta a guscio",
-            "proteina LTP"
-          ]
+          "allergenFree": ["Crostacei", "Frutta a guscio", "Proteina LTP"]
         }
       ],
       "like": "8"
@@ -290,15 +248,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         },
         {
           "id": "3",
-          "categoria": "proteina LTP"
+          "categoria": "Proteina LTP"
         }
       ],
       "Menu": [
@@ -306,20 +264,13 @@
           "id": "1",
           "name": "Bacon King",
           "descrizione": "Hamburger di manzo alla griglia, maionese, ketchup, cheddar e bacon",
-          "allergenFree": [
-            "crostacei",
-            "frutta a guscio",
-            "proteina LTP"
-          ]
+          "allergenFree": ["Crostacei", "Frutta a guscio", "Proteina LTP"]
         },
         {
           "id": "2",
           "name": "Avocado",
           "descrizione": "Pane al mais, pollo croccante, pomodoro, lattuga e doppia maionese",
-          "allergenFree": [
-            "crostacei",
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Crostacei", "Frutta a guscio"]
         }
       ],
       "like": "9"
@@ -336,19 +287,19 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "3",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         },
         {
           "id": "4",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -356,30 +307,19 @@
           "id": "1",
           "name": "Gobhi Mattar",
           "descrizione": "Cavolfiore e piselli cotti in salsa di spezie",
-          "allergenFree": [
-            "lattosio",
-            "crostacei"
-          ]
+          "allergenFree": ["Lattosio", "Crostacei"]
         },
         {
           "id": "2",
           "name": "Chichen",
           "descrizione": "Riso di pollo speziato",
-          "allergenFree": [
-            "frutta a guscio",
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Frutta a guscio", "Lattosio", "Glutine"]
         },
         {
           "id": "3",
           "name": "Jinga",
           "descrizione": "Riso con gamberetti e spezie",
-          "allergenFree": [
-            "frutta a guscio",
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Frutta a guscio", "Lattosio", "Glutine"]
         }
       ],
       "like": "5"
@@ -396,15 +336,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         },
         {
           "id": "3",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         }
       ],
       "Menu": [
@@ -412,28 +352,19 @@
           "id": "1",
           "name": "Rice pulau",
           "descrizione": "Riso con zafferano, spezie e mandorle",
-          "allergenFree": [
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Glutine"]
         },
         {
           "id": "2",
           "name": "Pudina tikka",
           "descrizione": "Bocconcini di pollo disossati alle erbe",
-          "allergenFree": [
-            "lattosio",
-            "crostacei"
-          ]
+          "allergenFree": ["Lattosio", "Crostacei"]
         },
         {
           "id": "3",
           "name": "Alu chole",
           "descrizione": "Patate e ceci speziati",
-          "allergenFree": [
-            "glutine",
-            "lattosio"
-          ]
+          "allergenFree": ["Glutine", "Lattosio"]
         }
       ],
       "like": "7"
@@ -450,15 +381,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         },
         {
           "id": "2",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "3",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -466,31 +397,19 @@
           "id": "1",
           "name": "Margherita senza glutine",
           "descrizione": "Pizza senza glutine con pomodoro, mozzarella, olio e basilico",
-          "allergenFree": [
-            "frutta a guscio",
-            "glutine",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Glutine", "Crostacei"]
         },
         {
           "id": "2",
           "name": "Capricciosa senza glutine",
           "descrizione": "Pizza senza glutine con pomodori, mozzarella, prosciutto cotto, funghi, olive e carciofini",
-          "allergenFree": [
-            "frutta a guscio",
-            "glutine",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Glutine", "Crostacei"]
         },
         {
           "id": "3",
           "name": "Diavola",
           "descrizione": "Pizza senza glutine con pomodori, mozzarella e salame piccante",
-          "allergenFree": [
-            "frutta a guscio",
-            "glutine",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Glutine", "Crostacei"]
         }
       ],
       "like": "30"
@@ -507,11 +426,11 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "2",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         }
       ],
       "Menu": [
@@ -519,27 +438,19 @@
           "id": "1",
           "name": "Marinara gialla",
           "descrizione": "Pomodorini gialli, capperi lacrimelle, acciughe, olive nere, origano, olio e basilico",
-          "allergenFree": [
-            "lattosio",
-            "crostacei"
-          ]
+          "allergenFree": ["Lattosio", "Crostacei"]
         },
         {
           "id": "2",
           "name": "Marinara gialla slow food",
           "descrizione": "Pomodorini gialli del Piennolo certificati slow food, capperi lacrimelle, acciughe, olive nere, origano, olio e basilico",
-          "allergenFree": [
-            "lattosio",
-            "crostacei"
-          ]
+          "allergenFree": ["Lattosio", "Crostacei"]
         },
         {
           "id": "3",
           "name": "Margherita al salame",
           "descrizione": "Pomodoro San Marzano, mozzarella, salame napoletano, olio e basilico",
-          "allergenFree": [
-            "crostacei"
-          ]
+          "allergenFree": ["Crostacei"]
         }
       ],
       "like": "20"
@@ -556,15 +467,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "crostacei"
+          "categoria": "Crostacei"
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         },
         {
           "id": "3",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a Guscio"
         }
       ],
       "Menu": [
@@ -601,15 +512,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         },
         {
           "id": "3",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         }
       ],
       "Menu": [
@@ -617,30 +528,19 @@
           "id": "1",
           "name": "Cruditè di pesce",
           "descrizione": "Mix di pesce crudo dal pescato del giorno",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         },
         {
           "id": "2",
           "name": "Creatività di mare",
           "descrizione": "Mix di pesce crudo e cotto dal pescato del giorno",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         },
         {
           "id": "3",
           "name": "Bistecca di spada alla griglia",
           "descrizione": "Filetto di pesce spada alla griglia",
-          "allergenFree": [
-            "lattosio",
-            "frutta a guscio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         }
       ],
       "like": "25"
@@ -657,15 +557,15 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         },
         {
           "id": "3",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         }
       ],
       "Menu": [
@@ -673,19 +573,13 @@
           "id": "1",
           "name": "Misto mare",
           "descrizione": "Mix di pesce crudo e cotto",
-          "allergenFree": [
-            "frutta a guscio"
-          ]
+          "allergenFree": ["Frutta a guscio"]
         },
         {
           "id": "2",
           "name": "Grigliata di pescato locale",
           "descrizione": "Mix di pesce locale alla griglia",
-          "allergenFree": [
-            "frutta a guscio",
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Frutta a guscio", "Lattosio", "Glutine"]
         }
       ],
       "like": "10"
@@ -702,11 +596,11 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         }
       ],
       "Menu": [
@@ -714,28 +608,19 @@
           "id": "1",
           "name": "Chickenburger",
           "descrizione": "Bun, cotoletta di pollo e salsa caesar",
-          "allergenFree": [
-            "frutta a guscio",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Crostacei"]
         },
         {
           "id": "2",
           "name": "Hamburger",
           "descrizione": "Bun, hamburger, ketchup, senape, cipolla, cetriolo",
-          "allergenFree": [
-            "frutta a guscio",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Crostacei"]
         },
         {
           "id": "3",
           "name": "Misto mare",
           "descrizione": "Bun, hamburger, cheddar, ketchup, senape, cipolla",
-          "allergenFree": [
-            "frutta a guscio",
-            "crostacei"
-          ]
+          "allergenFree": ["Frutta a guscio", "Crostacei"]
         }
       ],
       "like": "50"
@@ -752,11 +637,11 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -764,27 +649,19 @@
           "id": "1",
           "name": "Al cotto",
           "descrizione": "Piadina con prosciutto cotto",
-          "allergenFree": [
-            "lattosio"
-          ]
+          "allergenFree": ["Lattosio"]
         },
         {
           "id": "2",
           "name": "Capri",
           "descrizione": "Piadina con tonno, pomodoro e maionese",
-          "allergenFree": [
-            "frutta a guscio",
-            "lattosio"
-          ]
+          "allergenFree": ["Frutta a guscio", "Lattosio"]
         },
         {
           "id": "3",
           "name": "Leggera",
           "descrizione": "Piadina con posciutto crudo e pomodorini",
-          "allergenFree": [
-            "frutta a guscio",
-            "lattosio"
-          ]
+          "allergenFree": ["Frutta a guscio", "Lattosio"]
         }
       ],
       "like": "10"
@@ -801,11 +678,11 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "Glutine"
         }
       ],
       "Menu": [
@@ -813,27 +690,19 @@
           "id": "1",
           "name": "Agnello alla brace",
           "descrizione": "Agnello cotto alla brace",
-          "allergenFree": [
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Glutine"]
         },
         {
           "id": "2",
           "name": "Filetto di chianina",
           "descrizione": "Filetto di chianina semplice",
-          "allergenFree": [
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Glutine"]
         },
         {
           "id": "3",
           "name": "Filetto ai porcini",
           "descrizione": "Filetto su letto di funghi porcini",
-          "allergenFree": [
-            "glutine"
-          ]
+          "allergenFree": ["Glutine"]
         }
       ],
       "like": "15"
@@ -850,11 +719,11 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "lattosio"
+          "categoria": "Lattosio"
         },
         {
           "id": "2",
-          "categoria": "frutta a guscio"
+          "categoria": "Frutta a guscio"
         }
       ],
       "Menu": [
@@ -862,27 +731,19 @@
           "id": "1",
           "name": "Agnello alla brace",
           "descrizione": "Agnello cotto alla brace",
-          "allergenFree": [
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Glutine"]
         },
         {
           "id": "2",
           "name": "Filetto di chianina",
           "descrizione": "Filetto di chianina semplice",
-          "allergenFree": [
-            "lattosio",
-            "glutine"
-          ]
+          "allergenFree": ["Lattosio", "Glutine"]
         },
         {
           "id": "3",
           "name": "Filetto ai porcini",
           "descrizione": "Filetto su letto di funghi porcini",
-          "allergenFree": [
-            "glutine"
-          ]
+          "allergenFree": ["Glutine"]
         }
       ],
       "like": "15"
@@ -898,7 +759,7 @@
       "intolleranze": [
         {
           "id": 1,
-          "int": "lattosio"
+          "int": "Lattosio"
         }
       ]
     },
@@ -924,41 +785,41 @@
   "allergeni": [
     {
       "id": "1",
-      "nome": "Lattosio",
+      "name": "Lattosio",
       "descrizionebreve": "L’intolleranza al lattosio consiste nell’incapacità dell’organismo di digerire completamente lo zucchero presente nel latte e nei suoi derivati ed è causata da una presenza insufficiente dell’enzima...",
       "descrizione": "L’intolleranza al lattosio consiste nell’incapacità dell’organismo di digerire completamente lo zucchero presente nel latte e nei suoi derivati ed è causata da una presenza insufficiente dell’enzima lattasi. Può essere di origine genetica e, dunque, comparire già dall’infanzia, oppure manifestarsi in età adulta. Non si tratta di un disturbo pericoloso, ma è associato a sintomi fastidiosi, come dolori addominali, gonfiore, meteorismo, diarrea e stitichezza, che possono essere evitati solo limitando il lattosio introdotto con l’alimentazione. "
     },
     {
       "id": "2",
-      "nome": "Glutine",
+      "name": "Glutine",
       "img": "glutine.png",
       "descrizionebreve": "L’intolleranza al glutine è un’elevata sensibilità del nostro organismo verso il glutine, un complesso proteico composto essenzialmente da due proteine, la glutenina e la gliadina. Esso si trova...",
       "descrizione": "L’intolleranza al glutine è un’elevata sensibilità del nostro organismo verso il glutine, un complesso proteico composto essenzialmente da due proteine, la glutenina e la gliadina. Esso si trova principalmente in molti cereali (come grano, segale, orzo, farro, kamut) e in tutti gli alimenti che ne prevedono la presenza (come pasta, pane, focacce, pizza, torte). L’organismo di chi soffre di intolleranza al glutine non è quindi in grado di tollerare e assimilare correttamente questo elemento."
     },
     {
       "id": "3",
-      "nome": "Crostacei",
+      "name": "Crostacei",
       "img": "crostacei.png",
       "descrizionebreve": "I sintomi dell’allergia crostacei di solito sono evidenti subito, appena si ingeriscono questi alimenti. Passano dall’orticaria al prurito, si può gonfiare il viso, o le labbra, la lingua o la...",
       "descrizione": "I sintomi dell’allergia crostacei di solito sono evidenti subito, appena si ingeriscono questi alimenti. Passano dall’orticaria al prurito, si può gonfiare il viso, o le labbra, la lingua o la gola. I crostacei possono fari insorgere, a chi ne è allergico, anche problemi respiratori come respiro sibilante e congestione nasale, dolori addominali. Chi è allergico ai crostacei può soffrire anche di diarrea, nausea, vomito e vertigini e se la reazione sfocia nell’anafilassi, potrebbe essere letale. Tra i sintomi troviamo anche il calo della pressione sanguigna, un senso di stordimento e la perdita di coscienza."
     },
     {
       "id": "4",
-      "nome": "Frutta a guscio",
+      "name": "Frutta a guscio",
       "img": "frutta a guscio",
       "descrizionebreve": "L'allergia alla frutta a guscio si verifica in quanto il sistema immunitario reagisce in modo anomalo alle proteine di questo alimento, producendo molti anticorpi IgE che circolano nel sangue...",
       "descrizione": "L'allergia alla frutta a guscio si verifica in quanto il sistema immunitario reagisce in modo anomalo alle proteine di questo alimento, producendo molti anticorpi IgE che circolano nel sangue. I bambini con anticorpi IgE diretti contro le proteine della frutta a guscio reagiscono rapidamente, nel giro di minuti o di poche ore, quando vengono esposti a questi alimenti. La frutta a guscio gioca un ruolo di primaria importanza come causa di shock anafilattico fatale. Non solo le arachidi, ma anche la noce comune, la noce del Brasile e la nocciola sono state associate alla morte per anafilassi. Avere quindi un'allergia a questo tipo di allergene non è un fatto banale ed esiste un pericolo concreto di reazioni gravi."
     },
     {
       "id": "5",
-      "nome": "Nichel",
+      "name": "Nichel",
       "img": "nichel",
       "descrizionebreve": "L'allergia al nichel è una reazione esagerata del sistema immunitario verso una sostanza estranea all'organismo, in questo caso il nichel. Nella maggior parte dei casi si manifesta con sintomi...",
       "descrizione": "L'allergia al nichel è una reazione esagerata del sistema immunitario verso una sostanza estranea all'organismo, in questo caso il nichel. Nella maggior parte dei casi si manifesta con sintomi della pelle come chiazze rosse ruvide e con intenso prurito. Ma può anche provocare fenomeni extra cutanei, come ad esempio disturbi gastrointestinali, urinari, ginecologici e neurologici periferici. Il nichel è presente in concentrazioni diverse nei cibi. Alcuni alimenti presentano un alto contenuto di nichel: pomodori, cacao in polvere e cioccolato, frutta secca in genere, crostacei, kiwi, pere, prugne, uva e uva passa, soia, legumi ecc. Altri alimenti, invece, sono a basso contenuto di nichel quali: la carne, alcuni tipi di pesce, latte e derivati, ecc. Non si hanno indicazioni in merito al fabbisogno giornaliero di nichel. Sono importanti anche le modalità di cottura degli alimenti. Sono indicate le pentole di ghisa, di alluminio anodizzato, oppure di acciaio inox 18/c garantito senza nichel e quelle di terracotta."
     },
     {
       "id": "6",
-      "nome": "Proteina LTP",
+      "name": "Proteina LTP",
       "img": "proteina LTP",
       "descrizionebreve": "Le LTP (Lipid Transfer Protein) sono delle proteine contenute in molti alimenti vegetali, soprattutto nella buccia delle pesche, mele, albicocche, ciliegie, ma anche in molti altri alimenti...",
       "descrizione": "Le LTP (Lipid Transfer Protein) sono delle proteine contenute in molti alimenti vegetali, soprattutto nella buccia delle pesche, mele, albicocche, ciliegie, ma anche in molti altri alimenti. Sono la causa più frequente di allergia alimentare in Italia e nei paesi mediterranei e causano reazioni allergiche molto gravi."

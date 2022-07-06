@@ -16,11 +16,11 @@ import CloseIcon from "@mui/icons-material/Close";
 import GoBackButton from "../components/GoBackButton";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-import { getAllergenById } from "../api/Allergenz";
+import { getAllergenByName } from "../api/Allergenz";
 
 const InfoAllergene = () => {
   const [allergene, setAllergene] = useState({});
-  const [nome, setNome] = useState();
+  const [name, setName] = useState();
   const [descrizione, setDescrizione] = useState();
   let navigate = useNavigate();
   let [searchParams, setSearchParams] = useSearchParams();
@@ -31,14 +31,14 @@ const InfoAllergene = () => {
   }, []);
 
   useEffect(() => {
-    getAllergenById(searchParams.get("id"))
+    getAllergenByName(searchParams.get("name"))
       .then(function (allergene) {
         console.log(allergene);
         setAllergene((allergene) => ({
           ...allergene,
         }));
         console.log(allergene);
-        setNome(allergene[0].nome);
+        setName(allergene[0].name);
         setDescrizione(allergene[0].descrizione);
       })
       .catch(function (error) {
@@ -60,9 +60,9 @@ const InfoAllergene = () => {
               }
             >
               <ListItemIcon>
-                <Avatar alt="Remy Sharp" src={"../../icon/" + nome + ".png"} />
+                <Avatar alt="Remy Sharp" src={"../../icon/" + name + ".png"} />
               </ListItemIcon>
-              <ListItemText primary={nome} />
+              <ListItemText primary={name} />
             </ListItem>
           </List>
 

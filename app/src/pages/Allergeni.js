@@ -49,14 +49,14 @@ const Allergeni = () => {
       <Box maxWidth="md" justifyContent="center" margin="auto">
         <Paper sx={{ marginBottom: 1 }}>
           <List>
-            {allergeni.map((allergene, nome) => (
+            {allergeni.map((allergene, name) => (
               <ListItem
                 secondaryAction={
                   <IconButton
                     edge="end"
                     onClick={() => {
-                      navigate("/dettagli-allergene?id=" + allergene.id, {
-                        id: allergene.id,
+                      navigate("/dettagli-allergene?name=" + allergene.name, {
+                        name: allergene.name,
                       });
                     }}
                   >
@@ -68,11 +68,11 @@ const Allergeni = () => {
                 <ListItemAvatar>
                   <Avatar
                     alt="Remy Sharp"
-                    src={"../../icon/" + allergene.nome + ".png"}
+                    src={"../../icon/" + allergene.name + ".png"}
                   />
                 </ListItemAvatar>
                 <ListItemText
-                  primary={allergene.nome}
+                  primary={allergene.name}
                   secondary={allergene.descrizionebreve}
                 />
                 <Divider variant="inset" component="li" />
