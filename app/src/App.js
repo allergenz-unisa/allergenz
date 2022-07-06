@@ -14,6 +14,7 @@ import InfoRistorante from "./pages/InfoRistorante";
 import RistoCategoria from "./pages/RistoCategoria";
 import InfoAllergene from "./pages/InfoAllergene";
 import FormSegnalazione from "./pages/FormSegnalazione";
+import RistoranteEsistente from "./pages/RistoranteEsistente";
 import Conferma from "./pages/Conferma";
 import "./index.css";
 
@@ -45,6 +46,10 @@ function App() {
               element={<FormSegnalazione />}
             />
             <Route path="/conferma" element={<Conferma />} />
+            <Route
+              path="/RistoranteEsistente"
+              element={<RistoranteEsistente />}
+            />
           </Routes>
         </MainLayout>
       </TitleContextProvider>

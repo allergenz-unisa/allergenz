@@ -9,6 +9,7 @@ import {
   IconButton,
   List,
   ListItem,
+  ListItemButton,
   ListItemIcon,
   MenuItem,
   ListItemText,
@@ -31,6 +32,9 @@ const Account = () => {
   let navigate = useNavigate();
 
   const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { changeTitle } = useTitleContext();
 
   const token = localStorage.getItem("token");
@@ -39,6 +43,10 @@ const Account = () => {
   async function getUtente() {
     const user = await getUserByToken();
     setUser(user);
+
+    setUsername(user.username);
+    setEmail(user.email);
+    setPassword(user.password);
   }
 
   useEffect(() => {

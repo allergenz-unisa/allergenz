@@ -6,10 +6,10 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-const Conferma = () => {
+const RistoranteEsistente = () => {
   const { changeTitle } = useTitleContext();
   useEffect(() => {
-    changeTitle("Pagina di conferma");
+    changeTitle("Errore");
   }, []);
 
   return (
@@ -23,7 +23,8 @@ const Conferma = () => {
           >
             <CardContent>
               <Typography variant="h5" component="div">
-                L’inserimento è andato a buon fine!
+                Hai provato ad inserire un ristorante già presente sulla
+                piattaforma!
               </Typography>
             </CardContent>
             <CardActions>
@@ -44,4 +45,4 @@ const Conferma = () => {
   );
 };
 
-export default Conferma;
+export default RistoranteEsistente;

@@ -15,6 +15,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import useTitleContext from "../components/PageTitleContext";
 import SearchBar from "../components/SearchBar";
 import GoBackButton from "../components/GoBackButton";
+import logo from "../images/logo/4x/allergens_logo@4x.png";
 
 import { getRestarantByCategory } from "../api/Allergenz";
 import { getUserByToken } from "../api/Allergenz";
@@ -77,10 +78,25 @@ const RistoCategoria = () => {
   return (
     <div>
       <Box maxWidth="lg" justifyContent="center" margin="auto">
+        <Grid
+          marginBottom={2}
+          container
+          justifyContent="center"
+          alignItems="center"
+          alignSelf="center"
+        >
+          <Box
+            component="img"
+            sx={{
+              maxWidth: 300,
+            }}
+            alt="Logo"
+            src={logo}
+          />
+
+          <Grid item xs={12}></Grid>
+        </Grid>
         <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <SearchBar />
-          </Grid>
           {ristoranti.map((ristorante, id) => (
             <Grid item xs={12} sm={12} md={6} lg={4}>
               <Card

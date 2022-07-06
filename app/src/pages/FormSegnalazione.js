@@ -16,7 +16,7 @@ import {
 import { textAlign } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { addNewRestaurant } from "../api/Allergenz";
+import { addNewRestaurant, getRestarantByName } from "../api/Allergenz";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
 
@@ -99,6 +99,22 @@ const FormSegnalazione = () => {
    * Questa funzione colleziona tutte le variabili di stato del form
    * e se non ci sono errori invoca il metodo addNewRestaurant dell'API
    */
+
+  function checkRistorante() {
+    getRestarantByName(localName)
+      .then(function (ristorante) {
+        if (ristorante.length > 0) {
+          console.log("Ristorante esistente");
+          window.location.href = "/RistoranteEsistente";
+          return;
+        }
+        segnalazioneRistorante();
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
+
   const segnalazioneRistorante = async () => {
     setErrors([]);
     let errs = [];
@@ -332,7 +348,7 @@ const FormSegnalazione = () => {
                           variant="contained"
                           color="secondary"
                           sx={{ color: "white", fontWeight: "bold" }}
-                          onClick={() => segnalazioneRistorante()}
+                          onClick={() => checkRistorante()}
                         >
                           Conferma
                         </Button>
