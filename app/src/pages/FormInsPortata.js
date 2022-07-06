@@ -136,6 +136,7 @@ const FormInsPortata = () => {
               </ListItem>
               <ListItem>
                 <TextField
+                  color="secondary"
                   fullWidth
                   name="NomePiatto"
                   id="NomePiatto"
@@ -145,6 +146,7 @@ const FormInsPortata = () => {
               </ListItem>
               <ListItem>
                 <TextField
+                  color="secondary"
                   fullWidth
                   name="Descrizione"
                   id="Descrizione"
@@ -154,6 +156,7 @@ const FormInsPortata = () => {
               </ListItem>
               <ListItem>
                 <TextField
+                  color="secondary"
                   fullWidth
                   select
                   name="Allergene"

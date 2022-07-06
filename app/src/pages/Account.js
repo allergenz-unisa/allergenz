@@ -10,6 +10,7 @@ import {
   List,
   ListItem,
   ListItemIcon,
+  MenuItem,
   ListItemText,
   TextField,
   Typography,
@@ -23,6 +24,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { getUserByToken } from "../api/Allergenz";
 import CloseIcon from "@mui/icons-material/Close";
 import GoBackButton from "../components/GoBackButton";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 
 const Account = () => {
   let navigate = useNavigate();
@@ -42,6 +45,56 @@ const Account = () => {
     getUtente();
     changeTitle("Il tuo profilo");
   }, []);
+
+  const [formValues, setFormValues] = useState([{ name: "" }]);
+
+  let handleChange = (i, e) => {
+    let newFormValues = [...formValues];
+    newFormValues[i][e.target.name] = e.target.value;
+    setFormValues(newFormValues);
+  };
+
+  let addFormFields = () => {
+    setFormValues([...formValues, { name: "" }]);
+  };
+
+  let removeFormFields = (i) => {
+    let newFormValues = [...formValues];
+    newFormValues.splice(i, 1);
+    setFormValues(newFormValues);
+  };
+
+  let handleSubmit = (event) => {
+    event.preventDefault();
+    alert(JSON.stringify(formValues));
+  };
+
+  const allergeni = [
+    {
+      value: "Lattosio",
+      label: "Lattosio",
+    },
+    {
+      value: "Glutine",
+      label: "Glutine",
+    },
+    {
+      value: "Crostacei",
+      label: "Crostacei",
+    },
+    {
+      value: "Frutta a guscio",
+      label: "Frutta a guscio",
+    },
+    {
+      value: "Nichel",
+      label: "Nichel",
+    },
+    {
+      value: "Proteina LTP",
+      label: "Proteina LTP",
+    },
+  ];
 
   return (
     <div>
@@ -125,16 +178,36 @@ const Account = () => {
                 <ListItemText primary="Dati Anagrafici" />
               </ListItem>
               <ListItem>
-                <TextField fullWidth id="fullName" label={user.fullName} />
+                <TextField
+                  color="secondary"
+                  fullWidth
+                  id="fullName"
+                  label={user.fullName}
+                />
               </ListItem>
               <ListItem>
-                <TextField fullWidth id="username" label={user.username} />
+                <TextField
+                  color="secondary"
+                  fullWidth
+                  id="username"
+                  label={user.username}
+                />
               </ListItem>
               <ListItem>
-                <TextField fullWidth id="email" label={user.email} />
+                <TextField
+                  color="secondary"
+                  fullWidth
+                  id="email"
+                  label={user.email}
+                />
               </ListItem>
               <ListItem>
-                <TextField fullWidth id="password" label={user.password} />
+                <TextField
+                  color="secondary"
+                  fullWidth
+                  id="password"
+                  label={user.password}
+                />
               </ListItem>
 
               <ListItem>
@@ -143,11 +216,70 @@ const Account = () => {
                 </ListItemIcon>
                 <ListItemText primary="Intolleranze" />
               </ListItem>
-              <ListItem>
-                <TextField fullWidth id="intolleranza1" label="intolleranza1" />
-              </ListItem>
-              <ListItem>
-                <TextField fullWidth id="intolleranza2" label="intolleranza2" />
+
+              <ListItem fullWidth>
+                <form onSubmit={handleSubmit}>
+                  {formValues.map((element, index) => (
+                    <div key={index}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                        }}
+                      >
+                        <TextField
+                          color="secondary"
+                          sx={{
+                            mb: 2,
+                          }}
+                          fullWidth
+                          select
+                          name="Allergene"
+                          id="Allergene"
+                          label="Scegli un allergene"
+                        >
+                          {allergeni.map((option) => (
+                            <MenuItem
+                              key={option.value}
+                              value={option.value}
+                              onChange={(e) => handleChange(index, e)}
+                            >
+                              {option.label}
+                            </MenuItem>
+                          ))}
+                        </TextField>
+
+                        <IconButton onClick={() => removeFormFields(index)}>
+                          <RemoveCircleIcon color="secondary" />
+                        </IconButton>
+                      </Box>
+                    </div>
+                  ))}
+                  <div className="button-section">
+                    <Button
+                      onClick={() => addFormFields()}
+                      sx={{ fontWeight: "bold" }}
+                      fullWidth
+                      variant="text"
+                      color="secondary"
+                    >
+                      <IconButton onClick={() => addFormFields()}>
+                        <AddCircleIcon color="secondary" />
+                      </IconButton>
+                      Aggiungi intolleranza
+                    </Button>
+
+                    <Button
+                      sx={{ color: "white", fontWeight: "bold" }}
+                      variant={"contained"}
+                      color={"secondary"}
+                      fullWidth
+                      type="submit"
+                    >
+                      Salva le modifiche
+                    </Button>
+                  </div>
+                </form>
               </ListItem>
             </List>
           </Card>
