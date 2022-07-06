@@ -9,6 +9,7 @@ import Account from "./pages/Account";
 import ModificaMenu from "./pages/ModificaMenu";
 import { TitleContextProvider } from "./components/PageTitleContext";
 import FormInsPortata from "./pages/FormInsPortata";
+import FormModificaPortata from "./pages/FormModificaPortata";
 import InfoRistorante from "./pages/InfoRistorante";
 import RistoCategoria from "./pages/RistoCategoria";
 import InfoAllergene from "./pages/InfoAllergene";
@@ -27,8 +28,12 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registrazione" element={<Registrazione />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/modifica-menu/:id" element={<ModificaMenu />} />
-            <Route path="/inserimento-portata/:id" element={<FormInsPortata />} />
+            <Route path="/modifica-menu/:id/" element={<ModificaMenu />} />
+            <Route
+              path="/inserimento-portata/:id"
+              element={<FormInsPortata />}
+            />
+            <Route path="/modifica-portata" element={<FormModificaPortata />} />
             <Route path="/dettagli-ristorante" element={<InfoRistorante />} />
             <Route
               path="/ristoranti-per-categoria"

@@ -770,7 +770,8 @@
       "password": "Allergenz",
       "email": "fede.amato@gmail.com",
       "intolleranze": [],
-      "token": 1654003146227
+      "token": 1654003146227,
+      "likes": [1, 2, 3, 15]
     },
     {
       "id": 1654003355357,

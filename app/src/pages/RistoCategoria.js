@@ -17,9 +17,15 @@ import SearchBar from "../components/SearchBar";
 import GoBackButton from "../components/GoBackButton";
 
 import { getRestarantByCategory } from "../api/Allergenz";
+import { getUserByToken } from "../api/Allergenz";
 
 const RistoCategoria = () => {
   const [ristoranti, setRistoranti] = useState([]);
+  const [user, setUser] = useState();
+  const [userLikes, setUserLikes] = useState([]);
+  const [like, setLike] = useState(false);
+
+  const token = localStorage.getItem("token");
 
   let navigate = useNavigate();
   let [searchParams, setSearchParams] = useSearchParams();
@@ -31,6 +37,7 @@ const RistoCategoria = () => {
 
   useEffect(() => {
     getRistoranti();
+    getUtente();
   }, []);
 
   function getRistoranti() {
@@ -43,6 +50,28 @@ const RistoCategoria = () => {
       .catch(function (error) {
         console.error(error);
       });
+  }
+
+  async function getUtente() {
+    const user = await getUserByToken();
+    setUser(user);
+    console.log("prova user");
+    console.log(user);
+    setUserLikes(user.likes);
+    console.log(userLikes);
+  }
+
+  function checkLike(id) {
+    userLikes.find((element) => {
+      if (element === id) {
+        console.log("true");
+        return true;
+      } else {
+        console.log("false");
+        return false;
+      }
+    });
+    return;
   }
 
   return (
@@ -80,17 +109,49 @@ const RistoCategoria = () => {
                   alt="Local Image"
                 />
                 <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                  </IconButton>
-                  <Typography
-                    sx={{
-                      fontWeight: "bold",
-                      color: "#757575",
-                    }}
-                  >
-                    {ristorante.like}
-                  </Typography>
+                  {checkLike(ristorante.id) == 1 ? (
+                    <div>
+                      <IconButton
+                        aria-label="add to favorites"
+                        onClick={() => {}}
+                      >
+                        <FavoriteIcon />
+                        <Typography
+                          sx={{
+                            fontWeight: "bold",
+                            color: "#757575",
+                          }}
+                        >
+                          {ristorante.like}
+                        </Typography>
+                      </IconButton>
+                    </div>
+                  ) : (
+                    <div>
+                      <div>
+                        <IconButton
+                          aria-label="add to favorites"
+                          onClick={() => {}}
+                        >
+                          <FavoriteIcon />
+                          <Typography
+                            sx={{
+                              fontWeight: "bold",
+                              color: "#757575",
+                            }}
+                          >
+                            {ristorante.like}
+                          </Typography>
+                          <Typography
+                            sx={{
+                              fontWeight: "bold",
+                              color: "#757575",
+                            }}
+                          ></Typography>
+                        </IconButton>
+                      </div>
+                    </div>
+                  )}
                 </CardActions>
               </Card>
             </Grid>

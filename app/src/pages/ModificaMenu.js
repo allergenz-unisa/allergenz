@@ -72,20 +72,21 @@ const ModificaMenu = () => {
             <List>
               {menu.map((piatto, id) => (
                 <ListItem
-                secondaryAction={
-                  <IconButton edge="end" component={Link} to="/account">
-                    <Modifica />
-                  </IconButton>
-                }
-              >
-                <ListItemIcon>
-                  <Portata />
-                </ListItemIcon>
-                <ListItemText primary={piatto.name} />
-              </ListItem>
+                  secondaryAction={
+                    <IconButton edge="end" component={Link} to="/account">
+                      <Modifica />
+                    </IconButton>
+                  }
+                >
+                  <ListItemIcon>
+                    <Portata />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={piatto.name}
+                    secondary={piatto.descrizione}
+                  />
+                </ListItem>
               ))}
-              
-
             </List>
             <Button
               fullWidth
