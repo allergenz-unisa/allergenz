@@ -624,7 +624,7 @@
           "categoria": "glutine"
         }
       ],
-      "Menù": [
+      "Menu": [
         {
           "id": "1",
           "name": "Misto mare",
@@ -655,8 +655,17 @@
         "cap": "84121"
       },
       "Cucina": "Fast food",
-      "AllergenFree": [],
-      "Menù": [
+      "AllergenFree": [
+        {
+          "id": "1",
+          "categoria": "frutta a guscio"
+        },
+        {
+          "id": "2",
+          "categoria": "glutine"
+        }
+      ],
+      "Menu": [
         {
           "id": "1",
           "name": "Chickenburger",
