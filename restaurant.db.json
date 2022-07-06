@@ -286,7 +286,7 @@
         "citta": "Salerno",
         "cap": "84122"
       },
-      "Cucina": "Hamburger",
+      "Cucina": "Fast food",
       "AllergenFree": [
         {
           "id": "1",
@@ -354,7 +354,7 @@
           "descrizione": "Nigiri con una fettina di tonno",
           "allergenFree": [
             {
-              "img": "gluten-free.png"
+              
             }
           ]
         },
@@ -422,15 +422,15 @@
         "citta": "Napoli",
         "cap": "80138"
       },
-      "Cucina": "pizza",
+      "Cucina": "Pizza",
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "crostacei"
+          "categoria": "glutine"
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "crostacei"
         },
         {
           "id": "3",
@@ -440,21 +440,33 @@
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Margherita senza glutine",
+          "descrizione": "Pizza senza glutine con pomodoro, mozzarella, olio e basilico",
+          "allergenFree": [
+            "frutta a guscio",
+            "glutine",
+            "crostacei"
+          ]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Capricciosa senza glutine",
+          "descrizione": "Pizza senza glutine con pomodori, mozzarella, prosciutto cotto, funghi, olive e carciofini",
+          "allergenFree": [
+            "frutta a guscio",
+            "glutine",
+            "crostacei"
+          ]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Diavola",
+          "descrizione": "Pizza senza glutine con pomodori, mozzarella e salame piccante",
+          "allergenFree": [
+            "frutta a guscio",
+            "glutine",
+            "crostacei"
+          ]
         }
       ],
       "like": "30"
@@ -475,27 +487,35 @@
         },
         {
           "id": "2",
-          "categoria": "glutine"
+          "categoria": "lattosio"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Marinara gialla",
+          "descrizione": "Pomodorini gialli, capperi lacrimelle, acciughe, olive nere, origano, olio e basilico",
+          "allergenFree": [
+            "lattosio",
+            "crostacei"
+          ]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Marinara gialla slow food",
+          "descrizione": "Pomodorini gialli del Piennolo certificati slow food, capperi lacrimelle, acciughe, olive nere, origano, olio e basilico",
+          "allergenFree": [
+            "lattosio",
+            "crostacei"
+          ]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Margherita al salame",
+          "descrizione": "Pomodoro San Marzano, mozzarella, salame napoletano, olio e basilico",
+          "allergenFree": [
+            "crostacei"
+          ]
         }
       ],
       "like": "20"
