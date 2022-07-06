@@ -27,8 +27,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registrazione" element={<Registrazione />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/modificaMenu" element={<ModificaMenu />} />
-            <Route path="/inserimento-portata" element={<FormInsPortata />} />
+            <Route path="/modifica-menu/:id" element={<ModificaMenu />} />
+            <Route path="/inserimento-portata/:id" element={<FormInsPortata />} />
             <Route path="/dettagli-ristorante" element={<InfoRistorante />} />
             <Route
               path="/ristoranti-per-categoria"

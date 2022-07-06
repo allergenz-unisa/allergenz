@@ -23,6 +23,7 @@ const Dashboard = () => {
   let navigate = useNavigate();
   const [searchResult, setSearchResult] = useState([]);
   const [searchString, setSearchString] = useState("");
+  const [filters, setFilters] = useState([]);
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
@@ -70,20 +71,24 @@ const Dashboard = () => {
         ) : searchResult.length > 0 && searchString ? (
           <div>
             <Box sx={{ width: "maxwidth", flexDirection: "row" }}>
-              <Button
-                onClick={() => {
-                  navigate(-1);
-                }}
-                variant="outlined"
-                color="secondary"
-              >
-                Indietro
-              </Button>
-              <CustomizedMenus />
+              <CustomizedMenus onChangeFilter={(filters)=>setFilters(filters)}/>
             </Box>
             <Box maxWidth="lg" justifyContent="center" margin="auto">
               <Grid container spacing={2}>
-                {searchResult.map((ristorante, id) => (
+                {searchResult.filter(
+                  (ristorante)=>{
+                    console.log(filters);
+                    if(filters.length===0) {
+                      console.log("filtriamo");
+                      return true;}
+                      for (const a of ristorante.AllergenFree) {
+                        if (filters.includes(a.categoria))
+                        return true;
+                      }
+
+                      return false;
+                  }
+                ).map((ristorante, id) => (
                   <Grid item xs={12} sm={12} md={6} lg={4} sx={{ t: 20 }}>
                     <Card
                       onClick={() => {

@@ -13,16 +13,18 @@ import {
 import React, { useEffect } from "react";
 import Portata from "@mui/icons-material/Restaurant";
 import Modifica from "@mui/icons-material/Edit";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
 
 const ModificaMenu = () => {
   let navigate = useNavigate();
+  let { id } = useParams();
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
     changeTitle("Modifica il menù");
+    console.log(id);
   }, []);
 
   return (
@@ -117,7 +119,7 @@ const ModificaMenu = () => {
               variant="text"
               color="secondary"
               onClick={() => {
-                navigate("/inserimento-portata");
+                navigate(`/inserimento-portata/${id}`);
               }}
             >
               {" "}

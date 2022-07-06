@@ -47,6 +47,7 @@ const FormInsPortata = () => {
     changeTitle("Segnalazione di un locale");
   }, []);
 
+
   return (
     <div sx={{ bgcolor: "#FAF4F4" }}>
       <Grid container>

@@ -82,18 +82,21 @@ const DettagliRistorante = () => {
                 <ListItem
                   secondaryAction={
                     <ListItemAvatar>
-                      <Avatar
-                        sx={{
-                          width: 30,
-                          height: 30,
-                          ml: 50,
-                        }}
-                        alt="Remy Sharp"
-                        src="../../icon/lattosio.png"
-                        onClick={() => {
-                          navigate("/lattosio");
-                        }}
-                      />
+                      {piatto.allergenFree && piatto.allergenFree.map(a => 
+                          <Avatar
+                          sx={{
+                            width: 30,
+                            height: 30,
+                            ml: 50,
+                          }}
+                          alt="Remy Sharp"
+                          src={`/icon/${a}.png`}
+                          onClick={() => {
+                            navigate("/lattosio");
+                          }}
+                        />
+                      )}
+                      
                     </ListItemAvatar>
                   }
                 >
@@ -114,7 +117,7 @@ const DettagliRistorante = () => {
               variant="text"
               color="secondary"
               onClick={() => {
-                navigate("/modificaMenu");
+                navigate(`/modifica-menu/${ristorante.id}`);
               }}
             >
               {" "}

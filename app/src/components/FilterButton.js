@@ -50,11 +50,25 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-export default function CustomizedMenus() {
-  const [checked, setChecked] = React.useState(true);
+export default function CustomizedMenus(props) {
+  const [filters, setFilters] = React.useState([]);
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
+  const handleChange = (event, filter) => {
+    if(event.target.checked) {
+      setFilters([...filters, filter]);
+      props.onChangeFilter([...filters, filter]);
+    }
+    else{
+      const newFilters = [];
+        for (const f of filters) {
+          if (f === filter) {
+            continue;
+          }
+          newFilters.push(f);
+        }
+        setFilters([...newFilters]);
+        props.onChangeFilter([...newFilters]);
+    }
   };
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -65,6 +79,7 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   };
 
+  console.log(filters);
   return (
     <div>
       <Button
@@ -90,7 +105,7 @@ export default function CustomizedMenus() {
       >
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Le mie intolleranze
@@ -99,7 +114,7 @@ export default function CustomizedMenus() {
         <Divider sx={{ my: 0.5 }} />
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Lattosio
@@ -107,7 +122,7 @@ export default function CustomizedMenus() {
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Glutine
@@ -115,7 +130,7 @@ export default function CustomizedMenus() {
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Crostacei
@@ -123,7 +138,7 @@ export default function CustomizedMenus() {
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Frutta a guscio
@@ -131,15 +146,15 @@ export default function CustomizedMenus() {
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Nichel
-          <Switch color="secondary"/>
+          <Switch checked={filters.includes("nichel")} onChange={(e)=>handleChange(e, "nichel")} color="secondary"/>
         </MenuItem>
         <MenuItem
           sx={{ justifyContent: "flex-end" }}
-          onClick={handleChange}
+          
           disableRipple
         >
           Proteina LTP
