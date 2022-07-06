@@ -47,12 +47,6 @@ const DettagliRistorante = () => {
 
   return (
     <div>
-      <Box
-        component="img"
-        sx={{ maxWidth: "100%", borderRadius: 1 }}
-        alt="Image"
-        src={"../../img/" + ristorante.localName + ".jpg"}
-      />
       <Grid
         container
         maxWidth={"md"}
@@ -61,6 +55,12 @@ const DettagliRistorante = () => {
         margin="auto"
       >
         <Grid item xs={12} md={12} lg={6}>
+          <Box
+            component="img"
+            sx={{ width: "100%", borderRadius: 1 }}
+            alt="Image"
+            src={"../../img/" + ristorante.localName + ".jpg"}
+          />
           <Paper
             sx={{
               marginTop: 2,
@@ -70,7 +70,10 @@ const DettagliRistorante = () => {
             <List>
               <ListItem>
                 <ListItemIcon>
-                  <Avatar alt="Image" src={"../../img/" + ristorante.localName + ".jpg"} />
+                  <Avatar
+                    alt="Image"
+                    src={"../../img/" + ristorante.localName + ".jpg"}
+                  />
                 </ListItemIcon>
                 <ListItemText primary={ristorante.localName} />
               </ListItem>

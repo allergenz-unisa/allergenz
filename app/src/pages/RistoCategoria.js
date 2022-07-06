@@ -14,6 +14,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import useTitleContext from "../components/PageTitleContext";
 import SearchBar from "../components/SearchBar";
+import GoBackButton from "../components/GoBackButton";
 
 import { getRestarantByCategory } from "../api/Allergenz";
 
@@ -52,7 +53,7 @@ const RistoCategoria = () => {
             <SearchBar />
           </Grid>
           {ristoranti.map((ristorante, id) => (
-            <Grid item xs={12} sm={6} md={4} lg={4}>
+            <Grid item xs={12} sm={12} md={6} lg={4}>
               <Card
                 onClick={() => {
                   navigate("/dettagli-ristorante?id=" + ristorante.id, {
@@ -61,7 +62,11 @@ const RistoCategoria = () => {
                 }}
               >
                 <CardHeader
-                  title={ristorante.localName}
+                  title={
+                    <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                      {ristorante.localName}
+                    </Box>
+                  }
                   subheader={ristorante.address.via}
                 />
                 <CardMedia
@@ -87,6 +92,13 @@ const RistoCategoria = () => {
             </Grid>
           ))}
         </Grid>
+        <Box
+          sx={{
+            mt: 5,
+          }}
+        >
+          <GoBackButton />
+        </Box>
       </Box>
     </div>
   );
