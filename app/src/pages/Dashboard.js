@@ -70,69 +70,71 @@ const Dashboard = () => {
           </div>
         ) : searchResult.length > 0 && searchString ? (
           <div>
-            <Box sx={{ width: "maxwidth", flexDirection: "row" }}>
-              <CustomizedMenus onChangeFilter={(filters)=>setFilters(filters)}/>
+            <Box sx={{ width: "maxwidth", flexDirection: "row", mb: 2 }}>
+              <CustomizedMenus
+                onChangeFilter={(filters) => setFilters(filters)}
+              />
             </Box>
             <Box maxWidth="lg" justifyContent="center" margin="auto">
               <Grid container spacing={2}>
-                {searchResult.filter(
-                  (ristorante)=>{
+                {searchResult
+                  .filter((ristorante) => {
                     console.log(filters);
-                    if(filters.length===0) {
+                    if (filters.length === 0) {
                       console.log("filtriamo");
-                      return true;}
-                      for (const a of ristorante.AllergenFree) {
-                        if (filters.includes(a.categoria))
-                        return true;
-                      }
+                      return true;
+                    }
+                    for (const a of ristorante.AllergenFree) {
+                      if (filters.includes(a.categoria)) return true;
+                    }
 
-                      return false;
-                  }
-                ).map((ristorante, id) => (
-                  <Grid item xs={12} sm={12} md={6} lg={4} sx={{ t: 20 }}>
-                    <Card
-                      onClick={() => {
-                        navigate("/dettagli-ristorante?id=" + ristorante.id, {
-                          id: ristorante.id,
-                        });
-                      }}
-                    >
-                      <CardHeader
-                        title={
-                          <Box component="div" sx={{ whiteSpace: "nowrap" }}>
-                            {ristorante.localName}
-                          </Box>
-                        }
-                        subheader={
-                          <Box component="div" sx={{ whiteSpace: "nowrap" }}>
-                            {ristorante.address.via +
-                              ", " +
-                              ristorante.address.citta}
-                          </Box>
-                        }
-                      />
-                      <CardMedia
-                        component="img"
-                        height="150"
-                        image={"../../img/" + ristorante.localName + ".jpg"}
-                        alt={ristorante.localName}
-                      />
-                      <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                          <FavoriteIcon />
-                        </IconButton>
-                        <Typography
-                          sx={{
-                            fontWeight: "bold",
-                            color: "#757575",
-                          }}
-                        >
-                          {ristorante.like}
-                        </Typography>
-                      </CardActions>
-                    </Card>
-                  </Grid>
-                ))}
+                    return false;
+                  })
+                  .map((ristorante, id) => (
+                    <Grid item xs={12} sm={12} md={6} lg={4} sx={{ t: 20 }}>
+                      <Card
+                        onClick={() => {
+                          navigate("/dettagli-ristorante?id=" + ristorante.id, {
+                            id: ristorante.id,
+                          });
+                        }}
+                      >
+                        <CardHeader
+                          title={
+                            <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                              {ristorante.localName}
+                            </Box>
+                          }
+                          subheader={
+                            <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                              {ristorante.address.via +
+                                ", " +
+                                ristorante.address.citta}
+                            </Box>
+                          }
+                        />
+                        <CardMedia
+                          component="img"
+                          height="150"
+                          image={"../../img/" + ristorante.localName + ".jpg"}
+                          alt={ristorante.localName}
+                        />
+                        <CardActions disableSpacing>
+                          <IconButton aria-label="add to favorites">
+                            <FavoriteIcon />
+                          </IconButton>
+                          <Typography
+                            sx={{
+                              fontWeight: "bold",
+                              color: "#757575",
+                            }}
+                          >
+                            {ristorante.like}
+                          </Typography>
+                        </CardActions>
+                      </Card>
+                    </Grid>
+                  ))}
               </Grid>
             </Box>
           </div>
