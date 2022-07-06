@@ -10,21 +10,40 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Portata from "@mui/icons-material/Restaurant";
 import Modifica from "@mui/icons-material/Edit";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import GoBackButton from "../components/GoBackButton";
 import useTitleContext from "../components/PageTitleContext";
+import { getRestarantById } from "../api/Allergenz";
 
 const ModificaMenu = () => {
   let navigate = useNavigate();
   let { id } = useParams();
+  const [ristorante, setRistorante] = useState({});
+  const [menu, setMenu] = useState([{}]);
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
     changeTitle("Modifica il menù");
     console.log(id);
+  }, []);
+
+  useEffect(() => {
+    getRestarantById(id)
+      .then(function (ristorante) {
+        setRistorante(ristorante);
+        console.log(ristorante);
+        console.log(ristorante.Menu);
+        setMenu(ristorante.Menu);
+        console.log(menu);
+        console.log("ok");
+      })
+      .catch(function (error) {
+        console.log("ERRORE");
+        console.error(error);
+      });
   }, []);
 
   return (
@@ -38,7 +57,7 @@ const ModificaMenu = () => {
       >
         <Grid item xs={12} md={12} lg={6}>
           <Typography variant="h4" component="h1">
-            Ristorante da Carmine
+            {ristorante.localName}
           </Typography>
           <Typography>
             Aggiungi una nuova portata o modifica i piatti già inseriti
@@ -51,7 +70,8 @@ const ModificaMenu = () => {
             }}
           >
             <List>
-              <ListItem
+              {menu.map((piatto, id) => (
+                <ListItem
                 secondaryAction={
                   <IconButton edge="end" component={Link} to="/account">
                     <Modifica />
@@ -61,58 +81,11 @@ const ModificaMenu = () => {
                 <ListItemIcon>
                   <Portata />
                 </ListItemIcon>
-                <ListItemText primary="Modifica piatto" />
+                <ListItemText primary={piatto.name} />
               </ListItem>
+              ))}
+              
 
-              <Drawer />
-
-              <ListItem
-                secondaryAction={
-                  <IconButton edge="end" component={Link} to="/account">
-                    {" "}
-                    <Modifica />
-                  </IconButton>
-                }
-              >
-                <ListItemIcon>
-                  <Portata />
-                </ListItemIcon>
-                <ListItemText primary="Modifica piatto" />
-              </ListItem>
-
-              <Drawer />
-
-              <ListItem
-                secondaryAction={
-                  <IconButton edge="end" component={Link} to="/account">
-                    {" "}
-                    <Modifica />
-                  </IconButton>
-                }
-              >
-                <ListItemIcon>
-                  <Portata />
-                </ListItemIcon>
-                <ListItemText primary="Modifica piatto" />
-              </ListItem>
-
-              <Drawer />
-
-              <ListItem
-                secondaryAction={
-                  <IconButton edge="end" component={Link} to="/account">
-                    {" "}
-                    <Modifica />
-                  </IconButton>
-                }
-              >
-                <ListItemIcon>
-                  <Portata />
-                </ListItemIcon>
-                <ListItemText primary="Modifica piatto" />
-              </ListItem>
-
-              <Drawer />
             </List>
             <Button
               fullWidth
