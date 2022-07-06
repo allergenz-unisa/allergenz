@@ -52,7 +52,7 @@ const RistoCategoria = () => {
             <SearchBar />
           </Grid>
           {ristoranti.map((ristorante, id) => (
-            <Grid item xs={12} sm={6} md={4} lg={4}>
+            <Grid item xs={12} sm={12} md={6} lg={4}>
               <Card
                 onClick={() => {
                   navigate("/dettagli-ristorante?id=" + ristorante.id, {
@@ -61,7 +61,11 @@ const RistoCategoria = () => {
                 }}
               >
                 <CardHeader
-                  title={ristorante.localName}
+                  title={
+                    <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                      {ristorante.localName}
+                    </Box>
+                  }
                   subheader={ristorante.address.via}
                 />
                 <CardMedia
