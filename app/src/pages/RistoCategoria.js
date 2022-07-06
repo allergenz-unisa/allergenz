@@ -14,6 +14,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import useTitleContext from "../components/PageTitleContext";
 import SearchBar from "../components/SearchBar";
+import GoBackButton from "../components/GoBackButton";
 
 import { getRestarantByCategory } from "../api/Allergenz";
 
@@ -91,6 +92,13 @@ const RistoCategoria = () => {
             </Grid>
           ))}
         </Grid>
+        <Box
+          sx={{
+            mt: 5,
+          }}
+        >
+          <GoBackButton />
+        </Box>
       </Box>
     </div>
   );
