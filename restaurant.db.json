@@ -147,7 +147,7 @@
           "id": "3",
           "name": "Scampi roll",
           "descrizione": "Salmone, avocado, topping tartare di scampi all'olio",
-          "allergenFree": []
+          "allergenFree": ["Lattosio", "Frutta a guscio"]
         }
       ],
       "like": "10"
@@ -471,31 +471,27 @@
         },
         {
           "id": "2",
-          "categoria": "Glutine"
-        },
-        {
-          "id": "3",
-          "categoria": "Frutta a Guscio"
+          "categoria": "Lattosio"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Marinara gialla",
+          "descrizione": "Pomodorini gialli, capperi lacrimelle, acciughe, olive nere, origano, olio e basilico",
+          "allergenFree": ["Lattosio", "Crostacei"]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Marinara gialla slow food",
+          "descrizione": "Pomodorini gialli del Piennolo certificati slow food, capperi lacrimelle, acciughe, olive nere, origano, olio e basilico",
+          "allergenFree": ["Lattosio", "Crostacei"]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Margherita al salame",
+          "descrizione": "Pomodoro San Marzano, mozzarella, salame napoletano, olio e basilico",
+          "allergenFree": ["Crostacei"]
         }
       ],
       "like": "25"
