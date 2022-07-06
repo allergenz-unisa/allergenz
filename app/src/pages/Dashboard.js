@@ -17,6 +17,7 @@ import SearchBar from "../components/SearchBar";
 import logo from "../images/logo/4x/allergens_logo@4x.png";
 import CustomizedMenus from "../components/FilterButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import GoBackButton from "../components/GoBackButton";
 
 const Dashboard = () => {
   let navigate = useNavigate();
@@ -68,12 +69,20 @@ const Dashboard = () => {
           </div>
         ) : searchResult.length > 0 && searchString ? (
           <div>
+            <Box sx={{ width: "maxwidth", flexDirection: "row" }}>
+              <Button
+                onClick={() => {
+                  navigate(-1);
+                }}
+                variant="outlined"
+                color="secondary"
+              >
+                Indietro
+              </Button>
+              <CustomizedMenus />
+            </Box>
             <Box maxWidth="lg" justifyContent="center" margin="auto">
               <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <CustomizedMenus />
-                </Grid>
-
                 {searchResult.map((ristorante, id) => (
                   <Grid item xs={12} sm={12} md={6} lg={4} sx={{ t: 20 }}>
                     <Card
@@ -84,8 +93,18 @@ const Dashboard = () => {
                       }}
                     >
                       <CardHeader
-                        title={ristorante.localName}
-                        subheader={ristorante.address.via}
+                        title={
+                          <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                            {ristorante.localName}
+                          </Box>
+                        }
+                        subheader={
+                          <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                            {ristorante.address.via +
+                              ", " +
+                              ristorante.address.citta}
+                          </Box>
+                        }
                       />
                       <CardMedia
                         component="img"

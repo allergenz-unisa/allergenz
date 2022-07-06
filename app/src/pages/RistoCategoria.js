@@ -67,7 +67,11 @@ const RistoCategoria = () => {
                       {ristorante.localName}
                     </Box>
                   }
-                  subheader={ristorante.address.via + ", " + ristorante.address.citta}
+                  subheader={
+                    <Box component="div" sx={{ whiteSpace: "nowrap" }}>
+                      {ristorante.address.via + ", " + ristorante.address.citta}
+                    </Box>
+                  }
                 />
                 <CardMedia
                   component="img"
