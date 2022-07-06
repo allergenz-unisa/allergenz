@@ -86,11 +86,12 @@ const FormSegnalazione = () => {
     changeTitle("Segnalazione di un locale");
   }, []);
 
-  const [nomeLocale, setNomeLocale] = useState("");
+  const [localName, setLocalName] = useState("");
   const [via, setVia] = useState("");
+  const [id, setId] = useState("");
   const [citta, setCitta] = useState("");
   const [cap, setCap] = useState("");
-  const [cucina, setCucina] = useState("");
+  const [Cucina, setCucina] = useState("");
   const [allergene, setAllergene] = useState("");
   const [errors, setErrors] = useState([]);
 
@@ -98,19 +99,21 @@ const FormSegnalazione = () => {
    * Questa funzione colleziona tutte le variabili di stato del form
    * e se non ci sono errori invoca il metodo addNewRestaurant dell'API
    */
-   const segnalazioneRistorante = async () => {
+  const segnalazioneRistorante = async () => {
     setErrors([]);
     let errs = [];
     const risto = {
-      nomeLocale: nomeLocale,
+      id: (Math.floor(Math.random() * 1000000) + 10).toString(),
+      localName: localName,
       via: via,
       citta: citta,
       cap: cap,
-      cucina: cucina,
+      Cucina: Cucina,
       allergene: allergene,
     };
 
-    if (!risto.nomeLocale) errs.push("È obbligatorio inserire il nome del locale");
+    if (!risto.localName)
+      errs.push("È obbligatorio inserire il nome del locale");
 
     if (!risto.via) errs.push("È obbligatorio inserire la via del locale");
 
@@ -118,20 +121,23 @@ const FormSegnalazione = () => {
 
     if (!risto.cap) errs.push("È obbligatorio inserire il CAP del locale");
 
-    if (!risto.cucina) errs.push("È obbligatorio inserire la cucina del locale");
+    if (!risto.Cucina)
+      errs.push("È obbligatorio inserire la cucina del locale");
 
-    if (!risto.allergene) errs.push("È obbligatorio inserire l'allergene a cui il locale pone attenzione");
+    if (!risto.allergene)
+      errs.push(
+        "È obbligatorio inserire l'allergene a cui il locale pone attenzione"
+      );
 
     if (errs.length) {
       setErrors(errs);
       return;
     }
 
-    console.log(risto)
+    console.log(risto);
     await addNewRestaurant(risto);
     window.location.href = "/conferma";
   };
-
 
   return (
     <div sx={{ bgcolor: "#FAF4F4" }}>
@@ -177,163 +183,168 @@ const FormSegnalazione = () => {
           </Box>
         </div>
       ) : (
-      <Grid container>
-        <Grid item xs={12} md={2} lg={3} />
-        <Grid item xs={12} md={8} lg={6}>
-          <Paper>
-            <Typography
-              sx={{ mr: 2, ml: 2, mb: 2 }}
-              variant="h4"
-              component="h1"
-            >
-              {" "}
-              Segnala un locale
-            </Typography>
-            <Typography sx={{ mr: 2, ml: 2, mb: 2 }}>
-              {" "}
-              Grazie per aver scelto di contribuire alla crescita della nostra
-              community! Grazie a te, sempre meno persone con intolleranze
-              alimentari avranno difficoltà a trovare e scegliere un ristorante
-              in cui poter mangiare. Ti invitiamo a inserire i dati a tua
-              disposizione nel form di seguito...{" "}
-            </Typography>
-            <Box>
-              <List >
-                <ListItem>
-                  <Typography
-                    variant="h6"
-                    component="h2"
-                    sx={{ fontWeight: "bold" }}
-                  >
-                    {" "}
-                    Dati del locale{" "}
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <TextField
-                    color="secondary"
-                    fullWidth
-                    onChange={(e) => setNomeLocale(e.target.value)}
-                    name="NomeLocale"
-                    id="NomeLocale"
-                    label="Nome del locale"
-                  />
-                </ListItem>
-                <ListItem>
-                  <TextField
-                    color="secondary"
-                    fullWidth
-                    onChange={(e) => setVia(e.target.value)}
-                    name="Via"
-                    id="Via"
-                    label="Via..."
-                  />
-                </ListItem>
-                <ListItem>
-                  <TextField
-                    color="secondary"
-                    fullWidth
-                    onChange={(e) => setCitta(e.target.value)}
-                    name="Citta"
-                    id="Citta"
-                    label="Città"
-                  />
-                </ListItem>
-                <ListItem>
-                  <TextField 
-                    color="secondary" 
-                    fullWidth 
-                    onChange={(e) => setCap(e.target.value)}
-                    name="CAP"
-                    id="CAP" 
-                    label="CAP" 
-                  />
-                </ListItem>
-                <ListItem>
-                  <TextField
-                    color="secondary"
-                    fullWidth
-                    select
-                    helperText="Selezionare un tipo di cucina"
-                    name="Cucina"
-                    id="Cucina"
-                    label="Cucina"
-                  >
-                    {cucine.map((option) => (
-                      <MenuItem key={option.value} value={option.value} onClick={()=> setCucina(option.value)}>
-                        {option.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </ListItem>
-                <ListItem>
-                  <TextField
-                    color="secondary"
-                    fullWidth
-                    select
-                    helperText="Selezionare l'allergene che è possibile evitare in questo locale"
-                    name="Allergene"
-                    id="Allergene"
-                    label="Allergene"
-                  >
-                    {allergeni.map((option) => (
-                      <MenuItem key={option.value} value={option.value} onClick={()=> setAllergene(option.value)}>
-                        {option.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </ListItem>
+        <Grid container>
+          <Grid item xs={12} md={2} lg={3} />
+          <Grid item xs={12} md={8} lg={6}>
+            <Paper>
+              <Typography
+                sx={{ mr: 2, ml: 2, mb: 2 }}
+                variant="h4"
+                component="h1"
+              >
+                {" "}
+                Segnala un locale
+              </Typography>
+              <Typography sx={{ mr: 2, ml: 2, mb: 2 }}>
+                {" "}
+                Grazie per aver scelto di contribuire alla crescita della nostra
+                community! Grazie a te, sempre meno persone con intolleranze
+                alimentari avranno difficoltà a trovare e scegliere un
+                ristorante in cui poter mangiare. Ti invitiamo a inserire i dati
+                a tua disposizione nel form di seguito...{" "}
+              </Typography>
+              <Box>
+                <List>
+                  <ListItem>
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: "bold" }}
+                    >
+                      {" "}
+                      Dati del locale{" "}
+                    </Typography>
+                  </ListItem>
+                  <ListItem>
+                    <TextField
+                      color="secondary"
+                      fullWidth
+                      onChange={(e) => setLocalName(e.target.value)}
+                      name="NomeLocale"
+                      id="NomeLocale"
+                      label="Nome del locale"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <TextField
+                      color="secondary"
+                      fullWidth
+                      onChange={(e) => setVia(e.target.value)}
+                      name="Via"
+                      id="Via"
+                      label="Via..."
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <TextField
+                      color="secondary"
+                      fullWidth
+                      onChange={(e) => setCitta(e.target.value)}
+                      name="Citta"
+                      id="Citta"
+                      label="Città"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <TextField
+                      color="secondary"
+                      fullWidth
+                      onChange={(e) => setCap(e.target.value)}
+                      name="CAP"
+                      id="CAP"
+                      label="CAP"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <TextField
+                      color="secondary"
+                      fullWidth
+                      select
+                      helperText="Selezionare un tipo di cucina"
+                      name="Cucina"
+                      id="Cucina"
+                      label="Cucina"
+                    >
+                      {cucine.map((option) => (
+                        <MenuItem
+                          key={option.value}
+                          value={option.value}
+                          onClick={() => setCucina(option.value)}
+                        >
+                          {option.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  </ListItem>
+                  <ListItem>
+                    <TextField
+                      color="secondary"
+                      fullWidth
+                      select
+                      helperText="Selezionare l'allergene che è possibile evitare in questo locale"
+                      name="Allergene"
+                      id="Allergene"
+                      label="Allergene"
+                    >
+                      {allergeni.map((option) => (
+                        <MenuItem
+                          key={option.value}
+                          value={option.value}
+                          onClick={() => setAllergene(option.value)}
+                        >
+                          {option.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  </ListItem>
 
-                <ListItem>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
-                      <Button
-                        fullWidth
-                        variant="outlined"
-                        color="secondary"
-                        onClick={() => {
-                          navigate(-1);
-                        }}
-                      >
-                        Annulla
-                      </Button>
+                  <ListItem>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={6}>
+                        <Button
+                          fullWidth
+                          variant="outlined"
+                          color="secondary"
+                          onClick={() => {
+                            navigate(-1);
+                          }}
+                        >
+                          Annulla
+                        </Button>
+                      </Grid>
+
+                      {errors.length > 0 ? (
+                        <Alert severity="error">
+                          <Typography>
+                            Attenzione correggere i seguenti errori:
+                            <ul>
+                              {errors.map((err) => (
+                                <li>{err}</li>
+                              ))}
+                            </ul>
+                          </Typography>
+                        </Alert>
+                      ) : null}
+
+                      <Grid item xs={12} md={6}>
+                        <Button
+                          fullWidth
+                          variant="contained"
+                          color="secondary"
+                          sx={{ color: "white", fontWeight: "bold" }}
+                          onClick={() => segnalazioneRistorante()}
+                        >
+                          Conferma
+                        </Button>
+                      </Grid>
                     </Grid>
-
-                    {errors.length > 0 ? (
-                      <Alert severity="error">
-                        <Typography>
-                          Attenzione correggere i seguenti errori:
-                          <ul>
-                            {errors.map((err) => (
-                              <li>{err}</li>
-                            ))}
-                          </ul>
-                        </Typography>
-                      </Alert>
-                    ) : null}
-
-                    <Grid item xs={12} md={6}>
-                      <Button
-                        fullWidth
-                        variant="contained"
-                        color="secondary"
-                        sx={{ color: "white", fontWeight: "bold" }}
-                        onClick={() => segnalazioneRistorante()}
-                      >
-                        Conferma
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </ListItem>
-              </List>
-            </Box>
-            
-           
-            
-          </Paper>
+                  </ListItem>
+                </List>
+              </Box>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={2} lg={3} />
         </Grid>
-        <Grid item xs={12} md={2} lg={3} />
-      </Grid>
       )}
     </div>
   );
