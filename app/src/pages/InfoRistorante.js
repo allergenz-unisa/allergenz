@@ -51,7 +51,7 @@ const DettagliRistorante = () => {
         component="img"
         sx={{ maxWidth: "100%", borderRadius: 1 }}
         alt="Image"
-        src="../../img/wine-glass.jpg"
+        src={"../../img/" + ristorante.localName + ".jpg"}
       />
       <Grid
         container
@@ -70,7 +70,7 @@ const DettagliRistorante = () => {
             <List>
               <ListItem>
                 <ListItemIcon>
-                  <Avatar alt="Image" src="../../img/wine-glass.jpg" />
+                  <Avatar alt="Image" src={"../../img/" + ristorante.localName + ".jpg"} />
                 </ListItemIcon>
                 <ListItemText primary={ristorante.localName} />
               </ListItem>

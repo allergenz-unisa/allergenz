@@ -544,6 +544,148 @@
         }
       ],
       "like": "25"
+    },
+    {
+      "id": "12",
+      "localName": "Bonora",
+      "address": {
+        "via": "SP61",
+        "citta": "Castellabate",
+        "cap": "84048"
+      },
+      "Cucina": "Cucina di mare",
+      "AllergenFree": [
+        {
+          "id": "1",
+          "categoria": "lattosio"
+        },
+        {
+          "id": "2",
+          "categoria": "frutta a guscio"
+        },
+        {
+          "id": "3",
+          "categoria": "glutine"
+        }
+      ],
+      "Menu": [
+        {
+          "id": "1",
+          "name": "Cruditè di pesce",
+          "descrizione": "Mix di pesce crudo dal pescato del giorno",
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio",
+            "glutine"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Creatività di mare",
+          "descrizione": "Mix di pesce crudo e cotto dal pescato del giorno",
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Bistecca di spada alla griglia",
+          "descrizione": "Filetto di pesce spada alla griglia",
+          "allergenFree": [
+            "lattosio",
+            "frutta a guscio",
+            "glutine"
+          ]
+        }
+      ],
+      "like": "25"
+    },
+    {
+      "id": "13",
+      "localName": "Marechiaro",
+      "address": {
+        "via": "Via Magna Grecia",
+        "citta": "Capaccio",
+        "cap": "84047"
+      },
+      "Cucina": "Cucina di mare",
+      "AllergenFree": [
+        {
+          "id": "1",
+          "categoria": "lattosio"
+        },
+        {
+          "id": "2",
+          "categoria": "frutta a guscio"
+        },
+        {
+          "id": "3",
+          "categoria": "glutine"
+        }
+      ],
+      "Menù": [
+        {
+          "id": "1",
+          "name": "Misto mare",
+          "descrizione": "Mix di pesce crudo e cotto",
+          "allergenFree": [
+            "frutta a guscio"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Grigliata di pescato locale",
+          "descrizione": "Mix di pesce locale alla griglia",
+          "allergenFree": [
+            "frutta a guscio",
+            "lattosio",
+            "glutine"
+          ]
+        }
+      ],
+      "like": "10"
+    },
+    {
+      "id": "14",
+      "localName": "McDonald's Salerno",
+      "address": {
+        "via": "Via Roma",
+        "citta": "Salerno",
+        "cap": "84121"
+      },
+      "Cucina": "Fast food",
+      "AllergenFree": [],
+      "Menù": [
+        {
+          "id": "1",
+          "name": "Chickenburger",
+          "descrizione": "Bun, cotoletta di pollo e salsa caesar",
+          "allergenFree": [
+            "frutta a guscio",
+            "crostacei"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Hamburger",
+          "descrizione": "Bun, hamburger, ketchup, senape, cipolla, cetriolo",
+          "allergenFree": [
+            "frutta a guscio",
+            "crostacei"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Misto mare",
+          "descrizione": "Bun, hamburger, cheddar, ketchup, senape, cipolla",
+          "allergenFree": [
+            "frutta a guscio",
+            "crostacei"
+          ]
+        }
+      ],
+      "like": "50"
     }
   ],
 

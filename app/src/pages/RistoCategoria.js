@@ -67,8 +67,8 @@ const RistoCategoria = () => {
                 <CardMedia
                   component="img"
                   height="150"
-                  image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f3d7d1b4-4df6-4d72-b2f0-acf05cccae08/Derivates/4513fa48-f03c-4f8e-bea0-18385dd4bdd0.jpg"
-                  alt="Paella dish"
+                  image={"../../img/" + ristorante.localName + ".jpg"}
+                  alt="Local Image"
                 />
                 <CardActions disableSpacing>
                   <IconButton aria-label="add to favorites">
