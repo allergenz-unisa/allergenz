@@ -5,10 +5,9 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Switch from '@mui/material/Switch';
+import Switch from "@mui/material/Switch";
 
 const StyledMenu = styled((props) => (
-
   <Menu
     elevation={0}
     anchorOrigin={{
@@ -54,20 +53,19 @@ export default function CustomizedMenus(props) {
   const [filters, setFilters] = React.useState([]);
 
   const handleChange = (event, filter) => {
-    if(event.target.checked) {
+    if (event.target.checked) {
       setFilters([...filters, filter]);
       props.onChangeFilter([...filters, filter]);
-    }
-    else{
+    } else {
       const newFilters = [];
-        for (const f of filters) {
-          if (f === filter) {
-            continue;
-          }
-          newFilters.push(f);
+      for (const f of filters) {
+        if (f === filter) {
+          continue;
         }
-        setFilters([...newFilters]);
-        props.onChangeFilter([...newFilters]);
+        newFilters.push(f);
+      }
+      setFilters([...newFilters]);
+      props.onChangeFilter([...newFilters]);
     }
   };
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -103,62 +101,58 @@ export default function CustomizedMenus(props) {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Le mie intolleranze
-          <Switch color="secondary"/>
+          <Switch color="secondary" />
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Lattosio
-          <Switch color="secondary"/>
+          <Switch
+            checked={filters.includes("lattosio")}
+            onChange={(e) => handleChange(e, "lattosio")}
+            color="secondary"
+          />
         </MenuItem>
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Glutine
-          <Switch color="secondary"/>
+          <Switch
+            checked={filters.includes("glutine")}
+            onChange={(e) => handleChange(e, "glutine")}
+            color="secondary"
+          />
         </MenuItem>
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Crostacei
-          <Switch color="secondary"/>
+          <Switch
+            checked={filters.includes("crostacei")}
+            onChange={(e) => handleChange(e, "crostacei")}
+            color="secondary"
+          />
         </MenuItem>
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Frutta a guscio
-          <Switch color="secondary"/>
+          <Switch
+            checked={filters.includes("frutta a guscio")}
+            onChange={(e) => handleChange(e, "frutta a guscio")}
+            color="secondary"
+          />
         </MenuItem>
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Nichel
-          <Switch checked={filters.includes("nichel")} onChange={(e)=>handleChange(e, "nichel")} color="secondary"/>
+          <Switch
+            checked={filters.includes("nichel")}
+            onChange={(e) => handleChange(e, "nichel")}
+            color="secondary"
+          />
         </MenuItem>
-        <MenuItem
-          sx={{ justifyContent: "flex-end" }}
-          
-          disableRipple
-        >
+        <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Proteina LTP
-          <Switch color="secondary"/>
+          <Switch
+            checked={filters.includes("proteina LTP")}
+            onChange={(e) => handleChange(e, "proteina LTP")}
+            color="secondary"
+          />
         </MenuItem>
       </StyledMenu>
     </div>
