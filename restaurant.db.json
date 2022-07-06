@@ -336,7 +336,7 @@
       "AllergenFree": [
         {
           "id": "1",
-          "categoria": "proteina LTP"
+          "categoria": "lattosio"
         },
         {
           "id": "2",
@@ -345,30 +345,41 @@
         {
           "id": "3",
           "categoria": "glutine"
+        },
+        {
+          "id": "4",
+          "categoria": "frutta a guscio"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
+          "name": "Gobhi Mattar",
+          "descrizione": "Cavolfiore e piselli cotti in salsa di spezie",
           "allergenFree": [
-            {
-              
-            }
+            "lattosio",
+            "crostacei"
           ]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Chichen",
+          "descrizione": "Riso di pollo speziato",
+          "allergenFree": [
+            "frutta a guscio",
+            "lattosio",
+            "glutine"
+          ]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Jinga",
+          "descrizione": "Riso con gamberetti e spezie",
+          "allergenFree": [
+            "frutta a guscio",
+            "lattosio",
+            "glutine"
+          ]
         }
       ],
       "like": "5"
@@ -390,26 +401,39 @@
         {
           "id": "2",
           "categoria": "glutine"
+        },
+        {
+          "id": "3",
+          "categoria": "crostacei"
         }
       ],
       "Menu": [
         {
           "id": "1",
-          "name": "Maguro",
-          "descrizione": "Nigiri con una fettina di tonno",
-          "allergenFree": []
+          "name": "Rice pulau",
+          "descrizione": "Riso con zafferano, spezie e mandorle",
+          "allergenFree": [
+            "lattosio",
+            "glutine"
+          ]
         },
         {
           "id": "2",
-          "name": "Avocado",
-          "descrizione": "Hosomaki con avocado centrale",
-          "allergenFree": []
+          "name": "Pudina tikka",
+          "descrizione": "Bocconcini di pollo disossati alle erbe",
+          "allergenFree": [
+            "lattosio",
+            "crostacei"
+          ]
         },
         {
           "id": "3",
-          "name": "Spicy tuna",
-          "descrizione": "Roll con tartare di tonno, tobiko al wasabi e salsa piccante",
-          "allergenFree": []
+          "name": "Alu chole",
+          "descrizione": "Patate e ceci speziati",
+          "allergenFree": [
+            "glutine",
+            "lattosio"
+          ]
         }
       ],
       "like": "7"
@@ -715,6 +739,153 @@
         }
       ],
       "like": "50"
+    },
+    {
+      "id": "15",
+      "localName": "I Love Piadina",
+      "address": {
+        "via": "Lungomare Trieste",
+        "citta": "Salerno",
+        "cap": "84122"
+      },
+      "Cucina": "Pite e piadine",
+      "AllergenFree": [
+        {
+          "id": "1",
+          "categoria": "lattosio"
+        },
+        {
+          "id": "2",
+          "categoria": "frutta a guscio"
+        }
+      ],
+      "Menu": [
+        {
+          "id": "1",
+          "name": "Al cotto",
+          "descrizione": "Piadina con prosciutto cotto",
+          "allergenFree": [
+            "lattosio"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Capri",
+          "descrizione": "Piadina con tonno, pomodoro e maionese",
+          "allergenFree": [
+            "frutta a guscio",
+            "lattosio"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Leggera",
+          "descrizione": "Piadina con posciutto crudo e pomodorini",
+          "allergenFree": [
+            "frutta a guscio",
+            "lattosio"
+          ]
+        }
+      ],
+      "like": "10"
+    },
+    {
+      "id": "16",
+      "localName": "Braceria Rispoli",
+      "address": {
+        "via": "Viale Giusepe Garibaldi",
+        "citta": "Cava De' Tirenni",
+        "cap": "84013"
+      },
+      "Cucina": "Cucina di terra",
+      "AllergenFree": [
+        {
+          "id": "1",
+          "categoria": "lattosio"
+        },
+        {
+          "id": "2",
+          "categoria": "glutine"
+        }
+      ],
+      "Menu": [
+        {
+          "id": "1",
+          "name": "Agnello alla brace",
+          "descrizione": "Agnello cotto alla brace",
+          "allergenFree": [
+            "lattosio",
+            "glutine"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Filetto di chianina",
+          "descrizione": "Filetto di chianina semplice",
+          "allergenFree": [
+            "lattosio",
+            "glutine"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Filetto ai porcini",
+          "descrizione": "Filetto su letto di funghi porcini",
+          "allergenFree": [
+            "glutine"
+          ]
+        }
+      ],
+      "like": "15"
+    },
+    {
+      "id": "17",
+      "localName": "Mood Steackhouse",
+      "address": {
+        "via": "Via Giovan Angelo Papio",
+        "citta": "Salerno",
+        "cap": "84122"
+      },
+      "Cucina": "Cucina di terra",
+      "AllergenFree": [
+        {
+          "id": "1",
+          "categoria": "lattosio"
+        },
+        {
+          "id": "2",
+          "categoria": "frutta a guscio"
+        }
+      ],
+      "Menu": [
+        {
+          "id": "1",
+          "name": "Agnello alla brace",
+          "descrizione": "Agnello cotto alla brace",
+          "allergenFree": [
+            "lattosio",
+            "glutine"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Filetto di chianina",
+          "descrizione": "Filetto di chianina semplice",
+          "allergenFree": [
+            "lattosio",
+            "glutine"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Filetto ai porcini",
+          "descrizione": "Filetto su letto di funghi porcini",
+          "allergenFree": [
+            "glutine"
+          ]
+        }
+      ],
+      "like": "15"
     }
   ],
 
