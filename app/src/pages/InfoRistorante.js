@@ -93,7 +93,7 @@ const DettagliRistorante = () => {
 
               {menu.map((piatto, id) => (
                 <Box>
-                  <ListItemButton>
+                  <ListItem>
                     <ListItemIcon>
                       <RestaurantMenuIcon />
                     </ListItemIcon>
@@ -103,28 +103,22 @@ const DettagliRistorante = () => {
                     />
                     {piatto.allergenFree &&
                       piatto.allergenFree.map((allergene, id) => (
-                        <ListItemButton>
-                          <ListItemIcon>
-                            <Avatar
-                              sx={{
-                                width: 20,
-                                height: 20,
-                              }}
-                              alt="Remy Sharp"
-                              src={`/icon/${allergene}.png`}
-                              onClick={() => {
-                                navigate(
-                                  "/dettagli-allergene?name=" + allergene,
-                                  {
-                                    allergene: allergene,
-                                  }
-                                );
-                              }}
-                            />
-                          </ListItemIcon>
-                        </ListItemButton>
+                        <Avatar
+                          sx={{
+                            width: 25,
+                            height: 25,
+                            ml: 1,
+                          }}
+                          alt="Remy Sharp"
+                          src={`/icon/${allergene}.png`}
+                          onClick={() => {
+                            navigate("/dettagli-allergene?name=" + allergene, {
+                              allergene: allergene,
+                            });
+                          }}
+                        />
                       ))}
-                  </ListItemButton>
+                  </ListItem>
                 </Box>
               ))}
 

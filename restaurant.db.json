@@ -81,7 +81,7 @@
             "Lattosio",
             "Frutta a guscio",
             "Proteina LTP",
-            "cCrostacei"
+            "Crostacei"
           ]
         },
         {
@@ -792,35 +792,30 @@
     {
       "id": "2",
       "name": "Glutine",
-      "img": "glutine.png",
       "descrizionebreve": "L’intolleranza al glutine è un’elevata sensibilità del nostro organismo verso il glutine, un complesso proteico composto essenzialmente da due proteine, la glutenina e la gliadina. Esso si trova...",
       "descrizione": "L’intolleranza al glutine è un’elevata sensibilità del nostro organismo verso il glutine, un complesso proteico composto essenzialmente da due proteine, la glutenina e la gliadina. Esso si trova principalmente in molti cereali (come grano, segale, orzo, farro, kamut) e in tutti gli alimenti che ne prevedono la presenza (come pasta, pane, focacce, pizza, torte). L’organismo di chi soffre di intolleranza al glutine non è quindi in grado di tollerare e assimilare correttamente questo elemento."
     },
     {
       "id": "3",
       "name": "Crostacei",
-      "img": "crostacei.png",
       "descrizionebreve": "I sintomi dell’allergia crostacei di solito sono evidenti subito, appena si ingeriscono questi alimenti. Passano dall’orticaria al prurito, si può gonfiare il viso, o le labbra, la lingua o la...",
       "descrizione": "I sintomi dell’allergia crostacei di solito sono evidenti subito, appena si ingeriscono questi alimenti. Passano dall’orticaria al prurito, si può gonfiare il viso, o le labbra, la lingua o la gola. I crostacei possono fari insorgere, a chi ne è allergico, anche problemi respiratori come respiro sibilante e congestione nasale, dolori addominali. Chi è allergico ai crostacei può soffrire anche di diarrea, nausea, vomito e vertigini e se la reazione sfocia nell’anafilassi, potrebbe essere letale. Tra i sintomi troviamo anche il calo della pressione sanguigna, un senso di stordimento e la perdita di coscienza."
     },
     {
       "id": "4",
       "name": "Frutta a guscio",
-      "img": "frutta a guscio",
       "descrizionebreve": "L'allergia alla frutta a guscio si verifica in quanto il sistema immunitario reagisce in modo anomalo alle proteine di questo alimento, producendo molti anticorpi IgE che circolano nel sangue...",
       "descrizione": "L'allergia alla frutta a guscio si verifica in quanto il sistema immunitario reagisce in modo anomalo alle proteine di questo alimento, producendo molti anticorpi IgE che circolano nel sangue. I bambini con anticorpi IgE diretti contro le proteine della frutta a guscio reagiscono rapidamente, nel giro di minuti o di poche ore, quando vengono esposti a questi alimenti. La frutta a guscio gioca un ruolo di primaria importanza come causa di shock anafilattico fatale. Non solo le arachidi, ma anche la noce comune, la noce del Brasile e la nocciola sono state associate alla morte per anafilassi. Avere quindi un'allergia a questo tipo di allergene non è un fatto banale ed esiste un pericolo concreto di reazioni gravi."
     },
     {
       "id": "5",
       "name": "Nichel",
-      "img": "nichel",
       "descrizionebreve": "L'allergia al nichel è una reazione esagerata del sistema immunitario verso una sostanza estranea all'organismo, in questo caso il nichel. Nella maggior parte dei casi si manifesta con sintomi...",
       "descrizione": "L'allergia al nichel è una reazione esagerata del sistema immunitario verso una sostanza estranea all'organismo, in questo caso il nichel. Nella maggior parte dei casi si manifesta con sintomi della pelle come chiazze rosse ruvide e con intenso prurito. Ma può anche provocare fenomeni extra cutanei, come ad esempio disturbi gastrointestinali, urinari, ginecologici e neurologici periferici. Il nichel è presente in concentrazioni diverse nei cibi. Alcuni alimenti presentano un alto contenuto di nichel: pomodori, cacao in polvere e cioccolato, frutta secca in genere, crostacei, kiwi, pere, prugne, uva e uva passa, soia, legumi ecc. Altri alimenti, invece, sono a basso contenuto di nichel quali: la carne, alcuni tipi di pesce, latte e derivati, ecc. Non si hanno indicazioni in merito al fabbisogno giornaliero di nichel. Sono importanti anche le modalità di cottura degli alimenti. Sono indicate le pentole di ghisa, di alluminio anodizzato, oppure di acciaio inox 18/c garantito senza nichel e quelle di terracotta."
     },
     {
       "id": "6",
       "name": "Proteina LTP",
-      "img": "proteina LTP",
       "descrizionebreve": "Le LTP (Lipid Transfer Protein) sono delle proteine contenute in molti alimenti vegetali, soprattutto nella buccia delle pesche, mele, albicocche, ciliegie, ma anche in molti altri alimenti...",
       "descrizione": "Le LTP (Lipid Transfer Protein) sono delle proteine contenute in molti alimenti vegetali, soprattutto nella buccia delle pesche, mele, albicocche, ciliegie, ma anche in molti altri alimenti. Sono la causa più frequente di allergia alimentare in Italia e nei paesi mediterranei e causano reazioni allergiche molto gravi."
     }
