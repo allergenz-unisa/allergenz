@@ -109,48 +109,48 @@ export default function CustomizedMenus(props) {
         <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Lattosio
           <Switch
-            checked={filters.includes("lattosio")}
-            onChange={(e) => handleChange(e, "lattosio")}
+            checked={filters.includes("Lattosio")}
+            onChange={(e) => handleChange(e, "Lattosio")}
             color="secondary"
           />
         </MenuItem>
         <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Glutine
           <Switch
-            checked={filters.includes("glutine")}
-            onChange={(e) => handleChange(e, "glutine")}
+            checked={filters.includes("Glutine")}
+            onChange={(e) => handleChange(e, "Glutine")}
             color="secondary"
           />
         </MenuItem>
         <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Crostacei
           <Switch
-            checked={filters.includes("crostacei")}
-            onChange={(e) => handleChange(e, "crostacei")}
+            checked={filters.includes("Crostacei")}
+            onChange={(e) => handleChange(e, "Crostacei")}
             color="secondary"
           />
         </MenuItem>
         <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Frutta a guscio
           <Switch
-            checked={filters.includes("frutta a guscio")}
-            onChange={(e) => handleChange(e, "frutta a guscio")}
+            checked={filters.includes("Frutta a guscio")}
+            onChange={(e) => handleChange(e, "Frutta a guscio")}
             color="secondary"
           />
         </MenuItem>
         <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Nichel
           <Switch
-            checked={filters.includes("nichel")}
-            onChange={(e) => handleChange(e, "nichel")}
+            checked={filters.includes("Nichel")}
+            onChange={(e) => handleChange(e, "Nichel")}
             color="secondary"
           />
         </MenuItem>
         <MenuItem sx={{ justifyContent: "flex-end" }} disableRipple>
           Proteina LTP
           <Switch
-            checked={filters.includes("proteina LTP")}
-            onChange={(e) => handleChange(e, "proteina LTP")}
+            checked={filters.includes("Proteina LTP")}
+            onChange={(e) => handleChange(e, "Proteina LTP")}
             color="secondary"
           />
         </MenuItem>
