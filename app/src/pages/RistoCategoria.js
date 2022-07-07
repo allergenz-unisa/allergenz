@@ -62,18 +62,7 @@ const RistoCategoria = () => {
     console.log(userLikes);
   }
 
-  function checkLike(id) {
-    userLikes.find((element) => {
-      if (element === id) {
-        console.log("true");
-        return true;
-      } else {
-        console.log("false");
-        return false;
-      }
-    });
-    return;
-  }
+  
 
   return (
     <div>
@@ -125,7 +114,6 @@ const RistoCategoria = () => {
                   alt="Local Image"
                 />
                 <CardActions disableSpacing>
-                  {checkLike(ristorante.id) == 1 ? (
                     <div>
                       <IconButton
                         aria-label="add to favorites"
@@ -142,32 +130,9 @@ const RistoCategoria = () => {
                         </Typography>
                       </IconButton>
                     </div>
-                  ) : (
-                    <div>
-                      <div>
-                        <IconButton
-                          aria-label="add to favorites"
-                          onClick={() => {}}
-                        >
-                          <FavoriteIcon />
-                          <Typography
-                            sx={{
-                              fontWeight: "bold",
-                              color: "#757575",
-                            }}
-                          >
-                            {ristorante.like}
-                          </Typography>
-                          <Typography
-                            sx={{
-                              fontWeight: "bold",
-                              color: "#757575",
-                            }}
-                          ></Typography>
-                        </IconButton>
-                      </div>
-                    </div>
-                  )}
+                  
+                   
+                  
                 </CardActions>
               </Card>
             </Grid>

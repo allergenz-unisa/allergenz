@@ -88,7 +88,7 @@ const DettagliRistorante = () => {
                     src={"../../img/" + ristorante.localName + ".jpg"}
                   />
                 </ListItemIcon>
-                <ListItemText primary={ristorante.localName} />
+                <ListItemText primary={ristorante.localName} secondary="*l'icona dell'allergene è cliccabile"/>
               </ListItem>
 
               {menu.map((piatto, id) => (

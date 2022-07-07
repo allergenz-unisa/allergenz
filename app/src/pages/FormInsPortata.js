@@ -52,7 +52,7 @@ const FormInsPortata = () => {
 
   const { changeTitle } = useTitleContext();
   useEffect(() => {
-    changeTitle('Inserisci una portata per " ' + ristorante.localName + ' " ');
+    changeTitle("Inserisci una portata");
   }, []);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const FormInsPortata = () => {
               component="h1"
             >
               {" "}
-              Aggiungi un nuovo piatto
+              {ristorante.localName}
             </Typography>
             <Typography sx={{ mr: 2, ml: 2, mb: 2 }}>
               {" "}
