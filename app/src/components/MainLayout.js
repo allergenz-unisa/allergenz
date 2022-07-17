@@ -94,7 +94,7 @@ const MainLayout = ({ children }) => {
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{ style: text }}
-              primary={"Segnala un locale"}
+              primary={"Inserire un locale"}
             />
           </ListItemButton>
         </ListItem>

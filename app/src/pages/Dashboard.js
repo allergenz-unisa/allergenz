@@ -423,7 +423,7 @@ const Dashboard = () => {
                 navigate("/form-segnalazione-locale");
               }}
             >
-              Segnala un locale
+              Inserire un locale
             </Button>
           </Grid>
         </Grid>
