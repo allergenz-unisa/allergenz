@@ -4,7 +4,7 @@
 
 # allergenz
 
-L’idea alla base del progetto ha a che fare con le intolleranze alimentari e con tutti i disagi che ne derivano. Il nostro scopo è, tanto quello di sensibilizzare all’argomento quante più persone possibili, quanto quello di supportare chi, anche improvvisamente, scopre di avere un’intolleranza alimentare.
+Il progetto Allergenz nasce per supportare le persone che soffrono di intolleranze alimentari aiutandole ad affrontare le difficoltà in cui, spesso improvvisamente si ritrovano. Il nostro scopo è, tanto quello di sensibilizzare all’argomento quante più persone possibili, quanto quello di supportare chi soffre in prima persona di una o più intolleranza alimentare.
 
 ## Come inizializzare il progetto
 
