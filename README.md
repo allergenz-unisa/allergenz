@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/app/src/images/logo/1x/allergens_logo.png" width="300">
+  <img src="/app/src/images/logo/1x/allergens_logo.png" width="500">
 </div>
 
 # allergenz
